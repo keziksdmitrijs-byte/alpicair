@@ -223,6 +223,27 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s}
 .reveal.in{opacity:1;transform:none}
 
+
+/* plan offer */
+.plan{position:relative;overflow:hidden;border-radius:36px;padding:56px;background:linear-gradient(135deg,#2b1f5c 0%,#1a1236 55%,#122a3a 100%);border:1px solid var(--line);display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center}
+.plan::after{content:"";position:absolute;right:-120px;top:-120px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(62,224,168,.22),transparent 70%);pointer-events:none}
+.steps{display:grid;gap:14px;margin:26px 0 28px;counter-reset:st}
+.steps div{display:flex;gap:14px;align-items:flex-start}
+.steps div::before{counter-increment:st;content:counter(st);flex:0 0 34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.1);font-weight:800;color:var(--vent)}
+.steps b{display:block;margin-bottom:2px}
+.steps span{color:var(--ink2);font-size:14px;line-height:1.5}
+.plan .ctas{display:flex;gap:10px;flex-wrap:wrap}
+.plan .note2{font-size:12.5px;color:var(--muted);margin-top:12px}
+.blueprint{position:relative;aspect-ratio:1.15;border-radius:24px;background:#0f2238;border:1px solid rgba(56,198,255,.25);overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.blueprint svg{width:100%;height:100%;display:block}
+.blueprint .bp-line{fill:none;stroke:#7fd3ff;stroke-width:2}
+.blueprint .bp-thin{fill:none;stroke:rgba(127,211,255,.35);stroke-width:1}
+.blueprint .bp-txt{font:700 10px Manrope,sans-serif;fill:#9fdcff;letter-spacing:.06em}
+.blueprint .pin{animation:pinIn .6s both}
+@keyframes pinIn{from{opacity:0;transform:translateY(-8px)}}
+.blueprint .pin circle{transition:r .3s}
+.plan h2{font-size:clamp(28px,3.2vw,44px)}
+@media (max-width:900px){.plan{grid-template-columns:1fr;padding:30px 22px}}
 @media (max-width:1100px){
   .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .detail{grid-template-columns:1fr 1fr;padding:90px 24px 30px}
@@ -273,7 +294,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 
 <nav class="top" id="nav"><div class="wrap">
   <a class="logo" href="#"><svg viewBox="0 0 48 32"><path d="M2 28L18 4l8 12" stroke="#b6a3ff" stroke-width="4" fill="none" stroke-linejoin="round"/><path d="M14 28L30 4l16 24" stroke="#7c5cff" stroke-width="4" fill="none" stroke-linejoin="round"/></svg>ALPICAIR</a>
-  <div class="links"><a href="#panelis">Viens panelis</a><a href="#serijas">Sērijas</a></div>
+  <div class="links"><a href="#panelis">Viens panelis</a><a href="#serijas">Sērijas</a><a href="#piedavajums">Piedāvājums</a></div>
   <button class="sysbtn" id="openSys"><svg width="16" height="16"><use href="#i-layers"/></svg>Mana sistēma <span class="n" id="sysN">0</span></button>
 </div></nav>
 
@@ -335,6 +356,43 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   <div class="grid" id="grid"></div>
 </div></section>
 
+<section id="piedavajums" style="padding-top:20px"><div class="wrap">
+  <div class="plan reveal">
+    <div style="position:relative;z-index:1">
+      <div class="kick cap">Individuāls piedāvājums</div>
+      <h2>Atsūtiet mājas plānu — piedāvājumu sagatavosim tieši jums</h2>
+      <p class="sub">Katrai mājai ir sava platība, telpu izkārtojums un siltuma zudumi. Pēc plāna izvēlēsimies piemērotu siltumsūkni, kondicionierus un rekuperatoru — visu no AlpicAir un ar vienu sienas paneli.</p>
+      <div class="steps">
+        <div><p style="margin:0"><b>Atsūtiet plānu</b><span>Stāvu plāns, skice vai pat foto no projekta — der jebkurā formātā (PDF, JPG).</span></p></div>
+        <div><p style="margin:0"><b>Mēs aprēķinām un izvēlamies</b><span>Jauda pēc platības un telpām, rekuperatora gaisa plūsma, iekārtu izvietojums.</span></p></div>
+        <div><p style="margin:0"><b>Saņemiet piedāvājumu</b><span>Konkrēti modeļi, montāža un vadība no viena Sonoff NSPanel Pro paneļa.</span></p></div>
+      </div>
+      <div class="ctas" id="planCtas"></div>
+      <div class="note2" id="planNote"></div>
+    </div>
+    <div class="blueprint" aria-hidden="true">
+      <svg viewBox="0 0 400 348">
+        <defs><pattern id="bpg" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" class="bp-thin"/></pattern></defs>
+        <rect width="400" height="348" fill="url(#bpg)"/>
+        <path class="bp-line" d="M40 40H360V308H40Z M40 170H200 M200 40V308 M200 210H360 M120 170V308 M280 40V210"/>
+        <path class="bp-thin" d="M150 40v-8M150 32h50M200 32v8" />
+        <text class="bp-txt" x="70" y="100">DZĪVOJAMĀ</text><text class="bp-txt" x="70" y="114" style="fill:#5fb4e6">32 m²</text>
+        <text class="bp-txt" x="215" y="100">VIRTUVE</text><text class="bp-txt" x="215" y="114" style="fill:#5fb4e6">14 m²</text>
+        <text class="bp-txt" x="298" y="100">GUĻAMĀ</text><text class="bp-txt" x="298" y="114" style="fill:#5fb4e6">16 m²</text>
+        <text class="bp-txt" x="52" y="250">TEHN.</text>
+        <text class="bp-txt" x="140" y="250">GUĻAMĀ</text><text class="bp-txt" x="140" y="264" style="fill:#5fb4e6">18 m²</text>
+        <text class="bp-txt" x="230" y="262">BĒRNU ISTABA</text><text class="bp-txt" x="230" y="276" style="fill:#5fb4e6">15 m²</text>
+        <g class="pin" style="animation-delay:.2s"><circle cx="80" cy="200" r="11" fill="#ff8a3d"/><text x="80" y="204" text-anchor="middle" font-size="11" font-weight="800" fill="#1a1530" font-family="Manrope">S</text></g>
+        <g class="pin" style="animation-delay:.4s"><circle cx="120" cy="58" r="11" fill="#38c6ff"/><text x="120" y="62" text-anchor="middle" font-size="11" font-weight="800" fill="#1a1530" font-family="Manrope">K</text></g>
+        <g class="pin" style="animation-delay:.6s"><circle cx="320" cy="58" r="11" fill="#38c6ff"/><text x="320" y="62" text-anchor="middle" font-size="11" font-weight="800" fill="#1a1530" font-family="Manrope">K</text></g>
+        <g class="pin" style="animation-delay:.8s"><circle cx="80" cy="290" r="11" fill="#3ee0a8"/><text x="80" y="294" text-anchor="middle" font-size="11" font-weight="800" fill="#1a1530" font-family="Manrope">R</text></g>
+        <g class="pin" style="animation-delay:1s"><rect x="186" y="150" width="28" height="28" rx="6" fill="#f4f4f6"/><rect x="190" y="154" width="20" height="20" rx="3" fill="#0b0b14"/><text x="200" y="168" text-anchor="middle" font-size="8" font-weight="800" fill="#ff8a3d" font-family="Manrope">22°</text></g>
+        <g font-family="Manrope" font-size="10" font-weight="700" fill="#cfe9ff"><circle cx="58" cy="330" r="5" fill="#ff8a3d"/><text x="68" y="334">siltumsūknis</text><circle cx="148" cy="330" r="5" fill="#38c6ff"/><text x="158" y="334">kondicionieris</text><circle cx="248" cy="330" r="5" fill="#3ee0a8"/><text x="258" y="334">rekuperators</text></g>
+      </svg>
+    </div>
+  </div>
+</div></section>
+
 <footer class="site"><div class="wrap"><div><b style="color:#fff">AlpicAir</b> — siltumsūkņi, kondicionieri, rekuperatori</div><div>Tehniskie dati: BVT Partneri katalogs · Foto: alpicair.com · Cenas pēc pieprasījuma</div></div></footer>
 
 <div class="detail" id="detail" role="dialog" aria-modal="true"></div>
@@ -342,13 +400,13 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 <aside class="drawer" id="drawer">
   <header><h3>Mana sistēma</h3><div style="color:var(--muted);font-size:14px">Viens zīmols — viens sienas panelis</div><button class="x" id="closeDrawer">×</button></header>
   <div class="list" id="sysList"></div>
-  <footer><div class="linked"><svg width="26" height="26" style="color:var(--brand2);flex:0 0 26px"><use href="#i-panel"/></svg><span id="sysMsg"></span></div><button class="btn pri" id="copySys">Kopēt sarakstu piedāvājumam</button></footer>
+  <footer><div class="linked"><svg width="26" height="26" style="color:var(--brand2);flex:0 0 26px"><use href="#i-panel"/></svg><span id="sysMsg"></span></div><button class="btn pri" id="planSys">Pieprasīt piedāvājumu ar mājas plānu</button><button class="btn gho" id="copySys">Kopēt sarakstu</button></footer>
 </aside>
 <div class="toast" id="toast"></div>
 
 <script>
 (async()=>{
-let SERIES=[];try{SERIES=(await (await fetch("catalog.json?t="+Date.now(),{cache:"no-store"})).json()).series||[]}catch(e){console.error("catalog.json",e)}
+let SERIES=[],CONTACTS={};try{const J=await (await fetch("catalog.json?t="+Date.now(),{cache:"no-store"})).json();SERIES=J.series||[];CONTACTS=J.contacts||{}}catch(e){console.error("catalog.json",e)}
 document.querySelector('[data-count="26"]').dataset.count=SERIES.length;document.querySelector('[data-count="162"]').dataset.count=SERIES.reduce((a,x)=>a+x.models.length,0);
 const CATS={hp:{n:"Siltumsūkņi",s:"Siltumsūknis",c:"#ff8a3d"},ac:{n:"Kondicionieri",s:"Kondicionieris",c:"#38c6ff"},rv:{n:"Rekuperācija",s:"Rekuperators",c:"#3ee0a8"},ctl:{n:"Vadība",s:"Vadība",c:"#b6a3ff"}};
 const byId=Object.fromEntries(SERIES.map(s=>[s.id,s]));
@@ -485,6 +543,23 @@ function updSys(){
 const closeDrawer=()=>{drawer.classList.remove("show");ov.classList.remove("show")};
 document.getElementById("openSys").onclick=()=>{drawer.classList.add("show");ov.classList.add("show")};
 document.getElementById("closeDrawer").onclick=closeDrawer;ov.onclick=closeDrawer;
+
+/* plan offer */
+function sysText(){return [...sys].map(fromKey).filter(Boolean).map(({s,m})=>`• ${m.m} — ${s.name}, ${m.l}`).join("\n")}
+function mailHref(){const body="Labdien!\n\nPielikumā mājas plāns. Lūdzu, sagatavojiet piedāvājumu AlpicAir sistēmai (siltumsūknis / kondicionieri / rekuperators) ar vadību no Sonoff NSPanel Pro.\n\nMājas platība: ~"+(typeof area!=="undefined"?area:"")+" m²\nAdrese / pilsēta: \nTālrunis: \n"+(sys.size?"\nInteresējošās iekārtas:\n"+sysText()+"\n":"")+"\n(Lūdzu, pievienojiet plānu kā pielikumu.)";
+  return `mailto:${CONTACTS.email}?subject=${encodeURIComponent("Piedāvājuma pieprasījums — mājas plāns")}&body=${encodeURIComponent(body)}`}
+function renderPlan(){
+  const c=CONTACTS,el=document.getElementById("planCtas"),b=[];
+  if(c.email)b.push(`<a class="btn pri" id="planMail" href="${mailHref()}">✉ Nosūtīt plānu e-pastā</a>`);
+  if(c.whatsapp)b.push(`<a class="btn gho" href="https://wa.me/${String(c.whatsapp).replace(/\D/g,"")}?text=${encodeURIComponent("Labdien! Vēlos nosūtīt mājas plānu AlpicAir piedāvājumam.")}" target="_blank" rel="noopener">WhatsApp</a>`);
+  if(c.phone)b.push(`<a class="btn gho" href="tel:${String(c.phone).replace(/[^\d+]/g,"")}">☎ ${esc(c.phone)}</a>`);
+  el.innerHTML=b.join("");
+  document.getElementById("planNote").textContent=b.length?(c.email?`Plānu pievienojiet e-pastam kā pielikumu · ${c.email}`:""):"Kontakti drīzumā.";
+  document.getElementById("planSys").style.display=c.email?"":"none";
+}
+document.getElementById("planCtas").addEventListener("click",e=>{const a=e.target.closest("#planMail");if(a)a.href=mailHref()});
+document.getElementById("planSys").onclick=()=>{if(CONTACTS.email)location.href=mailHref()};
+renderPlan();
 document.getElementById("copySys").onclick=()=>{if(!sys.size){toast("Sistēma ir tukša");return}
   const txt="AlpicAir sistēma (vadība: Sonoff NSPanel Pro):\n"+[...sys].map(fromKey).filter(Boolean).map(({s,m})=>`• ${m.m} — ${s.name}, ${m.l}`).join("\n");
   (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(()=>toast("Saraksts nokopēts"),()=>toast("Neizdevās nokopēt"))};

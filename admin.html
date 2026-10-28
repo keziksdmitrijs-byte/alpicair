@@ -98,6 +98,7 @@ dialog code{background:rgba(255,255,255,.08);padding:1px 6px;border-radius:6px}
   <a class="btn" href="./" target="_blank">Открыть сайт ↗</a>
   <button class="btn" id="bExport" title="Скачать резервную копию данных">⬇ JSON</button>
   <label class="btn" title="Загрузить данные из файла">⬆ JSON<input type="file" id="fImport" accept=".json,application/json" hidden></label>
+  <button class="btn" id="bContacts">☎ Контакты</button>
   <button class="btn" id="bSettings">⚙ Доступ</button>
   <button class="btn pri" id="bSave" disabled>Сохранить и опубликовать</button>
 </header>
@@ -129,6 +130,17 @@ dialog code{background:rgba(255,255,255,.08);padding:1px 6px;border-radius:6px}
   <label class="chk" style="margin:12px 0"><input type="checkbox" id="sRemember"> Запомнить на этом компьютере</label>
   <div class="toolbar"><button class="btn pri" id="sOk">Проверить и сохранить</button><button class="btn" id="sForget">Забыть токен</button><button class="btn" id="sClose">Закрыть</button></div>
   <p class="status" id="sMsg" style="margin-top:10px"></p>
+</dialog>
+<dialog id="dlgC">
+  <h2>Контакты для заявок</h2>
+  <p class="hint">Показываются в блоке «Atsūtiet mājas plānu» на сайте: кнопка письма (с готовым текстом заявки), WhatsApp и телефон. Пустое поле — кнопка не показывается.</p>
+  <div style="display:grid;gap:10px;margin:12px 0">
+    <label class="f">E-mail для планов и заявок<input id="cEmail" type="email" placeholder="info@…"></label>
+    <label class="f">Телефон<input id="cPhone" placeholder="+371 …"></label>
+    <label class="f">WhatsApp (номер)<input id="cWa" placeholder="+371 …"></label>
+  </div>
+  <div class="toolbar"><button class="btn pri" id="cOk">Применить</button><button class="btn" id="cClose">Закрыть</button></div>
+  <p class="hint" style="margin-top:10px">После «Применить» нажмите «Сохранить и опубликовать».</p>
 </dialog>
 <div class="toast" id="toast"></div>
 
@@ -212,6 +224,12 @@ $("#sOk").onclick=async()=>{
     if(!dirty)await load();else{try{sha=(await getFile("catalog.json")).sha}catch(e){}}updSave();setTimeout(()=>dlg.close(),700)}
   catch(e){$("#sMsg").className="status err";$("#sMsg").textContent="Ошибка: "+e.message}
 };
+
+/* ---------- contacts ---------- */
+const dlgC=$("#dlgC");
+$("#bContacts").onclick=()=>{const c=DATA.contacts||{};$("#cEmail").value=c.email||"";$("#cPhone").value=c.phone||"";$("#cWa").value=c.whatsapp||"";dlgC.showModal()};
+$("#cClose").onclick=()=>dlgC.close();
+$("#cOk").onclick=()=>{const e=$("#cEmail").value.trim();if(e&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e))return toast("Проверьте e-mail");DATA.contacts={email:e,phone:$("#cPhone").value.trim(),whatsapp:$("#cWa").value.trim()};markDirty();dlgC.close();toast("Контакты обновлены — сохраните изменения")};
 
 /* ---------- sidebar ---------- */
 function imgSrc(p){return p?(previews[p]||p):""}
