@@ -366,198 +366,6 @@
      "ūdens līdz"
     ],
     [
-     "-25 °C",
-     "apsilde līdz"
-    ]
-   ],
-   "models": [
-    {
-     "m": "AWI-40WRDC1 / AWO-40WRDC1",
-     "n": "AlpicAir siltumsūknis Split",
-     "l": "3,8 kW",
-     "s": [
-      [
-       "Aukstumaģents",
-       "R32"
-      ],
-      [
-       "Dzesēšanas jauda, kW",
-       "4"
-      ],
-      [
-       "Sildīšanas jauda, kW",
-       "3,8"
-      ],
-      [
-       "Āra bloks (P×A×Dz), mm",
-       "1133×568×390"
-      ],
-      [
-       "Maks. ūdens temperatūra, °C",
-       "60"
-      ],
-      [
-       "Iekšējais bloks (P×A×Dz), mm",
-       "860×318×460"
-      ],
-      [
-       "Darbība dzesēšanā, °C",
-       "+10…+48"
-      ],
-      [
-       "Darbība apsildē, °C",
-       "-25…+35"
-      ]
-     ],
-     "d": null,
-     "st": 1,
-     "img": "https://alpicair.com/image/cache/catalog/Split%20A-500x500.png"
-    },
-    {
-     "m": "AWI-60WRDC1 / AWO-60WRDC1",
-     "n": "AlpicAir siltumsūknis Split",
-     "l": "5,8 kW",
-     "s": [
-      [
-       "Aukstumaģents",
-       "R32"
-      ],
-      [
-       "Dzesēšanas jauda, kW",
-       "6"
-      ],
-      [
-       "Sildīšanas jauda, kW",
-       "5,8"
-      ],
-      [
-       "Āra bloks (P×A×Dz), mm",
-       "1133×568×390"
-      ],
-      [
-       "Maks. ūdens temperatūra, °C",
-       "60"
-      ],
-      [
-       "Iekšējais bloks (P×A×Dz), mm",
-       "860×318×460"
-      ],
-      [
-       "Darbība dzesēšanā, °C",
-       "+10…+48"
-      ],
-      [
-       "Darbība apsildē, °C",
-       "-25…+35"
-      ]
-     ],
-     "d": null,
-     "st": 0,
-     "img": "https://alpicair.com/image/cache/catalog/Split%20A-500x500.png"
-    },
-    {
-     "m": "AWI-80WRDC1 / AWO-80WRDC1",
-     "n": "AlpicAir siltumsūknis Split",
-     "l": "7 kW",
-     "s": [
-      [
-       "Aukstumaģents",
-       "R32"
-      ],
-      [
-       "Dzesēšanas jauda, kW",
-       "8"
-      ],
-      [
-       "Sildīšanas jauda, kW",
-       "7"
-      ],
-      [
-       "Āra bloks (P×A×Dz), mm",
-       "1133×568×390"
-      ],
-      [
-       "Maks. ūdens temperatūra, °C",
-       "60"
-      ],
-      [
-       "Iekšējais bloks (P×A×Dz), mm",
-       "860×318×460"
-      ],
-      [
-       "Darbība dzesēšanā, °C",
-       "+10…+48"
-      ],
-      [
-       "Darbība apsildē, °C",
-       "-25…+35"
-      ]
-     ],
-     "d": null,
-     "st": 0,
-     "img": "https://alpicair.com/image/cache/catalog/Split%20A-500x500.png"
-    },
-    {
-     "m": "AWI-100WRDC1 / AWO-100WRDC1",
-     "n": "AlpicAir siltumsūknis Split",
-     "l": "8,5 kW",
-     "s": [
-      [
-       "Aukstumaģents",
-       "R32"
-      ],
-      [
-       "Dzesēšanas jauda, kW",
-       "9,5"
-      ],
-      [
-       "Sildīšanas jauda, kW",
-       "8,5"
-      ],
-      [
-       "Āra bloks (P×A×Dz), mm",
-       "1133×568×390"
-      ],
-      [
-       "Maks. ūdens temperatūra, °C",
-       "60"
-      ],
-      [
-       "Iekšējais bloks (P×A×Dz), mm",
-       "860×318×460"
-      ],
-      [
-       "Darbība dzesēšanā, °C",
-       "+10…+48"
-      ],
-      [
-       "Darbība apsildē, °C",
-       "-25…+35"
-      ]
-     ],
-     "d": null,
-     "st": 0,
-     "img": "https://alpicair.com/image/cache/catalog/Split%20A-500x500.png"
-    }
-   ]
-  },
-  {
-   "id": "split-b",
-   "cat": "hp",
-   "name": "Split B",
-   "tag": "Jaunās paaudzes split",
-   "desc": "Uzlabota split sērija ar paplašinātu darba diapazonu — apkure līdz −30 °C āra temperatūrā.",
-   "img": "https://alpicair.com/image/cache/catalog/air%20water/Split%20B-500x500.png",
-   "stats": [
-    [
-     "4,3–8,3",
-     "kW apkure"
-    ],
-    [
-     "60 °C",
-     "ūdens līdz"
-    ],
-    [
      "-30 °C",
      "apsilde līdz"
     ]
@@ -602,7 +410,7 @@
       ]
      ],
      "d": null,
-     "st": 0,
+     "st": 1,
      "img": "https://alpicair.com/image/cache/catalog/air%20water/Split%20B-500x500.png"
     },
     {
@@ -644,7 +452,7 @@
       ]
      ],
      "d": null,
-     "st": 0,
+     "st": 1,
      "img": "https://alpicair.com/image/cache/catalog/air%20water/Split%20B-500x500.png"
     },
     {
@@ -686,7 +494,7 @@
       ]
      ],
      "d": null,
-     "st": 0,
+     "st": 1,
      "img": "https://alpicair.com/image/cache/catalog/air%20water/Split%20B-500x500.png"
     },
     {
@@ -699,6 +507,29 @@
      "img": "https://alpicair.com/image/cache/catalog/air%20water/Split%20B-500x500.png"
     }
    ]
+  },
+  {
+   "id": "split-b",
+   "cat": "hp",
+   "name": "Split B",
+   "tag": "Jaunās paaudzes split",
+   "desc": "Uzlabota split sērija ar paplašinātu darba diapazonu — apkure līdz −30 °C āra temperatūrā.",
+   "img": "https://alpicair.com/image/cache/catalog/air%20water/Split%20B-500x500.png",
+   "stats": [
+    [
+     "4,3–8,3",
+     "kW apkure"
+    ],
+    [
+     "60 °C",
+     "ūdens līdz"
+    ],
+    [
+     "-30 °C",
+     "apsilde līdz"
+    ]
+   ],
+   "models": []
   },
   {
    "id": "monoblock-r290",
