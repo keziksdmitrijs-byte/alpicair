@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlpicAir — viena sistēma, viena pults</title>
+<meta name="description" content="AlpicAir siltumsūkņi, kondicionieri un rekuperatori — viena zīmola klimata ekosistēma ar vienotu vadību.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b1b2b; --ink-2:#3a4b5c; --muted:#6b7b8c; --line:#e3e9ef;
+  --bg:#f5f8fb; --card:#ffffff; --night:#071423; --night-2:#0d2236;
+  --brand:#0a84d6; --brand-2:#36c5f0; --heat:#ff7a2f; --heat-2:#ffb547; --cool:#2fb7ff; --vent:#2fd39a;
+  --r:18px; --shadow:0 10px 30px -12px rgba(10,40,70,.18);
+  --mode:var(--heat);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+
+/* NAV */
+nav.top{position:fixed;inset:0 0 auto 0;z-index:40;transition:background .3s,box-shadow .3s}
+nav.top .wrap{display:flex;align-items:center;gap:24px;height:68px}
+nav.top.solid{background:rgba(7,20,35,.88);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(255,255,255,.06)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:#fff;text-decoration:none;letter-spacing:-.02em}
+.logo b{color:var(--brand-2)}
+.logo svg{width:30px;height:30px}
+nav.top .links{display:flex;gap:22px;margin-left:auto}
+nav.top .links a{color:#c9d6e3;text-decoration:none;font-weight:600;font-size:14px}
+nav.top .links a:hover{color:#fff}
+.sys-btn{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.18);padding:9px 14px;border-radius:999px;font-weight:700;font-size:14px}
+.sys-btn .n{background:var(--brand-2);color:var(--night);border-radius:999px;min-width:22px;height:22px;display:grid;place-items:center;font-size:12px;padding:0 6px;transition:transform .3s}
+.sys-btn .n.bump{transform:scale(1.35)}
+
+/* HERO */
+.hero{position:relative;background:radial-gradient(1200px 600px at 75% 20%,#123a5c 0%,transparent 60%),linear-gradient(180deg,var(--night) 0%,var(--night-2) 100%);color:#fff;padding:110px 0 70px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(500px 300px at var(--gx,30%) 80%,color-mix(in srgb,var(--mode) 25%,transparent),transparent 70%);transition:background 1s;pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-2);background:rgba(54,197,240,.1);border:1px solid rgba(54,197,240,.25);padding:6px 12px;border-radius:999px}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--vent);box-shadow:0 0 0 0 var(--vent);animation:ping 2s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(47,211,154,.6)}100%{box-shadow:0 0 0 12px rgba(47,211,154,0)}}
+h1{font-size:clamp(38px,5.4vw,68px);line-height:1.02;letter-spacing:-.035em;margin:18px 0 18px;font-weight:800}
+h1 .grad{background:linear-gradient(90deg,var(--heat),var(--heat-2) 30%,var(--brand-2) 65%,var(--vent));-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% 100%;animation:shift 8s ease-in-out infinite alternate}
+@keyframes shift{to{background-position:100% 0}}
+.lead{font-size:18px;line-height:1.6;color:#b9c8d6;max-width:540px}
+.cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;font-weight:700;text-decoration:none;border:0;font-size:15px;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;box-shadow:0 10px 30px -8px rgba(54,197,240,.6)}
+.btn.ghost{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.2)}
+.stats{display:flex;gap:34px;margin-top:40px}
+.stat b{display:block;font-size:34px;font-weight:800;letter-spacing:-.03em}
+.stat span{font-size:13px;color:#8fa3b6}
+
+/* house scene */
+.scene{position:relative;display:grid;grid-template-columns:1fr 150px;gap:18px;align-items:center}
+.house{width:100%;height:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.35))}
+.house .room{transition:fill 1s}
+.house .dev{transition:filter .4s,opacity .4s}
+.house .dev.off{opacity:.35}
+.house .lbl{font:700 11px Manrope,system-ui,sans-serif;fill:#cfe3f3;letter-spacing:.04em}
+.house .lnk{stroke:var(--mode);stroke-width:1.6;stroke-dasharray:4 6;fill:none;opacity:.8;animation:dash 1.2s linear infinite;transition:stroke 1s}
+.house.power-off .lnk{animation:none;opacity:.15}
+@keyframes dash{to{stroke-dashoffset:-20}}
+.particle{fill:var(--mode);transition:fill 1s}
+.fanspin{transform-box:fill-box;transform-origin:center;animation:spin 1.4s linear infinite}
+.house.power-off .fanspin{animation-play-state:paused}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.remote{position:relative;background:linear-gradient(160deg,#f4f8fb,#d9e3ec);border-radius:34px;padding:16px 14px 18px;box-shadow:0 30px 60px -20px rgba(0,0,0,.6),inset 0 2px 0 #fff;color:var(--ink);transform:rotate(4deg);transition:transform .4s}
+.remote:hover{transform:rotate(0) translateY(-4px)}
+.remote .screen{background:#0b1b2b;border-radius:18px;padding:12px 10px;color:#fff;text-align:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.remote .brandmini{font-size:9px;letter-spacing:.2em;color:#7f97ad;font-weight:800}
+.remote .temp{font-size:40px;font-weight:800;letter-spacing:-.04em;margin:4px 0 0;color:var(--mode);transition:color 1s}
+.remote .temp small{font-size:16px;vertical-align:top;margin-left:2px}
+.remote .modename{font-size:11px;font-weight:700;color:#b9c8d6;text-transform:uppercase;letter-spacing:.08em}
+.remote .icons{display:flex;justify-content:center;gap:6px;margin-top:8px}
+.remote .icons span{width:8px;height:8px;border-radius:50%;background:#2a3f52;transition:background .4s}
+.remote .icons span.on{background:var(--vent)}
+.remote .row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.rbtn{border:0;background:#fff;border-radius:14px;padding:10px 4px;font-size:11px;font-weight:700;color:var(--ink-2);box-shadow:0 2px 0 #c7d3de;transition:transform .1s,background .3s,color .3s;display:flex;flex-direction:column;align-items:center;gap:4px}
+.rbtn svg{width:18px;height:18px}
+.rbtn:active{transform:translateY(2px);box-shadow:none}
+.rbtn.act{background:var(--ink);color:#fff;box-shadow:0 2px 0 #000}
+.rbtn.act[data-mode=heat]{background:var(--heat)}
+.rbtn.act[data-mode=cool]{background:var(--cool)}
+.rbtn.act[data-mode=vent]{background:var(--vent);color:var(--night)}
+.rbtn.act[data-mode=auto]{background:var(--brand)}
+.tempctl{display:flex;gap:8px;margin-top:8px}
+.tempctl .rbtn{flex:1;font-size:20px;padding:4px}
+.power{display:block;margin:12px auto 0;width:48px;height:48px;border-radius:50%;border:0;background:#fff;box-shadow:0 3px 0 #c7d3de;color:#e04545;display:grid;place-items:center}
+.power.offst{color:#9aa}
+.remote .tip{position:absolute;left:-14px;top:-14px;background:var(--heat-2);color:var(--night);font-size:11px;font-weight:800;padding:6px 10px;border-radius:999px;transform:rotate(-8deg);box-shadow:0 6px 16px rgba(0,0,0,.3);animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{50%{transform:rotate(-8deg) translateY(-4px)}}
+
+/* SECTIONS */
+section{padding:90px 0}
+.kicker{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--brand)}
+h2{font-size:clamp(30px,3.6vw,46px);letter-spacing:-.03em;line-height:1.08;margin:10px 0 14px}
+.sub{color:var(--ink-2);font-size:17px;line-height:1.6;max-width:640px}
+
+.ecos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.eco{position:relative;background:var(--card);border-radius:24px;padding:28px;border:1px solid var(--line);overflow:hidden;cursor:pointer;transition:transform .35s,box-shadow .35s}
+.eco:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.eco::after{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:var(--c);opacity:.12;transition:transform .5s}
+.eco:hover::after{transform:scale(1.6)}
+.eco .ill{height:120px;display:flex;align-items:center}
+.eco .ill svg{height:110px;width:auto}
+.eco h3{font-size:22px;margin:14px 0 6px;letter-spacing:-.02em}
+.eco p{color:var(--ink-2);line-height:1.55;margin:0 0 16px;font-size:15px}
+.eco .meta{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:14px}
+.eco .meta .go{color:var(--c);display:flex;align-items:center;gap:6px}
+
+/* one-remote band */
+.band{background:linear-gradient(135deg,var(--night),#0f2c47);color:#fff;border-radius:32px;padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+.band .sub{color:#b9c8d6}
+.feat{display:grid;gap:14px;margin-top:24px}
+.feat div{display:flex;gap:14px;align-items:flex-start}
+.feat .ic{flex:0 0 40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(54,197,240,.12);color:var(--brand-2)}
+.feat b{display:block;margin-bottom:2px}
+.feat span{color:#9fb2c4;font-size:14px;line-height:1.5}
+.orbit{position:relative;aspect-ratio:1;max-width:420px;margin:auto;width:100%}
+.orbit .ring{position:absolute;inset:8%;border:1px dashed rgba(255,255,255,.18);border-radius:50%;animation:spin 40s linear infinite}
+.orbit .ring.r2{inset:24%;animation-duration:28s;animation-direction:reverse}
+.orbit .core{position:absolute;inset:36%;border-radius:50%;background:radial-gradient(circle,#1d5a8a,#0b2740);display:grid;place-items:center;box-shadow:0 0 60px rgba(54,197,240,.35)}
+.orbit .core svg{width:46%}
+.orbit .node{position:absolute;width:26%;aspect-ratio:1;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35);color:var(--ink);font-size:11px;font-weight:800;text-align:center;flex-direction:column}
+.orbit .node svg{width:58%;height:auto}
+.orbit .node em{font-style:normal;position:absolute;bottom:-22px;color:#cfe3f3;white-space:nowrap}
+.orbit .n1{left:37%;top:-2%}.orbit .n2{left:-2%;top:62%}.orbit .n3{right:-2%;top:62%}
+.orbit .pulse{position:absolute;inset:36%;border-radius:50%;border:2px solid var(--brand-2);animation:pulse 2.6s ease-out infinite}
+@keyframes pulse{from{transform:scale(1);opacity:.8}to{transform:scale(2.6);opacity:0}}
+
+/* CATALOG */
+#katalogs{padding-top:70px;scroll-margin-top:0}
+section{scroll-margin-top:60px}
+.filters{position:sticky;top:68px;z-index:20;background:rgba(245,248,251,.92);backdrop-filter:blur(10px);padding:14px 0;border-bottom:1px solid var(--line);margin-top:30px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{border:1px solid var(--line);background:#fff;padding:10px 16px;border-radius:999px;font-weight:700;font-size:14px;color:var(--ink-2);display:flex;align-items:center;gap:8px;transition:all .2s}
+.tab .c{font-size:12px;background:var(--bg);border-radius:999px;padding:2px 8px;color:var(--muted)}
+.tab.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tab.on .c{background:rgba(255,255,255,.15);color:#fff}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;min-height:0}
+.chip{border:1px dashed #c5d2de;background:transparent;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600;color:var(--ink-2)}
+.chip.on{background:var(--brand);border:1px solid var(--brand);color:#fff}
+.tools{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;align-items:center}
+.search{flex:1 1 220px;display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:0 12px}
+.search input{border:0;outline:0;padding:11px 0;font:inherit;width:100%;background:transparent}
+.ctl{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-size:13px;font-weight:600;color:var(--ink-2)}
+.ctl input[type=range]{accent-color:var(--brand);width:120px}
+.ctl select{border:0;font:inherit;background:transparent;outline:0;color:var(--ink)}
+.toggle{position:relative;width:38px;height:22px;background:#cfd9e2;border-radius:999px;transition:background .2s;flex:0 0 auto}
+.toggle::after{content:"";position:absolute;left:3px;top:3px;width:16px;height:16px;background:#fff;border-radius:50%;transition:transform .2s}
+.ctl.on .toggle{background:var(--vent)}
+.ctl.on .toggle::after{transform:translateX(16px)}
+.count{margin:22px 0 16px;color:var(--muted);font-weight:600;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s,border-color .3s;cursor:pointer;animation:rise .5s both}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:transparent}
+.card .pic{height:150px;display:grid;place-items:center;background:linear-gradient(160deg,var(--tint),#fff 85%);position:relative}
+.card .pic svg{height:110px;width:auto;max-width:85%;transition:transform .4s}
+.card:hover .pic svg{transform:scale(1.07)}
+.card:hover .fan{animation:spin 1s linear infinite}
+.fan{transform-box:fill-box;transform-origin:center}
+.badge{position:absolute;top:10px;left:10px;font-size:11px;font-weight:800;padding:4px 9px;border-radius:999px;background:#fff;color:var(--ink-2);box-shadow:0 2px 6px rgba(0,0,0,.06)}
+.stock{position:absolute;top:10px;right:10px;font-size:11px;font-weight:700;padding:4px 9px;border-radius:999px;display:flex;align-items:center;gap:5px}
+.stock.y{background:#e3f8ef;color:#108a5a}.stock.n{background:#fff3e6;color:#b25a00}
+.stock i{width:6px;height:6px;border-radius:50%;background:currentColor}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .series{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.card h4{margin:0;font-size:16px;letter-spacing:-.01em;word-break:break-word}
+.card p{margin:0;color:var(--ink-2);font-size:13.5px;line-height:1.45;flex:1}
+.card .foot{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.kw{font-weight:800;font-size:15px}
+.kw small{font-weight:600;color:var(--muted);font-size:12px}
+.add{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:#fff;display:grid;place-items:center;color:var(--ink);transition:all .25s}
+.add:hover{background:var(--ink);color:#fff}
+.add.in{background:var(--vent);border-color:var(--vent);color:var(--night)}
+.empty{grid-column:1/-1;text-align:center;padding:60px 0;color:var(--muted)}
+
+/* modal + drawer */
+.overlay{position:fixed;inset:0;background:rgba(7,20,35,.55);backdrop-filter:blur(4px);z-index:60;opacity:0;pointer-events:none;transition:opacity .3s}
+.overlay.show{opacity:1;pointer-events:auto}
+.modal{position:fixed;left:50%;top:50%;transform:translate(-50%,-46%) scale(.97);width:min(860px,calc(100% - 32px));max-height:calc(100% - 40px);overflow:auto;background:#fff;border-radius:28px;z-index:70;opacity:0;pointer-events:none;transition:all .35s cubic-bezier(.2,.9,.3,1.2);display:grid;grid-template-columns:1fr 1fr}
+.modal.show{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+.modal .mpic{background:linear-gradient(160deg,var(--tint),#fff);display:grid;place-items:center;padding:30px;min-height:300px}
+.modal .mpic svg{width:80%;height:auto;max-height:260px}
+.modal .mbody{padding:32px}
+.modal h3{font-size:26px;margin:6px 0 10px;letter-spacing:-.02em;word-break:break-word}
+.spec{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;margin:18px 0;font-size:14px}
+.spec dt{color:var(--muted)}.spec dd{margin:0;font-weight:700}
+.x{position:absolute;right:14px;top:14px;width:38px;height:38px;border-radius:50%;border:0;background:var(--bg);font-size:20px}
+.onebox{display:flex;gap:12px;align-items:center;background:var(--bg);border-radius:14px;padding:12px 14px;font-size:13px;color:var(--ink-2);line-height:1.45}
+.onebox svg{flex:0 0 30px}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:#fff;z-index:70;transform:translateX(100%);transition:transform .4s cubic-bezier(.2,.9,.3,1);display:flex;flex-direction:column}
+.drawer.show{transform:none}
+.drawer header{padding:24px;border-bottom:1px solid var(--line);position:relative}
+.drawer h3{margin:0 0 4px;font-size:22px}
+.drawer .list{flex:1;overflow:auto;padding:16px 24px}
+.item{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.item .ti{width:52px;height:52px;border-radius:12px;background:var(--tint);display:grid;place-items:center;flex:0 0 52px}
+.item .ti svg{width:40px;height:40px}
+.item b{font-size:14px;display:block}
+.item span{font-size:12px;color:var(--muted)}
+.item button{margin-left:auto;border:0;background:none;color:var(--muted);font-size:18px}
+.drawer footer{padding:20px 24px;border-top:1px solid var(--line);display:grid;gap:10px}
+.linked{display:flex;align-items:center;gap:10px;padding:14px;border-radius:14px;background:linear-gradient(135deg,#e8f6fd,#e8fbf3);font-size:13px;font-weight:600;color:var(--ink-2)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:var(--ink);color:#fff;padding:12px 18px;border-radius:999px;font-weight:700;font-size:14px;z-index:90;transition:transform .35s cubic-bezier(.2,.9,.3,1.3)}
+.toast.show{transform:translate(-50%,0)}
+
+footer.site{background:var(--night);color:#8fa3b6;padding:40px 0;font-size:14px}
+footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:960px){
+  .hero .wrap,.band{grid-template-columns:1fr}
+  .ecos{grid-template-columns:1fr}
+  .band{padding:32px 22px}
+  nav.top .links{display:none}
+  .sys-btn{margin-left:auto}
+  .modal{grid-template-columns:1fr}
+  .modal .mpic{min-height:200px}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  .scene{grid-template-columns:1fr 118px;gap:10px}
+  .remote{padding:12px 10px;border-radius:26px}
+  .remote .temp{font-size:30px}
+  .stats{gap:20px}
+  .stat b{font-size:26px}
+  .filters{position:static}
+  .ctl input[type=range]{width:90px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></symbol>
+    <symbol id="i-snow" viewBox="0 0 24 24"><g stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"><path d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7"/><path d="M9 4l3 2 3-2M9 20l3-2 3 2"/></g></symbol>
+    <symbol id="i-wind" viewBox="0 0 24 24"><g stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"><path d="M3 8h11a3 3 0 1 0-3-3M3 12h16a3 3 0 1 1-3 3M3 16h8"/></g></symbol>
+    <symbol id="i-auto" viewBox="0 0 24 24"><g stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v4h-4"/></g><text x="12" y="15.5" font-size="8" font-weight="800" text-anchor="middle" fill="currentColor" font-family="Manrope">A</text></symbol>
+    <symbol id="i-power" viewBox="0 0 24 24"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"><path d="M12 3v8M6.3 6.3a8 8 0 1 0 11.4 0"/></g></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5zM3 13l9 5 9-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6l8-3z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<nav class="top" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#"><svg viewBox="0 0 32 32"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#36c5f0"/><stop offset="1" stop-color="#0a84d6"/></linearGradient></defs><path d="M16 3L29 27H3L16 3z" fill="url(#lg)"/><path d="M10 22c3-3 9-3 12 0" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M12.5 18c2-1.6 5-1.6 7 0" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>Alpic<b>Air</b></a>
+    <div class="links"><a href="#ekosistema">Ekosistēma</a><a href="#viena-pults">Viena pults</a><a href="#katalogs">Katalogs</a></div>
+    <button class="sys-btn" id="openSys"><svg width="16" height="16"><use href="#i-layers"/></svg>Mana sistēma <span class="n" id="sysN">0</span></button>
+  </div>
+</nav>
+
+<header class="hero" id="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow"><i></i>Siltums · Vēsums · Svaigs gaiss</span>
+      <h1>Viens zīmols.<br>Viena pults.<br><span class="grad">Visa māja.</span></h1>
+      <p class="lead">Siltumsūknis, kondicionieri un rekuperators no <b style="color:#fff">AlpicAir</b> — iekārtas, kas runā vienā valodā. Pārvaldiet apkuri, dzesēšanu un ventilāciju no vienas pults, bez dažādu zīmolu lietotņu jūklim.</p>
+      <div class="cta">
+        <a class="btn primary" href="#katalogs">Skatīt katalogu <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+        <a class="btn ghost" href="#viena-pults">Kā tas darbojas</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b data-count="162">0</b><span>modeļi katalogā</span></div>
+        <div class="stat"><b data-count="3">0</b><span>iekārtu grupas</span></div>
+        <div class="stat"><b data-count="1">0</b><span>pults visam</span></div>
+      </div>
+    </div>
+
+    <div class="scene">
+      <svg class="house" id="house" viewBox="20 30 450 370" aria-label="Māja ar AlpicAir iekārtām">
+        <defs>
+          <linearGradient id="roof" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#1f4e78"/><stop offset="1" stop-color="#143657"/></linearGradient>
+          <linearGradient id="wall" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#e9f1f7"/><stop offset="1" stop-color="#cfdde8"/></linearGradient>
+        </defs>
+        <ellipse cx="230" cy="382" rx="210" ry="14" fill="#000" opacity=".25"/>
+        <path d="M40 160 L230 40 L420 160 Z" fill="url(#roof)"/>
+        <rect x="60" y="160" width="340" height="220" fill="url(#wall)" rx="4"/>
+        <rect id="r1" class="room" x="74" y="174" width="150" height="90" rx="6" fill="#fff4ea"/>
+        <rect id="r2" class="room" x="236" y="174" width="150" height="90" rx="6" fill="#fff4ea"/>
+        <rect id="r3" class="room" x="74" y="276" width="312" height="92" rx="6" fill="#fff4ea"/>
+        <!-- recuperator in attic -->
+        <g class="dev" id="dRv" transform="translate(190 100)">
+          <rect width="80" height="40" rx="6" fill="#f5f9fc" stroke="#9fb6c9"/>
+          <circle cx="40" cy="20" r="12" fill="none" stroke="#2fd39a" stroke-width="2"/>
+          <g class="fanspin"><path d="M40 10v20M30 20h20" stroke="#2fd39a" stroke-width="2.5" stroke-linecap="round"/></g>
+          <rect x="-12" y="12" width="12" height="16" fill="#9fb6c9"/><rect x="80" y="12" width="12" height="16" fill="#9fb6c9"/>
+          <text class="lbl" x="40" y="-8" text-anchor="middle">REKUPERATORS</text>
+        </g>
+        <!-- wall ACs -->
+        <g class="dev" id="dAc1" transform="translate(100 182)">
+          <rect width="100" height="22" rx="8" fill="#fff" stroke="#b5c7d6"/>
+          <rect x="8" y="16" width="84" height="3" rx="1.5" fill="#dbe5ee"/>
+          <circle cx="90" cy="8" r="2.4" fill="#2fd39a"/>
+        </g>
+        <g class="dev" id="dAc2" transform="translate(262 182)">
+          <rect width="100" height="22" rx="8" fill="#13212f" stroke="#2a3e52"/>
+          <rect x="8" y="16" width="84" height="3" rx="1.5" fill="#2a3e52"/>
+          <circle cx="90" cy="8" r="2.4" fill="#2fd39a"/>
+        </g>
+        <!-- radiator / floor heating -->
+        <g opacity=".85"><path d="M90 356 q10 -6 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" stroke="var(--heat)" stroke-width="2.5" fill="none" id="floorPipe" style="transition:stroke 1s"/></g>
+        <!-- indoor unit (hydrobox) -->
+        <g class="dev" id="dHpIn" transform="translate(340 290)">
+          <rect width="34" height="62" rx="6" fill="#fff" stroke="#b5c7d6"/>
+          <rect x="6" y="8" width="22" height="10" rx="2" fill="#0b1b2b"/>
+          <circle cx="17" cy="44" r="5" fill="none" stroke="#b5c7d6"/>
+        </g>
+        <!-- outdoor heat pump -->
+        <g class="dev" id="dHp" transform="translate(404 300)">
+          <rect width="52" height="70" rx="6" fill="#f2f6f9" stroke="#9fb6c9"/>
+          <circle cx="26" cy="32" r="18" fill="#dfe8ef" stroke="#9fb6c9"/>
+          <g class="fanspin"><path d="M26 16 q8 10 0 16 q-8 6 0 16 M10 32 q10 -8 16 0 q6 8 16 0" stroke="#5f7a91" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+          <text class="lbl" x="52" y="88" text-anchor="end" style="fill:#cfe3f3">SILTUMSŪKNIS</text>
+        </g>
+        <!-- links to remote -->
+        <path class="lnk" d="M270 120 C 330 120, 380 120, 455 170"/>
+        <path class="lnk" d="M362 193 C 400 193, 420 190, 455 190"/>
+        <path class="lnk" d="M200 193 C 220 150, 380 150, 455 200"/>
+        <path class="lnk" d="M456 300 C 456 260, 456 240, 456 215"/>
+        <!-- particles -->
+        <g id="parts"></g>
+        <text class="lbl" x="150" y="252" text-anchor="middle" style="fill:#5f7a91">DZĪVOJAMĀ</text>
+        <text class="lbl" x="311" y="252" text-anchor="middle" style="fill:#5f7a91">GUĻAMISTABA</text>
+        <text class="lbl" x="200" y="300" text-anchor="middle" style="fill:#5f7a91">1. STĀVS · GRĪDAS APKURE</text>
+      </svg>
+
+      <div class="remote" id="remote">
+        <span class="tip">Viena pults</span>
+        <div class="screen">
+          <div class="brandmini">ALPICAIR</div>
+          <div class="temp"><span id="tval">22</span><small>°C</small></div>
+          <div class="modename" id="mname">Apkure</div>
+          <div class="icons"><span class="on" title="Siltumsūknis"></span><span class="on" title="Kondicionieri"></span><span class="on" title="Rekuperators"></span></div>
+        </div>
+        <div class="row">
+          <button class="rbtn act" data-mode="heat"><svg><use href="#i-sun"/></svg>Apkure</button>
+          <button class="rbtn" data-mode="cool"><svg><use href="#i-snow"/></svg>Dzesē</button>
+          <button class="rbtn" data-mode="vent"><svg><use href="#i-wind"/></svg>Vent.</button>
+          <button class="rbtn" data-mode="auto"><svg><use href="#i-auto"/></svg>Auto</button>
+        </div>
+        <div class="tempctl"><button class="rbtn" id="tminus">−</button><button class="rbtn" id="tplus">+</button></div>
+        <button class="power" id="power" aria-label="Ieslēgt/izslēgt"><svg width="22" height="22"><use href="#i-power"/></svg></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="ekosistema">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Ekosistēma</div>
+      <h2>Trīs iekārtu grupas.<br>Viena loģika.</h2>
+      <p class="sub">Izvēlieties siltuma avotu, dzesēšanu un ventilāciju no viena ražotāja — vienota vadība, viens serviss, viena atbildība par visu sistēmu.</p>
+    </div>
+    <div class="ecos" id="ecos"></div>
+  </div>
+</section>
+
+<section id="viena-pults" style="padding-top:0">
+  <div class="wrap">
+    <div class="band reveal">
+      <div>
+        <div class="kicker" style="color:var(--brand-2)">Viena pults</div>
+        <h2>Visu māju vada<br>viena pults</h2>
+        <p class="sub">Kad visas iekārtas ir AlpicAir, jums nav jāžonglē ar vairākām pultīm un lietotnēm. Apkure, dzesēšana un svaiga gaisa padeve — vienā vietā.</p>
+        <div class="feat">
+          <div><span class="ic"><svg width="20" height="20"><use href="#i-phone"/></svg></span><p style="margin:0"><b>Viena vadība visam</b><span>Temperatūra, režīmi un grafiki visām iekārtām no vienas pults vai viedtālruņa.</span></p></div>
+          <div><span class="ic"><svg width="20" height="20"><use href="#i-layers"/></svg></span><p style="margin:0"><b>Iekārtas strādā saskaņoti</b><span>Siltumsūknis, kondicionieri un rekuperators nekonkurē savā starpā.</span></p></div>
+          <div><span class="ic"><svg width="20" height="20"><use href="#i-shield"/></svg></span><p style="margin:0"><b>Viens partneris</b><span>Viens zīmols — vienkāršāka uzstādīšana, apkope un garantija.</span></p></div>
+        </div>
+      </div>
+      <div class="orbit">
+        <div class="ring"></div><div class="ring r2"></div><div class="pulse"></div>
+        <div class="core"><svg viewBox="0 0 40 64"><rect x="2" y="2" width="36" height="60" rx="10" fill="#f4f8fb"/><rect x="7" y="8" width="26" height="18" rx="4" fill="#0b1b2b"/><text x="20" y="21" text-anchor="middle" font-size="9" font-weight="800" fill="#36c5f0" font-family="Manrope">22°</text><circle cx="13" cy="36" r="3.5" fill="#ff7a2f"/><circle cx="27" cy="36" r="3.5" fill="#2fb7ff"/><circle cx="13" cy="47" r="3.5" fill="#2fd39a"/><circle cx="27" cy="47" r="3.5" fill="#0a84d6"/></svg></div>
+        <div class="node n1" data-ill="hp"><em>Siltumsūknis</em></div>
+        <div class="node n2" data-ill="ac"><em>Kondicionieris</em></div>
+        <div class="node n3" data-ill="rv"><em>Rekuperators</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="katalogs">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Katalogs</div>
+      <h2>AlpicAir produkti</h2>
+      <p class="sub">Atlasiet pēc grupas, sērijas vai jaudas. Pievienojiet iekārtas „Manai sistēmai“ un salieciet visu māju no viena zīmola.</p>
+    </div>
+  </div>
+  <div class="filters">
+    <div class="wrap">
+      <div class="tabs" id="tabs"></div>
+      <div class="chips" id="chips"></div>
+      <div class="tools">
+        <label class="search"><svg width="18" height="18" style="color:var(--muted)"><use href="#i-search"/></svg><input id="q" placeholder="Meklēt modeli, sēriju…"></label>
+        <label class="ctl" id="kwCtl">Jauda no <input type="range" id="kw" min="0" max="40" step="0.5" value="0"><b id="kwv">0</b> kW</label>
+        <label class="ctl" id="stockCtl"><span class="toggle"></span>Tikai noliktavā</label>
+        <label class="ctl">Kārtot <select id="sort"><option value="name">pēc modeļa</option><option value="kwa">jauda ↑</option><option value="kwd">jauda ↓</option></select></label>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="count" id="count"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div><b style="color:#fff">AlpicAir</b> — siltumsūkņi, kondicionieri, rekuperatori.</div>
+    <div>Produktu dati: BVT Partneri iekārtu katalogs · Cenas pēc pieprasījuma</div>
+  </div>
+</footer>
+
+<div class="overlay" id="ov"></div>
+<div class="modal" id="modal"></div>
+<aside class="drawer" id="drawer">
+  <header>
+    <h3>Mana sistēma</h3>
+    <div style="color:var(--muted);font-size:14px">Visas izvēlētās iekārtas — viens zīmols</div>
+    <button class="x" id="closeDrawer">×</button>
+  </header>
+  <div class="list" id="sysList"></div>
+  <footer>
+    <div class="linked"><svg width="28" height="28" style="color:var(--brand)"><use href="#i-phone"/></svg><span id="sysMsg">Pievienojiet iekārtas no kataloga</span></div>
+    <button class="btn primary" id="copySys" style="justify-content:center">Kopēt sarakstu piedāvājumam</button>
+  </footer>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script src="data.js"></script>
+<script>
+const CATS={
+  hp:{name:"Siltumsūkņi",short:"Siltumsūknis",color:"#ff7a2f",tint:"#fff1e6",desc:"Gaiss-ūdens siltumsūkņi apkurei un karstajam ūdenim — Split, Monobloks, All in One un jaudīgie MAXX R290."},
+  ac:{name:"Kondicionieri",short:"Kondicionieris",color:"#2fb7ff",tint:"#e7f6ff",desc:"Sienas, kasešu, kanālu un multi-split sistēmas. HYPER NORDIC sildīšanai līdz -30°C."},
+  rv:{name:"Rekuperācija",short:"Rekuperators",color:"#2fd39a",tint:"#e6faf2",desc:"NEST pretplūsmas un rotācijas rekuperatori svaigam gaisam ar siltuma atgūšanu."},
+  ctl:{name:"Vadība",short:"Vadība",color:"#0a84d6",tint:"#e8f1fb",desc:"Pultis, WiFi moduļi un integrācija — viss vienā vadībā."}
+};
+const SUBORD=[...new Set(PRODUCTS.map(r=>r[3]))];
+const P=PRODUCTS.map((r,i)=>({id:i,model:r[0],name:r[1],cat:r[2],sub:r[3],series:r[4],kw:r[5],stock:!!r[6]}));
+
+/* ---------- illustrations ---------- */
+function ill(p){
+  const t=typeof p==="string"?{cat:p,sub:"",series:"",model:""}:p;
+  const dark=/black|TB/.test(t.series+t.model);
+  const body=dark?"#1a2836":"#ffffff", edge=dark?"#33475a":"#b8c8d6";
+  const fan=(cx,cy,r)=>`<circle cx="${cx}" cy="${cy}" r="${r}" fill="#e3ebf2" stroke="#9fb3c5" stroke-width="2"/><g class="fan"><path d="M${cx} ${cy-r+4} q${r*.5} ${r*.6} 0 ${r-4} q-${r*.5} ${r*.4} 0 ${r-4} M${cx-r+4} ${cy} q${r*.6} -${r*.5} ${r-4} 0 q${r*.4} ${r*.5} ${r-4} 0" stroke="#5f7a91" stroke-width="3" fill="none" stroke-linecap="round"/></g><circle cx="${cx}" cy="${cy}" r="3" fill="#5f7a91"/>`;
+  const outdoor=(w=120,h=96)=>`<svg viewBox="0 0 ${w+20} ${h+20}"><rect x="10" y="10" width="${w}" height="${h}" rx="10" fill="#f4f8fb" stroke="#a9bccd" stroke-width="2"/>${fan(10+w*.42,10+h/2,h*.36)}<g stroke="#c9d6e1" stroke-width="2">${[0,1,2,3,4].map(i=>`<path d="M${10+w*.8} ${28+i*12}h${w*.12}"/>`).join("")}</g><rect x="20" y="${h+8}" width="20" height="6" rx="2" fill="#a9bccd"/><rect x="${w-20}" y="${h+8}" width="20" height="6" rx="2" fill="#a9bccd"/></svg>`;
+  if(t.cat==="hp"){
+    if(t.sub==="All in One") return `<svg viewBox="0 0 200 140"><rect x="20" y="8" width="60" height="124" rx="10" fill="#fff" stroke="#a9bccd" stroke-width="2"/><rect x="32" y="22" width="36" height="20" rx="4" fill="#0b1b2b"/><text x="50" y="36" text-anchor="middle" font-size="10" font-weight="800" fill="#ff7a2f" font-family="Manrope">45°</text><path d="M32 60h36M32 70h36" stroke="#e3ebf2" stroke-width="3"/><g transform="translate(92 34)"><rect width="100" height="84" rx="10" fill="#f4f8fb" stroke="#a9bccd" stroke-width="2"/>${fan(42,42,30)}</g></svg>`;
+    if(/Split/.test(t.sub)) return `<svg viewBox="0 0 200 140"><rect x="16" y="20" width="56" height="84" rx="8" fill="#fff" stroke="#a9bccd" stroke-width="2"/><rect x="26" y="32" width="36" height="16" rx="3" fill="#0b1b2b"/><path d="M72 64 C 84 64, 84 70, 92 70" stroke="#ff7a2f" stroke-width="3" fill="none"/><g transform="translate(92 26)"><rect width="100" height="84" rx="10" fill="#f4f8fb" stroke="#a9bccd" stroke-width="2"/>${fan(42,42,30)}</g></svg>`;
+    if(t.sub==="MAXX R290") return `<svg viewBox="0 0 200 130"><rect x="8" y="10" width="184" height="104" rx="10" fill="#f4f8fb" stroke="#a9bccd" stroke-width="2"/>${fan(60,62,38)}${fan(140,62,38)}<rect x="20" y="114" width="24" height="8" rx="2" fill="#a9bccd"/><rect x="156" y="114" width="24" height="8" rx="2" fill="#a9bccd"/></svg>`;
+    return outdoor(140,100);
+  }
+  if(t.cat==="ac"){
+    const wall=`<svg viewBox="0 0 200 110"><rect x="10" y="20" width="180" height="48" rx="16" fill="${body}" stroke="${edge}" stroke-width="2"/><rect x="24" y="54" width="152" height="6" rx="3" fill="${dark?"#33475a":"#dbe5ee"}"/><circle cx="170" cy="36" r="3" fill="#2fd39a"/><text x="30" y="40" font-size="9" font-weight="800" fill="${dark?"#7f97ad":"#9fb3c5"}" font-family="Manrope" letter-spacing="1.5">ALPICAIR</text><g stroke="#2fb7ff" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".7"><path d="M50 78 q8 10 0 20"/><path d="M100 78 q8 10 0 22"/><path d="M150 78 q8 10 0 20"/></g></svg>`;
+    if(t.sub==="Sienas") return wall;
+    if(t.sub==="Kasetes"||(t.sub==="Multi-split"&&/^AC/.test(t.model))) return `<svg viewBox="0 0 160 160"><rect x="14" y="14" width="132" height="132" rx="14" fill="#fff" stroke="#a9bccd" stroke-width="2"/><rect x="44" y="44" width="72" height="72" rx="8" fill="#eef3f7" stroke="#c9d6e1"/><g fill="#c9d6e1"><rect x="30" y="24" width="100" height="8" rx="4"/><rect x="30" y="128" width="100" height="8" rx="4"/><rect x="24" y="30" width="8" height="100" rx="4"/><rect x="128" y="30" width="8" height="100" rx="4"/></g><g stroke="#e3ebf2" stroke-width="2">${[0,1,2,3,4,5].map(i=>`<path d="M50 ${54+i*10}h60"/>`).join("")}</g></svg>`;
+    if(t.sub==="Kanāla"||(t.sub==="Multi-split"&&/^AT/.test(t.model))) return `<svg viewBox="0 0 200 110"><path d="M20 40 L60 20 H190 L150 40 Z" fill="#eef3f7" stroke="#a9bccd" stroke-width="2"/><rect x="20" y="40" width="130" height="44" fill="#fff" stroke="#a9bccd" stroke-width="2"/><path d="M150 40 L190 20 V64 L150 84 Z" fill="#dfe8ef" stroke="#a9bccd" stroke-width="2"/><g stroke="#c9d6e1" stroke-width="2">${[0,1,2,3,4,5,6].map(i=>`<path d="M${34+i*16} 50v24"/>`).join("")}</g><g stroke="#2fb7ff" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".7"><path d="M8 54h-0M2 62h14M6 70h10"/></g></svg>`;
+    if(t.sub==="Griestu-grīdas") return `<svg viewBox="0 0 200 110"><rect x="10" y="22" width="180" height="56" rx="12" fill="#fff" stroke="#a9bccd" stroke-width="2"/><rect x="22" y="58" width="156" height="10" rx="5" fill="#dbe5ee"/><g stroke="#2fb7ff" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".7"><path d="M50 86 q10 6 20 0"/><path d="M90 88 q10 6 20 0"/><path d="M130 86 q10 6 20 0"/></g></svg>`;
+    if(t.sub==="Multi-split"||t.sub==="Āra bloki") {
+      const multi=/AM\dO/.test(t.model);
+      return `<svg viewBox="0 0 170 130"><rect x="10" y="10" width="${multi?150:140}" height="100" rx="10" fill="#f4f8fb" stroke="#a9bccd" stroke-width="2"/>${fan(66,60,36)}${multi?`<g>${Array.from({length:+t.model[2]}).map((_,i)=>`<circle cx="${132}" cy="${28+i*16}" r="5" fill="#2fb7ff"/>`).join("")}</g>`:`<g stroke="#c9d6e1" stroke-width="2">${[0,1,2,3,4].map(i=>`<path d="M118 ${30+i*12}h22"/>`).join("")}</g>`}<rect x="22" y="110" width="22" height="7" rx="2" fill="#a9bccd"/><rect x="${multi?126:116}" y="110" width="22" height="7" rx="2" fill="#a9bccd"/></svg>`;
+    }
+    if(t.sub==="Ventilatorkonvektori") return /^ACI/.test(t.model)?`<svg viewBox="0 0 160 160"><rect x="14" y="14" width="132" height="132" rx="14" fill="#fff" stroke="#a9bccd" stroke-width="2"/>${fan(80,80,34)}<path d="M20 150 q20 -8 40 0 t40 0 t40 0" stroke="#2fb7ff" stroke-width="3" fill="none"/></svg>`:wall;
+    if(t.sub==="Kemperiem") return `<svg viewBox="0 0 200 130"><rect x="10" y="60" width="180" height="50" rx="14" fill="#fff" stroke="#a9bccd" stroke-width="2"/><rect x="24" y="72" width="40" height="22" rx="4" fill="#cfe6f6"/><circle cx="50" cy="112" r="12" fill="#2a3e52"/><circle cx="150" cy="112" r="12" fill="#2a3e52"/><rect x="80" y="34" width="70" height="26" rx="8" fill="#f4f8fb" stroke="#a9bccd" stroke-width="2"/>${fan(115,47,9)}</svg>`;
+    if(t.sub==="Sausinātāji") return `<svg viewBox="0 0 120 160"><rect x="20" y="10" width="80" height="140" rx="16" fill="#fff" stroke="#a9bccd" stroke-width="2"/><rect x="32" y="24" width="56" height="10" rx="5" fill="#dbe5ee"/><path d="M60 74 q-14 20 0 30 q14 -10 0 -30z" fill="#2fb7ff" opacity=".8"/><rect x="30" y="118" width="60" height="22" rx="6" fill="#eef3f7"/></svg>`;
+    return wall;
+  }
+  if(t.cat==="rv"){
+    const rot=t.sub==="Rotācijas";
+    if(t.sub==="Decentralizēta") return `<svg viewBox="0 0 150 150"><circle cx="75" cy="75" r="60" fill="#fff" stroke="#a9bccd" stroke-width="2"/><circle cx="75" cy="75" r="40" fill="#eef3f7"/><g class="fan"><path d="M75 40 q14 18 0 35 q-14 17 0 35 M40 75 q18 -14 35 0 q17 14 35 0" stroke="#2fd39a" stroke-width="4" fill="none" stroke-linecap="round"/></g></svg>`;
+    return `<svg viewBox="0 0 200 140"><rect x="30" y="20" width="140" height="100" rx="10" fill="#fff" stroke="#a9bccd" stroke-width="2"/>${[[10,34],[10,86],[170,34],[170,86]].map(([x,y])=>`<rect x="${x}" y="${y-10}" width="20" height="20" rx="3" fill="#dfe8ef" stroke="#a9bccd"/>`).join("")}${rot?`<circle cx="100" cy="70" r="32" fill="#eef3f7" stroke="#a9bccd"/><g class="fan">${[0,30,60,90,120,150].map(a=>`<path d="M100 70 L${100+30*Math.cos(a*Math.PI/180)} ${70+30*Math.sin(a*Math.PI/180)}" stroke="#2fd39a" stroke-width="2"/>`).join("")}</g>`:`<path d="M70 40 L130 100 M130 40 L70 100" stroke="#c9d6e1" stroke-width="2"/><rect x="78" y="48" width="44" height="44" transform="rotate(45 100 70)" fill="#eef3f7" stroke="#a9bccd"/>`}<path d="M36 34 H62" stroke="#ff7a2f" stroke-width="3"/><path d="M138 34 H164" stroke="#2fd39a" stroke-width="3"/><path d="M62 106 H36" stroke="#2fb7ff" stroke-width="3"/><path d="M164 106 H138" stroke="#8aa0b4" stroke-width="3"/></svg>`;
+  }
+  // ctl
+  if(/Centr/.test(t.sub)||/CE52|CCM/.test(t.model)) return `<svg viewBox="0 0 160 140"><rect x="16" y="14" width="128" height="100" rx="12" fill="#fff" stroke="#a9bccd" stroke-width="2"/><rect x="26" y="24" width="108" height="70" rx="6" fill="#0b1b2b"/>${[0,1,2,3].map(i=>`<rect x="${34+(i%2)*50}" y="${32+Math.floor(i/2)*30}" width="42" height="24" rx="4" fill="${["#ff7a2f","#2fb7ff","#2fd39a","#0a84d6"][i]}" opacity=".85"/>`).join("")}</svg>`;
+  if(t.sub==="Integrācija") return `<svg viewBox="0 0 160 140"><rect x="40" y="30" width="80" height="80" rx="12" fill="#fff" stroke="#a9bccd" stroke-width="2"/><g stroke="#0a84d6" stroke-width="3" fill="none" stroke-linecap="round"><path d="M62 66 a26 26 0 0 1 36 0"/><path d="M70 76 a14 14 0 0 1 20 0"/></g><circle cx="80" cy="86" r="4" fill="#0a84d6"/><path d="M20 70h20M120 70h20" stroke="#a9bccd" stroke-width="3"/></svg>`;
+  return `<svg viewBox="0 0 100 160"><rect x="14" y="8" width="72" height="144" rx="20" fill="#f4f8fb" stroke="#a9bccd" stroke-width="2"/><rect x="24" y="22" width="52" height="40" rx="8" fill="#0b1b2b"/><text x="50" y="48" text-anchor="middle" font-size="14" font-weight="800" fill="#36c5f0" font-family="Manrope">22°</text><circle cx="36" cy="82" r="8" fill="#ff7a2f"/><circle cx="64" cy="82" r="8" fill="#2fb7ff"/><circle cx="36" cy="106" r="8" fill="#2fd39a"/><circle cx="64" cy="106" r="8" fill="#0a84d6"/><circle cx="50" cy="132" r="9" fill="#fff" stroke="#e04545" stroke-width="2"/></svg>`;
+}
+
+/* ---------- hero interaction ---------- */
+const MODES={heat:{c:"#ff7a2f",n:"Apkure",room:"#fff1e4",gx:"30%"},cool:{c:"#2fb7ff",n:"Dzesēšana",room:"#e6f5ff",gx:"60%"},vent:{c:"#2fd39a",n:"Ventilācija",room:"#e9fbf3",gx:"45%"},auto:{c:"#36c5f0",n:"Auto",room:"#eef6fb",gx:"50%"}};
+let mode="heat",temp=22,on=true;
+const house=document.getElementById("house"),parts=document.getElementById("parts");
+const devs={heat:["dHp","dHpIn","dRv"],cool:["dAc1","dAc2","dRv"],vent:["dRv"],auto:["dHp","dHpIn","dAc1","dAc2","dRv"]};
+function applyMode(){
+  const m=MODES[mode];
+  document.documentElement.style.setProperty("--mode",m.c);
+  document.getElementById("hero").style.setProperty("--gx",m.gx);
+  ["r1","r2","r3"].forEach(id=>document.getElementById(id).setAttribute("fill",on?m.room:"#e4ebf1"));
+  document.getElementById("floorPipe").style.stroke=on&&(mode==="heat"||mode==="auto")?"#ff7a2f":"#c9d6e1";
+  document.getElementById("mname").textContent=on?m.n:"Izslēgts";
+  document.getElementById("tval").textContent=on?temp:"--";
+  document.querySelectorAll(".house .dev").forEach(d=>d.classList.toggle("off",!on||!devs[mode].includes(d.id)));
+  const ic=document.querySelectorAll(".remote .icons span");
+  ic[0].classList.toggle("on",on&&devs[mode].includes("dHp"));ic[1].classList.toggle("on",on&&devs[mode].includes("dAc1"));ic[2].classList.toggle("on",on);
+  house.classList.toggle("power-off",!on);
+}
+document.querySelectorAll(".rbtn[data-mode]").forEach(b=>b.onclick=()=>{mode=b.dataset.mode;on=true;document.querySelectorAll(".rbtn[data-mode]").forEach(x=>x.classList.toggle("act",x===b));document.getElementById("power").classList.remove("offst");applyMode()});
+document.getElementById("tplus").onclick=()=>{if(on){temp=Math.min(30,temp+1);applyMode()}};
+document.getElementById("tminus").onclick=()=>{if(on){temp=Math.max(16,temp-1);applyMode()}};
+document.getElementById("power").onclick=e=>{on=!on;e.currentTarget.classList.toggle("offst",!on);applyMode()};
+// particles
+const NS="http://www.w3.org/2000/svg",pList=[];
+const zones=[[80,210,140,50],[242,210,140,50],[80,312,300,40]];
+for(let i=0;i<34;i++){const c=document.createElementNS(NS,"circle");c.setAttribute("class","particle");c.setAttribute("r",(1.5+Math.random()*2).toFixed(1));parts.appendChild(c);const z=zones[i%3];pList.push({el:c,z,x:z[0]+Math.random()*z[2],y:z[1]+Math.random()*z[3],v:.2+Math.random()*.5,ph:Math.random()*6})}
+let tt=0;(function loop(){tt+=.016;pList.forEach(p=>{const dir=mode==="cool"?1:mode==="vent"?0:-1;p.y+=on?(dir===0?0:dir*p.v*.6):0;p.x+=on?(dir===0?p.v*1.2:Math.sin(tt*2+p.ph)*.3):0;const[zx,zy,zw,zh]=p.z;if(p.y<zy)p.y=zy+zh;if(p.y>zy+zh)p.y=zy;if(p.x>zx+zw)p.x=zx;if(p.x<zx)p.x=zx+zw;p.el.setAttribute("cx",p.x.toFixed(1));p.el.setAttribute("cy",p.y.toFixed(1));p.el.setAttribute("opacity",on?(.35+.4*Math.sin(tt*3+p.ph)**2).toFixed(2):0)});requestAnimationFrame(loop)})();
+// auto demo cycle until user touches remote
+let demo=setInterval(()=>{const k=Object.keys(MODES);const nm=k[(k.indexOf(mode)+1)%k.length];document.querySelector(`.rbtn[data-mode=${nm}]`).click()},3500);
+document.getElementById("remote").addEventListener("pointerdown",()=>clearInterval(demo),{once:true});
+applyMode();
+
+/* ---------- ecosystem cards ---------- */
+const ecos=document.getElementById("ecos");
+["hp","ac","rv"].forEach((k,i)=>{const c=CATS[k];const n=P.filter(p=>p.cat===k).length;const el=document.createElement("div");el.className="eco reveal";el.style.cssText=`--c:${c.color};transition-delay:${i*.12}s`;el.innerHTML=`<div class="ill">${ill(k)}</div><h3>${c.name}</h3><p>${c.desc}</p><div class="meta"><span>${n} modeļi</span><span class="go">Skatīt <svg width="16" height="16"><use href="#i-arrow"/></svg></span></div>`;el.onclick=()=>{setCat(k);document.getElementById("katalogs").scrollIntoView()};ecos.appendChild(el)});
+document.querySelectorAll(".orbit .node").forEach(n=>n.insertAdjacentHTML("afterbegin",ill(n.dataset.ill)));
+
+/* ---------- catalog ---------- */
+const st={cat:"all",sub:null,q:"",kw:0,stock:false,sort:"name"};
+const tabsEl=document.getElementById("tabs"),chipsEl=document.getElementById("chips"),grid=document.getElementById("grid");
+function renderTabs(){
+  const list=[["all","Visi",P.length],...Object.entries(CATS).map(([k,c])=>[k,c.name,P.filter(p=>p.cat===k).length])];
+  tabsEl.innerHTML=list.map(([k,n,c])=>`<button class="tab ${st.cat===k?"on":""}" data-k="${k}">${n}<span class="c">${c}</span></button>`).join("");
+  tabsEl.querySelectorAll(".tab").forEach(b=>b.onclick=()=>setCat(b.dataset.k));
+  const subs=st.cat==="all"?[]:[...new Set(P.filter(p=>p.cat===st.cat).map(p=>p.sub))];
+  chipsEl.innerHTML=subs.map(s=>`<button class="chip ${st.sub===s?"on":""}">${s}</button>`).join("");
+  chipsEl.querySelectorAll(".chip").forEach((b,i)=>b.onclick=()=>{st.sub=st.sub===subs[i]?null:subs[i];renderTabs();render()});
+  document.getElementById("kwCtl").style.display=(st.cat==="rv"||st.cat==="ctl")?"none":"";
+}
+function setCat(k){st.cat=k;st.sub=null;renderTabs();render()}
+function filtered(){
+  const q=st.q.toLowerCase().trim();
+  let r=P.filter(p=>(st.cat==="all"||p.cat===st.cat)&&(!st.sub||p.sub===st.sub)&&(!st.stock||p.stock)&&(!st.kw||(p.kw!=null&&p.kw>=st.kw))&&(!q||(p.model+" "+p.name+" "+p.series+" "+p.sub).toLowerCase().includes(q)));
+  const nk=x=>x==null?-1:x;
+  if(st.sort==="kwa")r.sort((a,b)=>(a.kw??999)-(b.kw??999));
+  else if(st.sort==="kwd")r.sort((a,b)=>nk(b.kw)-nk(a.kw));
+  else r.sort((a,b)=>Object.keys(CATS).indexOf(a.cat)-Object.keys(CATS).indexOf(b.cat)||SUBORD.indexOf(a.sub)-SUBORD.indexOf(b.sub)||a.series.localeCompare(b.series)||(a.kw??0)-(b.kw??0));
+  return r;
+}
+function render(){
+  const r=filtered();
+  document.getElementById("count").textContent=`Atrasti ${r.length} produkti`;
+  grid.innerHTML=r.length?r.map((p,i)=>{const c=CATS[p.cat];return `<article class="card" data-id="${p.id}" style="--tint:${c.tint};--accent:${c.color};animation-delay:${Math.min(i,16)*30}ms"><div class="pic"><span class="badge">${p.sub}</span><span class="stock ${p.stock?"y":"n"}"><i></i>${p.stock?"Noliktavā":"Pēc pasūtījuma"}</span>${ill(p)}</div><div class="body"><div class="series">${p.series}</div><h4>${p.model}</h4><p>${p.name}</p><div class="foot"><span class="kw">${p.kw!=null?`${String(p.kw).replace(".",",")} <small>kW</small>`:`<small>${c.short}</small>`}</span><button class="add ${sys.has(p.id)?"in":""}" data-add="${p.id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"><use href="#${sys.has(p.id)?"i-check":"i-plus"}"/></svg></button></div></div></article>`}).join(""):`<div class="empty">Nekas netika atrasts. Mēģiniet mainīt filtrus.</div>`;
+}
+grid.addEventListener("click",e=>{const a=e.target.closest("[data-add]");if(a){e.stopPropagation();toggleSys(+a.dataset.add);return}const c=e.target.closest(".card");if(c)openModal(+c.dataset.id)});
+document.getElementById("q").oninput=e=>{st.q=e.target.value;render()};
+document.getElementById("kw").oninput=e=>{st.kw=+e.target.value;document.getElementById("kwv").textContent=st.kw;render()};
+document.getElementById("stockCtl").onclick=e=>{e.preventDefault();st.stock=!st.stock;e.currentTarget.classList.toggle("on",st.stock);render()};
+document.getElementById("sort").onchange=e=>{st.sort=e.target.value;render()};
+
+/* ---------- modal ---------- */
+const ov=document.getElementById("ov"),modal=document.getElementById("modal"),drawer=document.getElementById("drawer");
+function openModal(id){
+  const p=P[id],c=CATS[p.cat];
+  modal.style.setProperty("--tint",c.tint);
+  modal.innerHTML=`<div class="mpic">${ill(p)}</div><div class="mbody"><button class="x" id="mx">×</button><div class="series" style="font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:${c.color}">${c.name} · ${p.series}</div><h3>${p.model}</h3><p style="color:var(--ink-2);line-height:1.55;margin:0">${p.name}</p><dl class="spec"><dt>Grupa</dt><dd>${c.name}</dd><dt>Tips</dt><dd>${p.sub}</dd><dt>Sērija</dt><dd>${p.series}</dd>${p.kw!=null?`<dt>Jauda</dt><dd>${String(p.kw).replace(".",",")} kW</dd>`:""}<dt>Pieejamība</dt><dd style="color:${p.stock?"#108a5a":"#b25a00"}">${p.stock?"Noliktavā":"Pēc pasūtījuma"}</dd><dt>Cena</dt><dd>Pēc pieprasījuma</dd></dl><div class="onebox"><svg width="30" height="30" style="color:var(--brand)"><use href="#i-phone"/></svg><span>Iekļaujas vienotā AlpicAir sistēmā — vadiet kopā ar pārējām iekārtām no vienas pults.</span></div><button class="btn primary" id="madd" style="margin-top:18px;width:100%;justify-content:center">${sys.has(id)?"Noņemt no sistēmas":"Pievienot manai sistēmai"}</button></div>`;
+  modal.querySelector("#mx").onclick=closeAll;
+  modal.querySelector("#madd").onclick=()=>{toggleSys(id);closeAll()};
+  ov.classList.add("show");modal.classList.add("show");
+}
+function closeAll(){ov.classList.remove("show");modal.classList.remove("show");drawer.classList.remove("show")}
+ov.onclick=closeAll;document.addEventListener("keydown",e=>{if(e.key==="Escape")closeAll()});
+
+/* ---------- my system ---------- */
+const sys=new Set();
+try{(JSON.parse(localStorage.getItem("alpic-sys")||"[]")).forEach(i=>P[i]&&sys.add(i))}catch(e){}
+function save(){try{localStorage.setItem("alpic-sys",JSON.stringify([...sys]))}catch(e){}}
+function toast(t){const el=document.getElementById("toast");el.textContent=t;el.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove("show"),2000)}
+function toggleSys(id){
+  if(sys.has(id)){sys.delete(id);toast("Noņemts no sistēmas")}else{sys.add(id);toast(`${P[id].model} pievienots sistēmai`)}
+  save();updSys();render();
+  const n=document.getElementById("sysN");n.classList.add("bump");setTimeout(()=>n.classList.remove("bump"),300);
+}
+function updSys(){
+  document.getElementById("sysN").textContent=sys.size;
+  const items=[...sys].map(i=>P[i]);
+  document.getElementById("sysList").innerHTML=items.length?items.map(p=>`<div class="item" style="--tint:${CATS[p.cat].tint}"><div class="ti">${ill(p)}</div><div><b>${p.model}</b><span>${CATS[p.cat].short} · ${p.series}</span></div><button data-rm="${p.id}" aria-label="Noņemt">×</button></div>`).join(""):`<p style="color:var(--muted);text-align:center;padding:40px 0">Sistēma vēl tukša.<br>Pievienojiet iekārtas no kataloga ar „+“.</p>`;
+  document.querySelectorAll("[data-rm]").forEach(b=>b.onclick=()=>toggleSys(+b.dataset.rm));
+  const have=new Set(items.map(p=>p.cat));
+  const groups=["hp","ac","rv"].filter(k=>have.has(k)).map(k=>CATS[k].short.toLowerCase());
+  document.getElementById("sysMsg").textContent=items.length?`${items.length} iekārtas${groups.length>1?" ("+groups.join(", ")+")":""} — viens zīmols, vienota vadība`:"Pievienojiet iekārtas no kataloga";
+}
+document.getElementById("openSys").onclick=()=>{ov.classList.add("show");drawer.classList.add("show")};
+document.getElementById("closeDrawer").onclick=closeAll;
+document.getElementById("copySys").onclick=()=>{
+  if(!sys.size){toast("Sistēma ir tukša");return}
+  const txt="AlpicAir sistēma:\n"+[...sys].map(i=>`• ${P[i].model} — ${P[i].name}${P[i].kw!=null?` (${P[i].kw} kW)`:""}`).join("\n");
+  (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(()=>toast("Saraksts nokopēts"),()=>toast("Neizdevās nokopēt"));
+};
+
+/* ---------- misc ---------- */
+const nav=document.getElementById("nav");
+addEventListener("scroll",()=>nav.classList.toggle("solid",scrollY>40),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+document.querySelectorAll("[data-count]").forEach(el=>{const to=+el.dataset.count,t0=performance.now();(function f(t){const k=Math.min(1,(t-t0)/1400);el.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)})(t0)});
+renderTabs();render();updSys();
+</script>
+</body>
+</html>
