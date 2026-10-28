@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AlpicAir — viena sistēma, viens panelis</title>
-<meta name="description" content="AlpicAir siltumsūkņi, kondicionieri un rekuperatori — viena zīmola klimata sistēma, ko vada viens sienas panelis Sonoff NSPanel Pro.">
+<meta name="description" content="AlpicAir siltumsūkņi, kondicionieri un rekuperatori — viena zīmola klimata sistēma, ko vada viens sienas panelis.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Teko:wght@500;600&display=swap" rel="stylesheet">
@@ -16,8 +16,8 @@
   --mode:var(--heat);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;overflow-x:hidden}
-body{margin:0;font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{margin:0;font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:clip}
 body.lock{overflow:hidden}
 a{color:inherit}
 button{font:inherit;cursor:pointer;color:inherit}
@@ -316,6 +316,124 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   section{padding:70px 0}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* ===== scrolly ===== */
+.progress{position:fixed;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,var(--heat),var(--brand2),var(--cool));z-index:60;transition:width .1s linear}
+.scrolly{position:relative;height:calc(var(--n,7) * 100vh + 40vh)}
+.scrolly .sticky{position:sticky;top:0;height:100vh;display:grid;grid-template-columns:minmax(300px,0.8fr) 1.4fr;gap:30px;align-items:center;padding:80px 40px 30px;max-width:1500px;margin:0 auto;overflow:hidden}
+.s-text{position:relative;height:min(560px,70vh)}
+.s-step{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(40px);transition:opacity .6s,transform .6s;pointer-events:none}
+.s-step.on{opacity:1;transform:none;pointer-events:auto}
+.s-step.past{transform:translateY(-40px)}
+.s-step .kick{font-size:20px}
+.s-step h1,.s-step h2{font-size:clamp(34px,4.4vw,66px);line-height:1;letter-spacing:-.035em;margin:10px 0 18px;font-weight:800}
+.s-step h1 em,.s-step h2 em{font-style:normal;background:linear-gradient(90deg,var(--heat),#ffc06b 30%,var(--brand2) 60%,var(--cool));-webkit-background-clip:text;background-clip:text;color:transparent}
+.s-step h2 .c-heat{color:var(--heat)}.s-step h2 .c-cool{color:var(--cool)}.s-step h2 .c-vent{color:var(--vent)}.s-step h2 .c-dim{color:#8a82a8}
+.s-step p{color:var(--ink2);font-size:17px;line-height:1.6;max-width:470px;margin:0}
+.s-met{display:flex;gap:28px;margin-top:26px;flex-wrap:wrap}
+.s-met b{display:block;font-size:28px;font-weight:800;letter-spacing:-.03em}
+.s-met span{font-family:Teko,Manrope,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-size:15px}
+.s-step .cta{margin-top:26px}
+.stage{position:relative;width:100%;aspect-ratio:1020/560;max-height:78vh;align-self:center}
+.house{display:block;width:100%;height:100%;filter:drop-shadow(0 40px 60px rgba(0,0,0,.45));border-radius:28px;overflow:hidden}
+.house .sky{opacity:0;transition:opacity 1.2s}
+.house[data-sky=night] .sky-n,.house[data-sky=winter] .sky-w,.house[data-sky=summer] .sky-s,.house[data-sky=dusk] .sky-d{opacity:1}
+.house .stars,.house .moon{opacity:0;transition:opacity 1.2s}
+.house[data-sky=night] .stars,.house[data-sky=night] .moon{opacity:1}
+.house .sun{opacity:0;transition:opacity 1.2s}.house[data-sky=summer] .sun{opacity:1}
+.house .snow{opacity:0;transition:opacity 1s}.house[data-snow="1"] .snow{opacity:1}
+.house .g-snow{opacity:0;transition:opacity 1.2s}.house[data-snow="1"] .g-snow{opacity:1}
+.house .g-grass{opacity:0;transition:opacity 1.2s}.house[data-sky=summer] .g-grass{opacity:1}
+.house .room{transition:fill 1s;fill:#fbfaff}
+.house[data-tint=warm] .room{fill:#fff1e4}.house[data-tint=cool] .room{fill:#e6f5ff}.house[data-tint=fresh] .room{fill:#eafbf3}.house[data-tint=dark] .room{fill:#cfc9e6}
+.house[data-tint=cool] .r-liv,.house[data-tint=cool] .r-tech{fill:#f4f2fb}
+.house .win rect{fill:#bcd7f0;stroke:#a69cc4;stroke-width:2;transition:fill 1s}
+.house[data-sky=night] .win rect{fill:#ffd88a}
+.house[data-lights="0"] .win rect{fill:#3a3260}
+.fan{transform-box:fill-box;transform-origin:center}
+.house[data-hp="1"] .hpfan,.house[data-hp="2"] .hpfan{animation:spin 1.1s linear infinite}
+.house[data-hp="2"] .hpfan{animation-duration:3s}
+.house[data-ac="1"] .acfan{animation:spin .9s linear infinite}
+.house[data-rv="1"] .rvfan{animation:spin 1.2s linear infinite}.house[data-rv="2"] .rvfan{animation:spin 3.5s linear infinite}
+.floorheat{stroke:#d8d2e8;transition:stroke 1s}
+.house[data-floor="1"] .floorheat{stroke:var(--heat);stroke-dasharray:8 6;animation:flow 1.2s linear infinite}
+.hp-pipe{opacity:.25;transition:opacity 1s}.house[data-hp="1"] .hp-pipe,.house[data-hp="2"] .hp-pipe{opacity:1;stroke-dasharray:8 6;animation:flow 1s linear infinite}
+.hpwaves path{fill:none;stroke:#38c6ff;stroke-width:2.5;stroke-linecap:round;opacity:0;transition:opacity .8s}
+.house[data-hp="1"] .hpwaves path{opacity:.8;animation:pulse2 1.6s ease-in-out infinite}
+.house[data-hp="1"] .hpwaves path+path{animation-delay:.4s}
+@keyframes pulse2{50%{opacity:.2}}
+@keyframes flow{to{stroke-dashoffset:-28}}
+.airflow path{fill:none;stroke:var(--cool);stroke-width:3;stroke-linecap:round;stroke-dasharray:6 8;opacity:0;transition:opacity .8s}
+.house[data-ac="1"] .airflow path{opacity:.85;animation:flow .9s linear infinite}
+.iac .led{fill:#bbb;transition:fill .5s}.house[data-ac="1"] .iac .led{fill:var(--vent)}
+.duct{fill:none;stroke:#cfc7e3;stroke-width:5;stroke-linecap:round;transition:stroke .8s}
+.house[data-rv="1"] .duct,.house[data-rv="2"] .duct{stroke-dasharray:7 7;animation:flow 1.2s linear infinite}
+.house[data-rv="2"] .duct{animation-duration:3s}
+.house[data-rv="1"] .d-in,.house[data-rv="2"] .d-in,.house[data-rv="1"] .d-fresh,.house[data-rv="2"] .d-fresh{stroke:var(--vent)}
+.house[data-rv="1"] .d-out,.house[data-rv="2"] .d-out,.house[data-rv="1"] .d-ext,.house[data-rv="2"] .d-ext{stroke:#ffa36b}
+.boil{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(.08);transition:transform 1.8s}
+.house[data-boil="1"] .boil{transform:scaleY(1)}
+.drops{opacity:0}.house[data-boil="1"] .drops circle{animation:drop 1s linear infinite}.house[data-boil="1"] .drops{opacity:1}
+.house[data-boil="1"] .drops circle+circle{animation-delay:.5s}
+@keyframes drop{from{transform:translateY(-8px);opacity:0}50%{opacity:1}to{transform:translateY(10px);opacity:0}}
+.mini-panel .ring{fill:none;stroke:var(--mode);stroke-width:2.5;opacity:.9;animation:ring 1.8s ease-out infinite;transform-box:fill-box;transform-origin:center;transition:stroke .8s}
+@keyframes ring{from{transform:scale(.7);opacity:.9}to{transform:scale(1.6);opacity:0}}
+.mini-scr{fill:var(--mode);transition:fill .8s}
+.badge text{font-family:Manrope,sans-serif}
+.badge .bl{font-size:10px;font-weight:800;letter-spacing:.14em;fill:#b8b0d6}
+.badge .bv{font-size:17px;font-weight:800;fill:#fff}
+.badge .bs{font-size:12px;font-weight:800;fill:#fff}
+.b-co2{opacity:0;transition:opacity .6s}.house[data-co2="1"] .b-co2{opacity:1}
+/* big wall panel */
+.wp{container-type:inline-size;position:absolute;right:1%;bottom:6%;width:min(260px,24%);aspect-ratio:1;border-radius:9%;background:linear-gradient(145deg,#f6f5f9,#d9d6e2);padding:1.5%;box-shadow:0 30px 60px -18px rgba(0,0,0,.75),0 0 0 1px rgba(255,255,255,.5) inset,0 2px 0 #fff inset;z-index:3;display:flex;flex-direction:column}
+.wp-scr{flex:1;border-radius:6%;background:#0b0b14;color:#fff;padding:8% 8% 7%;display:flex;flex-direction:column;font-size:clamp(8px,.85vw,12.5px);position:relative;overflow:hidden}
+.wp-scr::before{content:"";position:absolute;inset:-30%;background:radial-gradient(circle at 70% 20%,color-mix(in srgb,var(--mode) 35%,transparent),transparent 55%);transition:background .8s;pointer-events:none}
+.wp-scr::after{content:"";position:absolute;inset:0;background:linear-gradient(130deg,rgba(255,255,255,.08),transparent 40%);pointer-events:none}
+.wp-top{display:flex;justify-content:space-between;align-items:center;color:#9a96b5;font-weight:700;position:relative}
+.wp-chip{background:color-mix(in srgb,var(--mode) 25%,#1a1828);color:#fff;border-radius:999px;padding:.2em .8em;font-size:.9em;transition:background .8s}
+.wp-main{position:relative;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:.8em;align-items:center;margin:9% 0 6%}
+.wp-ico{grid-row:1/3;width:3.4em;height:3.4em;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--mode) 22%,#15131f);color:var(--mode);transition:all .8s}
+.wp-ico svg{width:60%;height:60%}
+.wp-t{line-height:.9}
+.wp-t b{font-size:3.6em;font-weight:800;letter-spacing:-.05em;color:#fff}
+.wp-t sup{font-size:1.2em;color:var(--mode);font-weight:800;vertical-align:top;margin-left:.1em;transition:color .8s}
+.wp-mode{font-size:1em;font-weight:800;color:var(--mode);text-transform:uppercase;letter-spacing:.08em;transition:color .8s}
+.wp-metrics{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:.5em;margin-bottom:auto}
+.wp-metrics div{background:#17152a;border-radius:.7em;padding:.5em .5em}
+.wp-metrics b{display:block;font-size:1.25em;font-weight:800}
+.wp-metrics span{font-size:.75em;color:#8f8aa9;font-weight:700}
+.wp-devs{display:none!important;position:relative;grid-template-columns:repeat(4,1fr);gap:.4em;margin-top:6%}
+.wp-devs div{display:flex;flex-direction:column;align-items:center;gap:.25em;font-size:.72em;font-weight:700;color:#7f7a99;background:#15131f;border-radius:.7em;padding:.5em .2em;transition:all .5s}
+.wp-devs div i{width:.65em;height:.65em;border-radius:50%;background:#3a3550;transition:all .5s}
+.wp-devs div.on{color:#fff;background:#25213b}
+.wp-devs div.on i{background:var(--vent);box-shadow:0 0 8px var(--vent)}
+.wp-devs div.lo i{background:#ffd166;box-shadow:0 0 6px #ffd166}
+.wp-brand{text-align:center;font-size:3.6cqw;font-weight:800;letter-spacing:.3em;color:#8f88a8;margin-top:5%}
+.wp-cap{position:absolute;right:1%;bottom:calc(6% - 26px);font-size:12px;color:var(--muted);font-weight:700;width:min(260px,24%);text-align:center}
+.s-dots{position:absolute;right:16px;top:50%;transform:translateY(-50%);display:grid;gap:12px;z-index:4}
+.s-dots button{width:10px;height:10px;border-radius:50%;border:0;background:rgba(255,255,255,.2);padding:0;position:relative;transition:all .3s}
+.s-dots button.on{background:var(--mode);height:26px;border-radius:6px}
+.s-dots button span{position:absolute;right:20px;top:50%;transform:translateY(-50%);white-space:nowrap;font-size:12px;font-weight:700;color:var(--ink2);opacity:0;transition:opacity .2s;pointer-events:none}
+.s-dots button:hover span{opacity:1}
+.s-hint{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);font-family:Teko,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);font-size:15px;animation:bob2 1.8s ease-in-out infinite;transition:opacity .4s}
+@keyframes bob2{50%{transform:translate(-50%,6px)}}
+@media (max-width:900px){
+  .scrolly .sticky{grid-template-columns:1fr;grid-template-rows:auto 1fr;padding:74px 16px 16px;gap:8px;align-items:start}
+  .stage{order:-1;height:auto;aspect-ratio:1020/560;width:100%}
+  .s-text{height:auto;min-height:40vh}
+  .s-step{justify-content:flex-start}
+  .s-step h1,.s-step h2{font-size:clamp(28px,8vw,40px);margin:6px 0 10px}
+  .s-step p{font-size:15px}
+  .s-met{gap:18px;margin-top:14px}.s-met b{font-size:22px}
+  .s-step .cta{display:none}
+  .wp{width:30%;right:1%;bottom:4%;padding:1.6%}
+  .wp-scr{font-size:7.2cqw}.wp-metrics{display:none}.wp-main{margin:6% 0 0}.wp-top span:first-child{display:none}
+  
+  .wp-cap{display:none}
+  .s-dots{right:6px;top:auto;bottom:70px;transform:none;display:flex;gap:6px;left:16px;right:auto}
+  .s-dots button.on{width:22px;height:8px}.s-dots button{width:8px;height:8px}
+  .s-hint{display:none}
+}
+
 </style>
 </head>
 <body>
@@ -331,56 +449,136 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 
 <nav class="top" id="nav"><div class="wrap">
   <a class="logo" href="#"><svg viewBox="0 0 48 32"><path d="M2 28L18 4l8 12" stroke="#b6a3ff" stroke-width="4" fill="none" stroke-linejoin="round"/><path d="M14 28L30 4l16 24" stroke="#7c5cff" stroke-width="4" fill="none" stroke-linejoin="round"/></svg>ALPICAIR</a>
-  <div class="links"><a href="#panelis">Viens panelis</a><a href="#serijas">Sērijas</a><a href="#piedavajums">Piedāvājums</a></div>
+  <div class="links"><a href="#ka-strada">Kā tas strādā</a><a href="#serijas">Sērijas</a><a href="#piedavajums">Piedāvājums</a></div>
   <button class="sysbtn" id="openSys"><svg width="16" height="16"><use href="#i-layers"/></svg>Mana sistēma <span class="n" id="sysN">0</span></button>
 </div></nav>
+<div class="progress" id="progress"></div>
 
-<header class="hero"><div class="wrap">
-  <div>
-    <div class="eyebrow cap">AlpicAir · siltums · vēsums · svaigs gaiss</div>
-    <h1>Viens zīmols.<br>Viens panelis<br><em>uz sienas.</em></h1>
-    <p class="lead">Siltumsūknis, kondicionieri un rekuperators — visi <b>AlpicAir</b>. Un visu māju vada viens sienas panelis <b>Sonoff NSPanel Pro</b>: apkure, dzesēšana un ventilācija vienā ekrānā.</p>
-    <div class="cta">
-      <a class="btn pri" href="#serijas">Apskatīt sērijas <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
-      <a class="btn gho" href="#panelis">Kā tas darbojas</a>
-    </div>
-    <div class="stats"><div><b data-count="26">0</b><span>sērijas</span></div><div><b data-count="162">0</b><span>modeļi</span></div><div><b data-count="1">0</b><span>panelis visam</span></div></div>
-  </div>
-  <div class="scene" id="scene">
-    <div class="wall"></div>
-    <svg class="links-svg" viewBox="0 0 100 92" preserveAspectRatio="none"><path id="l1" d="M17 33 C 17 44, 25 44, 30 44"/><path id="l2" d="M83 33 C 83 44, 75 44, 70 44"/><path id="l3" d="M50 70 L 50 64"/></svg>
-    <a class="dev d1 on" id="dHp" href="#/s/all-in-one"><img src="" data-ser="all-in-one" alt="AlpicAir siltumsūknis"><div class="t">Siltumsūknis <span class="s">Apkure</span></div></a>
-    <a class="dev d2 on" id="dAc" href="#/s/trendy-white"><img src="" data-ser="trendy-white" alt="AlpicAir kondicionieris"><div class="t">Kondicionieris <span class="s">Gaida</span></div></a>
-    <a class="dev d3 on" id="dRv" href="#/s/nest-x"><div class="ill" data-ill="nest-x"></div><div class="t">Rekuperators <span class="s">Ventilē</span></div></a>
-    <div class="nsp" id="nsp"><div class="scr">
-      <div class="bar"><span id="clock">12:00</span><span>Mājas · AlpicAir</span></div>
-      <div class="set"><button id="tm" aria-label="Samazināt">−</button><div class="tv"><b><span id="tval">22</span>°</b><span id="mname">Apkure</span></div><button id="tp" aria-label="Palielināt">+</button></div>
-      <div class="modes"><button data-m="heat" class="on">Apk.</button><button data-m="cool">Dzes.</button><button data-m="vent">Vent.</button><button data-m="auto">Auto</button></div>
-      <div class="devs"><button class="on" data-d="dHp"><i></i>Siltumsūkn.</button><button class="on" data-d="dAc"><i></i>Kondic.</button><button class="on" data-d="dRv"><i></i>Rekup.</button></div>
-    </div></div>
-    <div class="nsp-tag">Pieskarieties panelim · <b>Sonoff NSPanel Pro</b></div>
-  </div>
-</div></header>
+<section class="scrolly" id="ka-strada">
+  <div class="sticky">
+    <div class="s-text" id="sText"></div>
+    <div class="stage">
+      <svg class="house" id="house" viewBox="0 0 1020 560" data-sky="night" aria-label="Māja ar AlpicAir iekārtām">
+        <defs>
+          <linearGradient id="skN" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b0a24"/><stop offset="1" stop-color="#2a2150"/></linearGradient>
+          <linearGradient id="skW" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fb8d8"/><stop offset="1" stop-color="#e4edf7"/></linearGradient>
+          <linearGradient id="skS" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3fa6ff"/><stop offset="1" stop-color="#bfe6ff"/></linearGradient>
+          <linearGradient id="skD" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a2d6e"/><stop offset="1" stop-color="#d98a6a"/></linearGradient>
+          <linearGradient id="wallG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f1fa"/><stop offset="1" stop-color="#e2ddee"/></linearGradient>
+          <linearGradient id="roofG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b3060"/><stop offset="1" stop-color="#261d45"/></linearGradient>
+          <radialGradient id="sunG"><stop offset="0" stop-color="#fff3c4"/><stop offset=".5" stop-color="#ffd166"/><stop offset="1" stop-color="#ffd166" stop-opacity="0"/></radialGradient>
+          <clipPath id="clipHouse"><rect x="150" y="170" width="460" height="290"/></clipPath>
+        </defs>
+        <!-- sky -->
+        <rect class="sky sky-n" width="1020" height="470" fill="url(#skN)"/>
+        <rect class="sky sky-w" width="1020" height="470" fill="url(#skW)"/>
+        <rect class="sky sky-s" width="1020" height="470" fill="url(#skS)"/>
+        <rect class="sky sky-d" width="1020" height="470" fill="url(#skD)"/>
+        <g class="stars"><circle cx="246" cy="160" r="0.8" fill="#fff" opacity="0.9"/><circle cx="410" cy="250" r="1" fill="#fff" opacity="0.4"/><circle cx="73" cy="15" r="1.6" fill="#fff" opacity="0.9"/><circle cx="301" cy="35" r="1" fill="#fff" opacity="0.9"/><circle cx="554" cy="189" r="1.3" fill="#fff" opacity="0.4"/><circle cx="113" cy="139" r="1" fill="#fff" opacity="0.4"/><circle cx="661" cy="138" r="1.3" fill="#fff" opacity="0.4"/><circle cx="173" cy="163" r="1.3" fill="#fff" opacity="0.9"/><circle cx="754" cy="195" r="0.8" fill="#fff" opacity="0.9"/><circle cx="350" cy="203" r="1" fill="#fff" opacity="0.4"/><circle cx="258" cy="247" r="1.3" fill="#fff" opacity="0.4"/><circle cx="565" cy="158" r="0.8" fill="#fff" opacity="0.6"/><circle cx="591" cy="164" r="1" fill="#fff" opacity="0.6"/><circle cx="438" cy="152" r="1.6" fill="#fff" opacity="0.6"/><circle cx="170" cy="124" r="1.3" fill="#fff" opacity="0.6"/><circle cx="49" cy="46" r="0.8" fill="#fff" opacity="0.6"/><circle cx="646" cy="148" r="1.6" fill="#fff" opacity="0.9"/><circle cx="356" cy="79" r="1" fill="#fff" opacity="0.4"/><circle cx="427" cy="108" r="1.6" fill="#fff" opacity="0.6"/><circle cx="193" cy="187" r="1.6" fill="#fff" opacity="0.9"/><circle cx="607" cy="169" r="1" fill="#fff" opacity="0.6"/><circle cx="108" cy="36" r="1" fill="#fff" opacity="0.6"/><circle cx="788" cy="126" r="0.8" fill="#fff" opacity="0.6"/><circle cx="186" cy="153" r="1.6" fill="#fff" opacity="0.4"/><circle cx="48" cy="187" r="0.8" fill="#fff" opacity="0.6"/><circle cx="757" cy="172" r="0.8" fill="#fff" opacity="0.6"/><circle cx="300" cy="169" r="1" fill="#fff" opacity="0.9"/><circle cx="425" cy="44" r="1.3" fill="#fff" opacity="0.9"/><circle cx="201" cy="232" r="1.3" fill="#fff" opacity="0.4"/><circle cx="261" cy="200" r="1" fill="#fff" opacity="0.6"/><circle cx="591" cy="9" r="1.3" fill="#fff" opacity="0.4"/><circle cx="470" cy="91" r="1.3" fill="#fff" opacity="0.6"/><circle cx="302" cy="297" r="0.8" fill="#fff" opacity="0.6"/><circle cx="217" cy="222" r="1" fill="#fff" opacity="0.4"/><circle cx="65" cy="36" r="0.8" fill="#fff" opacity="0.9"/><circle cx="177" cy="81" r="0.8" fill="#fff" opacity="0.9"/><circle cx="507" cy="132" r="1.3" fill="#fff" opacity="0.4"/><circle cx="130" cy="275" r="1.3" fill="#fff" opacity="0.6"/><circle cx="672" cy="107" r="1.6" fill="#fff" opacity="0.4"/><circle cx="252" cy="229" r="1.6" fill="#fff" opacity="0.6"/><circle cx="42" cy="117" r="1.6" fill="#fff" opacity="0.6"/><circle cx="259" cy="224" r="1" fill="#fff" opacity="0.6"/><circle cx="197" cy="21" r="0.8" fill="#fff" opacity="0.6"/><circle cx="264" cy="129" r="1" fill="#fff" opacity="0.4"/><circle cx="432" cy="138" r="1" fill="#fff" opacity="0.6"/><circle cx="57" cy="166" r="0.8" fill="#fff" opacity="0.9"/><circle cx="417" cy="25" r="1.6" fill="#fff" opacity="0.6"/><circle cx="100" cy="225" r="1" fill="#fff" opacity="0.9"/><circle cx="174" cy="177" r="1.3" fill="#fff" opacity="0.9"/><circle cx="487" cy="166" r="1.6" fill="#fff" opacity="0.9"/><circle cx="225" cy="142" r="1.3" fill="#fff" opacity="0.6"/><circle cx="513" cy="43" r="1.3" fill="#fff" opacity="0.9"/><circle cx="689" cy="102" r="0.8" fill="#fff" opacity="0.6"/><circle cx="639" cy="70" r="1.3" fill="#fff" opacity="0.9"/><circle cx="66" cy="90" r="1.6" fill="#fff" opacity="0.9"/><circle cx="488" cy="211" r="1.6" fill="#fff" opacity="0.4"/><circle cx="8" cy="113" r="1" fill="#fff" opacity="0.4"/><circle cx="629" cy="136" r="0.8" fill="#fff" opacity="0.6"/><circle cx="793" cy="200" r="1" fill="#fff" opacity="0.9"/><circle cx="59" cy="108" r="1" fill="#fff" opacity="0.9"/></g>
+        <g class="moon"><circle cx="690" cy="80" r="40" fill="#f3efe0" opacity=".12"/><circle cx="690" cy="80" r="24" fill="#f3efe0"/></g>
+        <g class="sun"><circle cx="680" cy="90" r="80" fill="url(#sunG)"/><circle cx="680" cy="90" r="30" fill="#ffd56b"/></g>
+        <g class="snow" id="snow"></g>
+        <!-- ground -->
+        <rect x="0" y="460" width="1020" height="100" fill="#2c2448"/>
+        <rect class="g-snow" x="0" y="456" width="1020" height="104" fill="#f2f6fb"/>
+        <rect class="g-grass" x="0" y="458" width="1020" height="102" fill="#6fbf73"/>
+        <!-- outdoor AC unit (left) -->
+        <g class="u-ac">
+          <rect x="62" y="236" width="80" height="58" rx="5" fill="#f4f4f7" stroke="#b9b2cf"/>
+          <circle cx="92" cy="265" r="20" fill="#e3e0ec" stroke="#b9b2cf"/>
+          <g class="fan acfan"><path d="M92 247 q7 9 0 18 q-7 9 0 18 M74 265 q9 -7 18 0 q9 7 18 0" stroke="#7a7196" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+          <path d="M120 250h16M120 258h16M120 266h16M120 274h16" stroke="#cfc9de" stroke-width="2"/>
+          <path d="M142 262 H150" stroke="#9a92b8" stroke-width="3"/>
+        </g>
+        <!-- house -->
+        <path d="M130 172 L380 62 L630 172 Z" fill="url(#roofG)"/>
+        <rect x="150" y="170" width="460" height="290" fill="url(#wallG)"/>
+        <g clip-path="url(#clipHouse)">
+          <!-- rooms tint -->
+          <rect class="room r-bed" x="156" y="182" width="219" height="126" fill="#fff"/>
+          <rect class="room r-kid" x="385" y="182" width="219" height="126" fill="#fff"/>
+          <rect class="room r-liv" x="156" y="320" width="294" height="134" fill="#fff"/>
+          <rect class="room r-tech" x="460" y="320" width="144" height="134" fill="#fff"/>
+        </g>
+        <!-- floors & walls -->
+        <path d="M150 314 H610 M380 176 V314 M455 314 V460" stroke="#cbc4dd" stroke-width="8"/>
+        <!-- windows -->
+        <g class="win"><rect x="200" y="235" width="56" height="50" rx="3"/><rect x="520" y="235" width="56" height="50" rx="3"/><rect x="190" y="370" width="70" height="60" rx="3"/></g>
+        <!-- furniture -->
+        <g fill="#cfc8e2"><rect x="290" y="268" width="70" height="26" rx="6"/><rect x="286" y="260" width="16" height="34" rx="5"/>
+          <rect x="400" y="276" width="56" height="18" rx="5"/><rect x="290" y="420" width="110" height="26" rx="8"/><rect x="290" y="404" width="110" height="20" rx="8"/></g>
+        <!-- floor heating -->
+        <path class="floorheat" d="M160 452 q12 -7 24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0" fill="none" stroke-width="4" stroke-linecap="round"/>
+        <!-- wall ACs -->
+        <g class="iac"><rect x="200" y="194" width="110" height="24" rx="9" fill="#fff" stroke="#c4bcdb"/><rect x="212" y="211" width="86" height="3" rx="1.5" fill="#e2ddee"/><circle class="led" cx="300" cy="202" r="2.5"/></g>
+        <g class="iac"><rect x="470" y="194" width="110" height="24" rx="9" fill="#1d1830" stroke="#3a3355"/><rect x="482" y="211" width="86" height="3" rx="1.5" fill="#3a3355"/><circle class="led" cx="570" cy="202" r="2.5"/></g>
+        <g class="airflow">
+          <path d="M215 226 q-6 22 4 44"/><path d="M255 226 q-2 26 6 50"/><path d="M295 226 q4 22 14 42"/>
+          <path d="M485 226 q-6 22 4 44"/><path d="M525 226 q-2 26 6 50"/><path d="M565 226 q4 22 14 42"/>
+        </g>
+        <!-- attic recuperator + ducts -->
+        <g class="rv">
+          <rect x="330" y="122" width="100" height="40" rx="6" fill="#f7f5fb" stroke="#a69cc4"/>
+          <circle cx="380" cy="142" r="13" fill="none" stroke="#7c5cff" stroke-width="2"/>
+          <g class="fan rvfan"><path d="M380 130v24M368 142h24" stroke="#7c5cff" stroke-width="2.5" stroke-linecap="round"/></g>
+          <rect x="300" y="132" width="30" height="8" fill="#cfc7e3"/><rect x="430" y="132" width="30" height="8" fill="#cfc7e3"/><rect x="300" y="146" width="30" height="8" fill="#cfc7e3"/><rect x="430" y="146" width="30" height="8" fill="#cfc7e3"/>
+          <path class="duct d-in" d="M300 136 H250 V182"/><path class="duct d-out" d="M460 136 H520 V182"/>
+          <path class="duct d-in" d="M300 150 H268 V176 H268 V316 H300 V330"/><path class="duct d-out" d="M460 150 H500 V176"/>
+          <path class="duct d-ext" d="M380 122 V96"/><path class="duct d-fresh" d="M396 122 V100"/>
+        </g>
+        <!-- technical room: all in one -->
+        <g class="aio">
+          <rect x="495" y="336" width="54" height="116" rx="6" fill="#f7f5fb" stroke="#b9b2cf"/>
+          <rect x="505" y="346" width="34" height="16" rx="3" fill="#0b0b14"/><text x="522" y="358" text-anchor="middle" font-size="9" font-weight="800" fill="#ff8a3d" font-family="Manrope,sans-serif" class="boilT">45°</text>
+          <rect x="505" y="372" width="34" height="70" rx="4" fill="#ece8f6"/>
+          <rect class="boil" x="505" y="376" width="34" height="66" rx="4" fill="#ff8a3d"/>
+          <path class="tap" d="M555 360 h18 v10" fill="none" stroke="#a69cc4" stroke-width="3"/>
+          <g class="drops"><circle cx="573" cy="380" r="2.4" fill="#38c6ff"/><circle cx="573" cy="392" r="2.4" fill="#38c6ff"/></g>
+        </g>
+        <!-- outdoor heat pump -->
+        <g class="u-hp">
+          <path class="hp-pipe" d="M549 430 H610 M610 430 H646" stroke="#ff8a3d" stroke-width="4" fill="none"/>
+          <rect x="646" y="384" width="100" height="74" rx="6" fill="#f4f4f7" stroke="#b9b2cf"/>
+          <circle cx="688" cy="421" r="27" fill="#e3e0ec" stroke="#b9b2cf"/>
+          <g class="fan hpfan"><path d="M688 397 q9 12 0 24 q-9 12 0 24 M664 421 q12 -9 24 0 q12 9 24 0" stroke="#7a7196" stroke-width="3.4" fill="none" stroke-linecap="round"/></g>
+          <rect x="722" y="392" width="16" height="10" rx="2" fill="#7c5cff"/>
+          <g class="hpwaves"><path d="M760 400 q8 8 0 16 q-8 8 0 16" /><path d="M772 396 q8 10 0 20 q-8 10 0 20"/></g>
+        </g>
+        <!-- small wall panel in living room -->
+        <g class="mini-panel">
+          <circle class="ring" cx="430" cy="372" r="18"/>
+          <rect x="418" y="360" width="24" height="24" rx="4" fill="#f4f4f7" stroke="#b9b2cf"/>
+          <rect x="421" y="363" width="18" height="18" rx="2" fill="#0b0b14"/>
+          <rect class="mini-scr" x="423" y="371" width="14" height="3" rx="1.5"/>
+        </g>
+        <!-- temperature badges -->
+        <g class="badge b-out"><rect x="20" y="20" width="132" height="44" rx="12" fill="rgba(14,10,28,.72)"/><text x="34" y="38" class="bl">ĀRĀ</text><text x="34" y="56" class="bv" id="tOut">−5 °C</text></g>
+        <g class="badge"><rect x="164" y="256" width="62" height="24" rx="8" fill="rgba(14,10,28,.75)"/><text x="195" y="272" text-anchor="middle" class="bs" id="tBed">21°</text></g>
+        <g class="badge"><rect x="535" y="256" width="62" height="24" rx="8" fill="rgba(14,10,28,.75)"/><text x="566" y="272" text-anchor="middle" class="bs" id="tKid">21°</text></g>
+        <g class="badge"><rect x="164" y="330" width="62" height="24" rx="8" fill="rgba(14,10,28,.75)"/><text x="195" y="346" text-anchor="middle" class="bs" id="tLiv">21°</text></g>
+        <g class="badge b-co2"><rect x="330" y="330" width="88" height="24" rx="8" fill="rgba(14,10,28,.75)"/><text x="374" y="346" text-anchor="middle" class="bs" id="tCo2">CO₂ 780</text></g>
+      </svg>
 
-<section id="panelis"><div class="wrap">
-  <div class="band reveal">
-    <div>
-      <div class="kick cap">Viens panelis</div>
-      <h2>Visu māju vada viens sienas panelis</h2>
-      <p class="sub">Kad visas iekārtas ir viena zīmola, tās var apvienot vienā vadībā. Sonoff NSPanel Pro ir skārienjūtīgs sienas panelis, kas aizstāj atsevišķās pultis katrā telpā.</p>
-      <div class="feats">
-        <div><span class="ic"><svg width="20" height="20"><use href="#i-panel"/></svg></span><p style="margin:0"><b>Viens ekrāns uz sienas</b><span>Temperatūra un režīmi siltumsūknim, kondicionieriem un rekuperatoram vienā vietā.</span></p></div>
-        <div><span class="ic"><svg width="20" height="20"><use href="#i-wifi"/></svg></span><p style="margin:0"><b>Arī no viedtālruņa</b><span>Tie paši scenāriji pieejami attālināti — ieslēdziet apkuri pirms atgriešanās mājās.</span></p></div>
-        <div><span class="ic"><svg width="20" height="20"><use href="#i-shield"/></svg></span><p style="margin:0"><b>Viens zīmols, viens partneris</b><span>Saskaņota uzstādīšana, apkope un garantija visai sistēmai.</span></p></div>
+      <!-- big wall panel -->
+      <div class="wp" id="wp" aria-label="AlpicAir sienas panelis">
+        <div class="wp-scr">
+          <div class="wp-top"><span id="wpClock">07:30</span><span class="wp-chip" id="wpChip">Gaidīšana</span></div>
+          <div class="wp-main">
+            <div class="wp-ico" id="wpIco"></div>
+            <div class="wp-t"><b id="wpT">21</b><sup id="wpU">°C</sup></div>
+            <div class="wp-mode" id="wpMode">Gaidīšana</div>
+          </div>
+          <div class="wp-metrics" id="wpMet"></div>
+          <div class="wp-devs" id="wpDevs"></div>
+        </div>
+        <div class="wp-brand">ALPICAIR</div>
       </div>
+      <div class="wp-cap">Sienas panelis dzīvojamā istabā</div>
     </div>
-    <div class="flow">
-      <div class="row"><div class="box">Siltumsūknis<small>apkure · karstais ūdens</small></div><div class="arrow">⇅</div><div class="box">Kondicionieri<small>dzesēšana · apsilde</small></div></div>
-      <div class="row"><div class="box hub">Sonoff NSPanel Pro<small style="color:#e9e3ff">viens sienas panelis</small></div></div>
-      <div class="row"><div class="box">Rekuperators<small>svaigs gaiss</small></div><div class="arrow">⇅</div><div class="box">Viedtālrunis<small>attālināta vadība</small></div></div>
-    </div>
+    <nav class="s-dots" id="sDots" aria-label="Scēnas"></nav>
+    <div class="s-hint" id="sHint">Ritiniet ↓</div>
   </div>
-</div></section>
+</section>
 
 <section id="serijas" style="padding-top:20px"><div class="wrap">
   <div class="reveal">
@@ -402,7 +600,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
       <div class="steps">
         <div><p style="margin:0"><b>Atsūtiet plānu</b><span>Stāvu plāns, skice vai pat foto no projekta — der jebkurā formātā (PDF, JPG).</span></p></div>
         <div><p style="margin:0"><b>Mēs aprēķinām un izvēlamies</b><span>Jauda pēc platības un telpām, rekuperatora gaisa plūsma, iekārtu izvietojums.</span></p></div>
-        <div><p style="margin:0"><b>Saņemiet piedāvājumu</b><span>Konkrēti modeļi, montāža un vadība no viena Sonoff NSPanel Pro paneļa.</span></p></div>
+        <div><p style="margin:0"><b>Saņemiet piedāvājumu</b><span>Konkrēti modeļi, montāža un vadība no viena sienas paneļa.</span></p></div>
       </div>
     </div>
     <form class="pform" id="pform" method="POST" enctype="multipart/form-data" novalidate>
@@ -420,7 +618,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
           <label><input type="checkbox" name="Interesē[]" value="Siltumsūknis"><span>Siltumsūknis</span></label>
           <label><input type="checkbox" name="Interesē[]" value="Kondicionieri"><span>Kondicionieri</span></label>
           <label><input type="checkbox" name="Interesē[]" value="Rekuperators"><span>Rekuperators</span></label>
-          <label><input type="checkbox" name="Interesē[]" value="NSPanel Pro vadība"><span>Vadība ar NSPanel Pro</span></label>
+          <label><input type="checkbox" name="Interesē[]" value="Vienota vadība"><span>Vienota vadība</span></label>
         </div>
       </div>
       <div class="pdrop" id="pdrop" tabindex="0" role="button" aria-label="Pievienot mājas plānu">
@@ -458,8 +656,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 
 <script>
 (async()=>{
-let SERIES=[],CONTACTS={};try{const J=await (await fetch("catalog.json?t="+Date.now(),{cache:"no-store"})).json();SERIES=J.series||[];CONTACTS=J.contacts||{}}catch(e){console.error("catalog.json",e)}
-document.querySelector('[data-count="26"]').dataset.count=SERIES.length;document.querySelector('[data-count="162"]').dataset.count=SERIES.reduce((a,x)=>a+x.models.length,0);
+let SERIES=[],CONTACTS={};try{const J=await (await fetch("catalog.json?t="+Date.now(),{cache:"no-store"})).json();SERIES=(J.series||[]).filter(s=>s.cat!=="ctl");CONTACTS=J.contacts||{}}catch(e){console.error("catalog.json",e)}
 const CATS={hp:{n:"Siltumsūkņi",s:"Siltumsūknis",c:"#ff8a3d"},ac:{n:"Kondicionieri",s:"Kondicionieris",c:"#38c6ff"},rv:{n:"Rekuperācija",s:"Rekuperators",c:"#3ee0a8"},ctl:{n:"Vadība",s:"Vadība",c:"#b6a3ff"}};
 const byId=Object.fromEntries(SERIES.map(s=>[s.id,s]));
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -479,37 +676,12 @@ window.ILL=id=>`<div class="ill">${ill(id)}</div>`;
 const imgOf=(s,m)=>(m&&m.img)||s.img;
 function visual(s,m){const u=imgOf(s,m);return u?`<img src="${u}" alt="${esc(s.name)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML=ILL('${s.id}')">`:ILL(s.id)}
 
-/* hero panel */
-const MODES={heat:{c:"#ff8a3d",n:"Apkure"},cool:{c:"#38c6ff",n:"Dzesēšana"},vent:{c:"#3ee0a8",n:"Ventilācija"},auto:{c:"#b6a3ff",n:"Auto"}};
-const DEVSTATE={heat:{dHp:"Apkure",dAc:"Gaida",dRv:"Ventilē"},cool:{dHp:"Gaida",dAc:"Dzesē",dRv:"Ventilē"},vent:{dHp:"Gaida",dAc:"Gaida",dRv:"Svaigs gaiss"},auto:{dHp:"Auto",dAc:"Auto",dRv:"Auto"}};
-let mode="heat",temp=22;const devOn={dHp:true,dAc:true,dRv:true};
-document.querySelectorAll(".dev img[data-ser]").forEach(i=>{i.referrerPolicy="no-referrer";i.onerror=()=>{i.outerHTML=ILL('nest-x')};const ss=byId[i.dataset.ser]||SERIES.find(x=>x.cat===(i.dataset.ser==="all-in-one"?"hp":"ac"));if(ss){i.src=ss.img||"";i.closest("a").href="#/s/"+ss.id}});
-document.querySelectorAll(".dev [data-ill]").forEach(d=>d.innerHTML=ill(d.dataset.ill));
-function paint(){
-  const m=MODES[mode];document.documentElement.style.setProperty("--mode",m.c);
-  document.getElementById("mname").textContent=m.n;document.getElementById("tval").textContent=temp;
-  document.querySelectorAll(".modes button").forEach(b=>b.classList.toggle("on",b.dataset.m===mode));
-  const map={dHp:"l1",dAc:"l2",dRv:"l3"};
-  for(const k in devOn){const el=document.getElementById(k),st=DEVSTATE[mode][k],active=devOn[k]&&st!=="Gaida";
-    el.classList.toggle("offd",!devOn[k]);el.classList.toggle("on",active);
-    el.querySelector(".s").textContent=devOn[k]?st:"Izslēgts";
-    const p=document.getElementById(map[k]);p.style.stroke=m.c;p.classList.toggle("off",!active);
-    document.querySelector(`.devs [data-d=${k}]`).classList.toggle("on",devOn[k]);}
-}
-let demo=setInterval(()=>{const k=Object.keys(MODES);mode=k[(k.indexOf(mode)+1)%k.length];paint()},3200);
-const stopDemo=()=>clearInterval(demo);
-document.querySelectorAll(".modes button").forEach(b=>b.onclick=()=>{mode=b.dataset.m;stopDemo();paint()});
-document.querySelectorAll(".devs button").forEach(b=>b.onclick=()=>{devOn[b.dataset.d]=!devOn[b.dataset.d];stopDemo();paint()});
-document.getElementById("tp").onclick=()=>{temp=Math.min(30,temp+1);stopDemo();paint()};
-document.getElementById("tm").onclick=()=>{temp=Math.max(16,temp-1);stopDemo();paint()};
-const clock=()=>{document.getElementById("clock").textContent=new Date().toLocaleTimeString("lv-LV",{hour:"2-digit",minute:"2-digit"})};clock();setInterval(clock,15000);
-paint();
 
 /* series wall */
-let cat="all";
+let cat="hp";
 const tabsEl=document.getElementById("tabs"),grid=document.getElementById("grid");
 function renderTabs(){
-  const list=[["all","Visas",SERIES.length],...Object.entries(CATS).map(([k,c])=>[k,c.n,SERIES.filter(s=>s.cat===k).length])];
+  const list=[...Object.entries(CATS).filter(([k])=>k!=="ctl").map(([k,c])=>[k,c.n,SERIES.filter(s=>s.cat===k).length])];
   tabsEl.innerHTML=list.map(([k,n,c])=>`<button class="tab ${cat===k?"on":""}" data-k="${k}">${n}<span>${c}</span></button>`).join("");
   tabsEl.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{cat=b.dataset.k;renderTabs();renderGrid()});
   document.getElementById("wallArea").hidden=cat!=="rv";
@@ -568,7 +740,7 @@ function renderModel(){
   ${m.s.length?`<table class="sp">${m.s.map(([l,v])=>`<tr><td>${esc(l)}</td><td>${esc(v)}</td></tr>`).join("")}</table>`:`<div class="nospec">Tehniskie dati tiek precizēti — jautājiet mums.</div>`}
   <span class="stock ${m.st?"y":"n"}"><i></i>${m.st?"Noliktavā":"Pēc pasūtījuma"}</span>
   <div class="acts"><button class="btn pri" id="mAdd">${sys.has(k)?'<svg width="18" height="18"><use href="#i-check"/></svg> Pievienots manai sistēmai':"Pievienot manai sistēmai"}</button></div>
-  <div class="note"><svg width="22" height="22" style="color:var(--brand2);flex:0 0 22px"><use href="#i-panel"/></svg>Vadāms kopā ar pārējām AlpicAir iekārtām no sienas paneļa Sonoff NSPanel Pro.</div>`;
+  <div class="note"><svg width="22" height="22" style="color:var(--brand2);flex:0 0 22px"><use href="#i-panel"/></svg>Vadāms kopā ar pārējām AlpicAir iekārtām no viena sienas paneļa.</div>`;
   det.querySelector("#mAdd").onclick=()=>{toggleSys(k);renderModel()};
 }
 function closeSeries(){det.classList.remove("show");document.body.classList.remove("lock");cur=null}
@@ -598,7 +770,7 @@ document.getElementById("closeDrawer").onclick=closeDrawer;ov.onclick=closeDrawe
 
 /* plan offer */
 function sysText(){return [...sys].map(fromKey).filter(Boolean).map(({s,m})=>`• ${m.m} — ${s.name}, ${m.l}`).join("\n")}
-function mailHref(){const body="Labdien!\n\nPielikumā mājas plāns. Lūdzu, sagatavojiet piedāvājumu AlpicAir sistēmai (siltumsūknis / kondicionieri / rekuperators) ar vadību no Sonoff NSPanel Pro.\n\nMājas platība: ~"+(typeof area!=="undefined"?area:"")+" m²\nAdrese / pilsēta: \nTālrunis: \n"+(sys.size?"\nInteresējošās iekārtas:\n"+sysText()+"\n":"")+"\n(Lūdzu, pievienojiet plānu kā pielikumu.)";
+function mailHref(){const body="Labdien!\n\nPielikumā mājas plāns. Lūdzu, sagatavojiet piedāvājumu AlpicAir sistēmai (siltumsūknis / kondicionieri / rekuperators).\n\nMājas platība: ~"+(typeof area!=="undefined"?area:"")+" m²\nAdrese / pilsēta: \nTālrunis: \n"+(sys.size?"\nInteresējošās iekārtas:\n"+sysText()+"\n":"")+"\n(Lūdzu, pievienojiet plānu kā pielikumu.)";
   return `mailto:${CONTACTS.email}?subject=${encodeURIComponent("Piedāvājuma pieprasījums — mājas plāns")}&body=${encodeURIComponent(body)}`}
 const lvNum=n=>{let d=String(n||"").replace(/\D/g,"");if(d.length===8)d="371"+d;return d};
 function renderPlan(){
@@ -649,7 +821,7 @@ renderPlan();
   if(location.hash==="#paldies"){const t=document.createElement("div");t.className="thanks";t.innerHTML=`<div><div class="ok">✓</div><h3>Paldies! Pieprasījums nosūtīts</h3><p>Esam saņēmuši jūsu mājas plānu. Sagatavosim piedāvājumu un sazināsimies ar jums tuvākajā laikā.</p><button class="btn pri">Labi</button></div>`;document.body.appendChild(t);t.querySelector("button").onclick=()=>{t.remove();history.replaceState(null,"",location.pathname)}}
 })();
 document.getElementById("copySys").onclick=()=>{if(!sys.size){toast("Sistēma ir tukša");return}
-  const txt="AlpicAir sistēma (vadība: Sonoff NSPanel Pro):\n"+[...sys].map(fromKey).filter(Boolean).map(({s,m})=>`• ${m.m} — ${s.name}, ${m.l}`).join("\n");
+  const txt="AlpicAir sistēma:\n"+[...sys].map(fromKey).filter(Boolean).map(({s,m})=>`• ${m.m} — ${s.name}, ${m.l}`).join("\n");
   (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(()=>toast("Saraksts nokopēts"),()=>toast("Neizdevās nokopēt"))};
 addEventListener("keydown",e=>{
   if(e.key==="Escape"){if(drawer.classList.contains("show"))closeDrawer();else if(cur)location.hash="#serijas"}
@@ -662,6 +834,77 @@ document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
 document.querySelectorAll("[data-count]").forEach(el=>{const to=+el.dataset.count,t0=performance.now();(function f(t){const k=Math.min(1,(t-t0)/1400);el.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)})(t0)});
 document.getElementById("aw").value=area;document.getElementById("awv").textContent=area;
 renderTabs();renderGrid();updSys();route();
+/* ===== scrolly ===== */
+(function(){
+const IC={
+ power:'<svg viewBox="0 0 24 24"><path d="M12 3v8M6.3 6.3a8 8 0 1 0 11.4 0" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>',
+ heat:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>',
+ water:'<svg viewBox="0 0 24 24"><path d="M12 3c3.5 4.5 6 7.6 6 10.5a6 6 0 0 1-12 0C6 10.6 8.5 7.5 12 3z" fill="currentColor"/></svg>',
+ vent:'<svg viewBox="0 0 24 24"><g stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round"><path d="M3 8h11a3 3 0 1 0-3-3M3 12h16a3 3 0 1 1-3 3M3 16h8"/></g></svg>',
+ cool:'<svg viewBox="0 0 24 24"><g stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round"><path d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7"/><path d="M9 4l3 2 3-2M9 20l3-2 3 2"/></g></svg>',
+ night:'<svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="currentColor"/></svg>',
+ away:'<svg viewBox="0 0 24 24"><g stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9H3z"/><path d="M12 13v4M10 15h4"/></g></svg>'};
+const MC={standby:"#b6a3ff",heat:"#ff8a3d",water:"#ff6b5a",vent:"#3ee0a8",cool:"#38c6ff",night:"#9d8cff",away:"#ffd166"};
+// d: hp,ac,rv,boil device states (0 off,1 on,2 low)
+const S=[
+ {kick:"AlpicAir · viena sistēma",h:'Viens zīmols.<br>Viens panelis<br><em>visai mājai.</em>',p:"Siltumsūknis, kondicionieri un rekuperators no AlpicAir. Ritiniet — un redzēsiet, kā viens sienas panelis vada visu māju.",met:[["3","iekārtu grupas"],["1","panelis"],["0","pultis atvilktnē"]],dot:"Sākums",
+  sky:"night",snow:0,tint:"base",lights:1,mode:"standby",ico:"power",chip:"Gaidīšana",t:21,u:"°C",out:-5,rooms:[21,21,21],co2:780,met2:[["−5°","ārā"],["45%","mitrums"],["780","CO₂ ppm"]],d:{hp:0,ac:0,rv:0,boil:0},time:"06:58",cta:1},
+ {kick:"01 · Apkure",h:'Ārā <span class="c-cool">−15 °C</span>.<br>Mājās <span class="c-heat">+22 °C</span>.',p:"Siltumsūknis ņem siltumu no āra gaisa un silda grīdu visā mājā. Uz paneļa — vēlamā temperatūra katrai telpai.",met:[["−25 °C","darbība līdz"],["60 °C","ūdens līdz"],["4–39 kW","jauda"]],dot:"Apkure",
+  sky:"winter",snow:1,tint:"warm",lights:1,mode:"heat",ico:"heat",chip:"Apkure",t:22,u:"°C",out:-15,rooms:[21,21,22],co2:820,met2:[["−15°","ārā"],["35°","grīdā"],["22°","telpā"]],d:{hp:1,ac:0,rv:0,boil:0,floor:1},time:"07:15"},
+ {kick:"02 · Karstais ūdens",h:'Karstais ūdens —<br><span class="c-heat">no tā paša</span><br>siltumsūkņa.',p:"All in One iekšējā blokā ir iebūvēta tvertne: siltumsūknis uzsilda ūdeni dušai un virtuvei. Katls nav vajadzīgs.",met:[["līdz 60 °C","karstais ūdens"],["1","iekšējais bloks"],["R32","aukstumaģents"]],dot:"Karstais ūdens",
+  sky:"winter",snow:1,tint:"warm",lights:1,mode:"water",ico:"water",chip:"Karstais ūdens",t:50,u:"°C",out:-12,rooms:[22,22,22],co2:900,met2:[["50°","tvertnē"],["−12°","ārā"],["22°","telpā"]],d:{hp:1,ac:0,rv:0,boil:1,floor:1},time:"07:40"},
+ {kick:"03 · Svaigs gaiss",h:'Svaigs gaiss.<br><span class="c-vent">Siltums paliek</span><br>mājā.',p:"NEST rekuperators nepārtraukti nomaina gaisu visās telpās un atgūst lielāko daļu siltuma. CO₂ krītas — logi paliek ciet.",met:[["līdz 87%","siltuma atgūšana"],["līdz 942","m³/h"],["3","montāžas veidi"]],dot:"Ventilācija",
+  sky:"winter",snow:1,tint:"fresh",lights:1,mode:"vent",ico:"vent",chip:"Ventilācija",t:620,u:"ppm",out:-8,rooms:[22,22,22],co2:620,co2from:1150,met2:[["86%","atgūšana"],["320","m³/h"],["−8°","ārā"]],d:{hp:1,ac:0,rv:1,boil:0,floor:1},time:"12:30"},
+ {kick:"04 · Vasara",h:'Ārā <span class="c-heat">+32 °C</span>.<br>Guļamistabā<br><span class="c-cool">+23 °C</span>.',p:"Sienas kondicionieri dzesē katru istabu atsevišķi — klusi un ekonomiski. Panelis rāda katras telpas temperatūru.",met:[["8,5","SEER līdz"],["2,7–7 kW","jauda"],["A+++","energoklase"]],dot:"Dzesēšana",
+  sky:"summer",snow:0,tint:"cool",lights:1,mode:"cool",ico:"cool",chip:"Dzesēšana",t:23,u:"°C",out:32,rooms:[23,23,25],co2:640,met2:[["+32°","ārā"],["23°","telpā"],["50%","mitrums"]],d:{hp:0,ac:1,rv:1,boil:0},time:"15:20"},
+ {kick:"05 · Nakts",h:'Klusa nakts.<br><span class="c-dim">Viens pieskāriens.</span>',p:"Nakts režīms visām iekārtām uzreiz: zemāka temperatūra guļamistabās, kluss ventilators, minimāla ventilācija.",met:[["20 °C","guļamistabā"],["1","pieskāriens"],["kluss","režīms"]],dot:"Nakts",
+  sky:"night",snow:0,tint:"dark",lights:0,mode:"night",ico:"night",chip:"Nakts",t:20,u:"°C",out:14,rooms:[20,20,21],co2:700,met2:[["20°","guļamistabā"],["+14°","ārā"],["min","ventilācija"]],d:{hp:2,ac:0,rv:2,boil:0},time:"23:10"},
+ {kick:"06 · Prom no mājām",h:'Prom no mājām?<br><span class="c-heat">Eko režīms.</span>',p:"Temperatūra pazeminās, ventilācija minimāla. Pirms atgriešanās komfortu var ieslēgt attālināti no viedtālruņa.",met:[["17 °C","uzturēšana"],["1","režīms visam"],["24/7","kontrole"]],dot:"Eko",
+  sky:"dusk",snow:0,tint:"base",lights:0,mode:"away",ico:"away",chip:"Eko · prom",t:17,u:"°C",out:3,rooms:[17,17,17],co2:450,met2:[["17°","telpā"],["+3°","ārā"],["min","ventilācija"]],d:{hp:2,ac:0,rv:2,boil:0},time:"09:00",cta:2}
+];
+const sec=document.getElementById("ka-strada");if(!sec)return;
+sec.style.setProperty("--n",S.length);
+const H=document.getElementById("house"),txt=document.getElementById("sText"),dots=document.getElementById("sDots");
+txt.innerHTML=S.map((s,i)=>`<div class="s-step" data-i="${i}"><div class="kick cap">${s.kick}</div>${i===0?"<h1>":"<h2>"}${s.h}${i===0?"</h1>":"</h2>"}<p>${s.p}</p><div class="s-met">${s.met.map(m=>`<div><b>${m[0]}</b><span>${m[1]}</span></div>`).join("")}</div>${s.cta===1?'<div class="cta"><a class="btn pri" href="#serijas">Apskatīt sērijas →</a><a class="btn gho" href="#piedavajums">Pieprasīt piedāvājumu</a></div>':s.cta===2?'<div class="cta"><a class="btn pri" href="#piedavajums">Atsūtīt mājas plānu →</a><a class="btn gho" href="#serijas">Sērijas</a></div>':""}</div>`).join("");
+dots.innerHTML=S.map((s,i)=>`<button data-i="${i}" aria-label="${s.dot}"><span>${s.dot}</span></button>`).join("");
+dots.querySelectorAll("button").forEach(b=>b.onclick=()=>{const top=sec.offsetTop+(+b.dataset.i+.3)*(sec.offsetHeight-innerHeight)/S.length;scrollTo({top,behavior:"smooth"})});
+// snow
+const sn=document.getElementById("snow");let sh="";for(let i=0;i<70;i++){const x=Math.random()*1040,d=(4+Math.random()*6).toFixed(1),dl=(-Math.random()*8).toFixed(1),r=(1+Math.random()*1.8).toFixed(1);sh+=`<circle cx="${x.toFixed(0)}" cy="-10" r="${r}" fill="#fff" style="animation:fall ${d}s linear ${dl}s infinite"/>`}sn.innerHTML=sh;
+const st=document.createElement("style");st.textContent="@keyframes fall{to{transform:translate(-30px,480px)}}";document.head.appendChild(st);
+const $=id=>document.getElementById(id);
+const tw={};function tween(id,to,fmt,dur=700){const el=$(id);if(!el)return;const from=tw[id]??to;tw[id]=to;const t0=performance.now();cancelAnimationFrame(el._r);(function f(t){const k=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-k,3),v=from+(to-from)*e;el.textContent=fmt(v);if(k<1)el._r=requestAnimationFrame(f)})(t0)}
+const sgn=v=>(v>0?"+":v<0?"−":"")+Math.abs(Math.round(v));
+let cur=-1;
+function apply(i){
+  const s=S[i];cur=i;
+  document.documentElement.style.setProperty("--mode",MC[s.mode]);
+  Object.assign(H.dataset,{sky:s.sky,snow:s.snow,tint:s.tint,lights:s.lights,hp:s.d.hp,ac:s.d.ac,rv:s.d.rv,boil:s.d.boil,floor:s.d.floor||0,co2:s.d.rv?1:0});
+  tween("tOut",s.out,v=>sgn(v)+" °C");
+  tween("tBed",s.rooms[0],v=>Math.round(v)+"°");tween("tKid",s.rooms[1],v=>Math.round(v)+"°");tween("tLiv",s.rooms[2],v=>Math.round(v)+"°");
+  $("wpChip").textContent=s.chip;$("wpMode").textContent=s.chip;$("wpIco").innerHTML=IC[s.ico];$("wpU").textContent=s.u;$("wpClock").textContent=s.time;
+  if(s.u!=="ppm")tween("wpT",s.t,v=>Math.round(v));
+  $("wpMet").innerHTML=s.met2.map(m=>`<div><b>${m[0]}</b><span>${m[1]}</span></div>`).join("");
+  const dv=[["hp","Siltumsūkn."],["boil","Ūdens"],["ac","Kondic."],["rv","Rekup."]];
+  $("wpDevs").innerHTML=dv.map(([k,n])=>`<div class="${s.d[k]===1?"on":s.d[k]===2?"lo":""}"><i></i>${n}</div>`).join("");
+  txt.querySelectorAll(".s-step").forEach((el,j)=>{el.classList.toggle("on",j===i);el.classList.toggle("past",j<i)});
+  dots.querySelectorAll("button").forEach((b,j)=>b.classList.toggle("on",j===i));
+  $("sHint").style.opacity=i===0?1:0;
+}
+function onScroll(){
+  const r=sec.getBoundingClientRect(),total=sec.offsetHeight-innerHeight;
+  const p=Math.min(1,Math.max(0,-r.top/total));
+  const f=p*S.length,i=Math.min(S.length-1,Math.floor(f)),sub=Math.min(1,f-i);
+  if(i!==cur)apply(i);
+  const s=S[i];
+  if(s.co2from){const v=Math.round(s.co2from+(s.co2-s.co2from)*Math.min(1,sub*1.4));$("tCo2").textContent="CO₂ "+v;$("wpT").textContent=v;tw.wpT=v}
+  else $("tCo2").textContent="CO₂ "+s.co2;
+  const pr=document.getElementById("progress");if(pr){const d=document.documentElement;pr.style.width=(scrollY/(d.scrollHeight-innerHeight)*100)+"%"}
+}
+let tick=false;addEventListener("scroll",()=>{if(!tick){tick=true;requestAnimationFrame(()=>{tick=false;onScroll()})}},{passive:true});
+addEventListener("resize",onScroll);
+apply(0);onScroll();
+})();
+
 })();
 </script>
 </body>
