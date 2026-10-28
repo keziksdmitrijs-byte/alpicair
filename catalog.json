@@ -4728,7 +4728,7 @@
    "name": "NEST X",
    "tag": "Pretplūsmas rekuperatori",
    "desc": "NEST X rekuperatori ar pretplūsmas plākšņu siltummaini — vertikālai, horizontālai vai griestu montāžai. E versijās entalpijas siltummainis atgūst arī mitrumu.",
-   "img": null,
+   "img": "img/nest-3xv-4xv-angle-lefts.webp",
    "stats": [
     [
      "760",
@@ -4780,7 +4780,7 @@
      ],
      "d": "AlpicAir NEST 2X V ir vertikāli uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 180 m³/h, siltuma atgūšanas efektivitāte līdz 87%. Gaisa vadu diametrs 100 mm. Izmēri 595 x 315 x 698 mm. Ieteicamā platība: līdz 100 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-2xv-angle-lefts.webp",
      "mt": "v",
      "a": 100
     },
@@ -4820,7 +4820,7 @@
      ],
      "d": "AlpicAir NEST 2X V E ir vertikāli uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 180 m³/h, siltuma atgūšanas efektivitāte līdz 78%. Gaisa vadu diametrs 100 mm. Izmēri 595 x 315 x 698 mm. Ieteicamā platība: līdz 100 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-2xv-angle-lefts.webp",
      "mt": "v",
      "a": 100
     },
@@ -4860,7 +4860,7 @@
      ],
      "d": "AlpicAir NEST 2X P ir pie griestiem uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 200 m³/h, siltuma atgūšanas efektivitāte līdz 80%. Gaisa vadu diametrs 125 mm. Izmēri 1010 x 590 x 250 mm. Ieteicamā platība: līdz 120 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-2x-p-ceiling-rights.webp",
      "mt": "p",
      "a": 120
     },
@@ -4904,7 +4904,7 @@
      ],
      "d": "AlpicAir NEST 2X P E ir pie griestiem uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 200 m³/h, siltuma atgūšanas efektivitāte līdz 80%. Gaisa vadu diametrs 125 mm. Izmēri 1010 x 590 x 250 mm. Ieteicamā platība: līdz 120 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-2x-p-ceiling-rights.webp",
      "mt": "p",
      "a": 120
     },
@@ -4948,7 +4948,7 @@
      ],
      "d": "AlpicAir NEST 400X P ir pie griestiem uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 380 m³/h, siltuma atgūšanas efektivitāte līdz 81%. Gaisa vadu diametrs 200 mm. Izmēri 1300 x 770 x 330 mm. Ieteicamā platība: līdz 220 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-400x-p-transparent.webp",
      "mt": "p",
      "a": 220
     },
@@ -4996,7 +4996,7 @@
      ],
      "d": "AlpicAir NEST 3X P ir pie griestiem uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 400 m³/h, siltuma atgūšanas efektivitāte līdz 80%. Gaisa vadu diametrs 160 mm. Izmēri 1228 x 690 x 324 mm. Ieteicamā platība: līdz 220 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-3xp-4xp-6.webp",
      "mt": "p",
      "a": 220
     },
@@ -5048,7 +5048,7 @@
      ],
      "d": "AlpicAir NEST 3X P E ir pie griestiem uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 400 m³/h, siltuma atgūšanas efektivitāte līdz 80%. Gaisa vadu diametrs 160 mm. Izmēri 1228 x 690 x 324 mm. Ieteicamā platība: līdz 220 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-3xp-4xp-1.webp",
      "mt": "p",
      "a": 220
     },
@@ -5088,7 +5088,7 @@
      ],
      "d": "AlpicAir NEST 3X V ir vertikāli uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 400 m³/h, siltuma atgūšanas efektivitāte līdz 87%. Gaisa vadu diametrs 160 mm. Izmēri 599 x 538 x 810 mm. Ieteicamā platība: līdz 230 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-3xv-4xv-angle-lefts.webp",
      "mt": "v",
      "a": 230
     },
@@ -5132,7 +5132,7 @@
      ],
      "d": "AlpicAir NEST 3X V E ir vertikāli uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 400 m³/h, siltuma atgūšanas efektivitāte līdz 87%. Gaisa vadu diametrs 160 mm. Izmēri 599 x 538 x 810 mm. Ieteicamā platība: līdz 230 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-3xv-4xv-angle-lefts.webp",
      "mt": "v",
      "a": 230
     },
@@ -5176,7 +5176,7 @@
      ],
      "d": "AlpicAir NEST 4X P ir pie griestiem uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 500 m³/h, siltuma atgūšanas efektivitāte līdz 79%. Gaisa vadu diametrs 160 mm. Izmēri 1228 x 690 x 324 mm. Ieteicamā platība: līdz 320 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-3xp-4xp-7.webp",
      "mt": "p",
      "a": 320
     },
@@ -5216,7 +5216,7 @@
      ],
      "d": "AlpicAir NEST 4X P E ir pie griestiem uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 500 m³/h, siltuma atgūšanas efektivitāte līdz 79%. Gaisa vadu diametrs 160 mm. Izmēri 1228 x 690 x 324 mm. Ieteicamā platība: līdz 320 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-3xp-4xp-7.webp",
      "mt": "p",
      "a": 320
     },
@@ -5256,7 +5256,7 @@
      ],
      "d": "AlpicAir NEST 4X V ir vertikāli uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 500 m³/h, siltuma atgūšanas efektivitāte līdz 81%. Gaisa vadu diametrs 160 mm. Izmēri 599 x 538 x 824 mm. Ieteicamā platība: līdz 310 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-3xv-4xv-angle-lefts.webp",
      "mt": "v",
      "a": 310
     },
@@ -5296,7 +5296,7 @@
      ],
      "d": "AlpicAir NEST 4X V E ir vertikāli uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 500 m³/h, siltuma atgūšanas efektivitāte līdz 71%. Gaisa vadu diametrs 160 mm. Izmēri 599 x 538 x 824 mm. Ieteicamā platība: līdz 310 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-3xv-4xv-angle-lefts.webp",
      "mt": "v",
      "a": 310
     },
@@ -5336,7 +5336,7 @@
      ],
      "d": "AlpicAir NEST 700X V ir vertikāli uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 500 m³/h, siltuma atgūšanas efektivitāte līdz 81%. Gaisa vadu diametrs 160 mm. Izmēri 599 x 538 x 824 mm. Ieteicamā platība: līdz 430 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-700x-v-transparent.webp",
      "mt": "v",
      "a": 430
     },
@@ -5376,7 +5376,7 @@
      ],
      "d": "AlpicAir NEST 700X V E ir vertikāli uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 500 m³/h, siltuma atgūšanas efektivitāte līdz 75%. Gaisa vadu diametrs 160 mm. Izmēri 599 x 538 x 824 mm. Ieteicamā platība: līdz 430 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-700x-v-transparent.webp",
      "mt": "v",
      "a": 430
     },
@@ -5420,7 +5420,7 @@
      ],
      "d": "AlpicAir NEST 700X P ir pie griestiem uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 700 m³/h, siltuma atgūšanas efektivitāte līdz 82%. Gaisa vadu diametrs 250 mm. Izmēri 1380 x 1070 x 350 mm. Ieteicamā platība: līdz 390 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-700x-p-transparent.webp",
      "mt": "p",
      "a": 390
     },
@@ -5460,7 +5460,7 @@
      ],
      "d": "AlpicAir NEST 700X P E ir pie griestiem uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 700 m³/h, siltuma atgūšanas efektivitāte līdz 80%. Gaisa vadu diametrs 250 mm. Izmēri 1380 x 1070 x 350 mm. Ieteicamā platība: līdz 390 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-700x-p-transparent.webp",
      "mt": "p",
      "a": 390
     },
@@ -5504,7 +5504,7 @@
      ],
      "d": "AlpicAir NEST 700X H ir horizontāli uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 760 m³/h, siltuma atgūšanas efektivitāte līdz 81%. Gaisa vadu diametrs 250 mm. Izmēri 1200 x 670 x 780 mm. Ieteicamā platība: līdz 440 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-700x-h-transparent.webp",
      "mt": "h",
      "a": 440
     }
@@ -5516,7 +5516,7 @@
    "name": "NEST R",
    "tag": "Rotācijas rekuperatori",
    "desc": "NEST R rekuperatori ar rotora tipa (sorbcijas/entalpijas) siltummaini — augsta siltuma atgūšana, mitruma atgūšana ziemā, kluss darbs. Vertikālai, horizontālai un griestu montāžai.",
-   "img": null,
+   "img": "img/nest-d450r-v-0.webp",
    "stats": [
     [
      "942",
@@ -5564,7 +5564,7 @@
      ],
      "d": "Kompakts griestu rotora rekuperators ar otrās paaudzes sorbcijas rotoru. Slēpjams zem griestiem.",
      "st": 0,
-     "img": null,
+     "img": "img/nest-d250r-p-0.webp",
      "mt": "p",
      "a": 85
     },
@@ -5600,7 +5600,7 @@
      ],
      "d": "NEST D250R P komplektācija S — kompakts griestu rekuperators ar sorbcijas rotoru.",
      "st": 0,
-     "img": null,
+     "img": "img/nest-d250r-p-s-0.webp",
      "mt": "p",
      "a": 85
     },
@@ -5644,7 +5644,7 @@
      ],
      "d": "AlpicAir NEST 350R PE ir pie griestiem uzstādāms rekuperators ar rotora tipa siltummaini. Maksimālā gaisa plūsma 300 m³/h, siltuma atgūšanas efektivitāte līdz 83%. Gaisa vadu diametrs 200 mm. Izmēri 900 x 160 x 395 mm. Ieteicamā platība: līdz 170 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-350r-pe-transparent.webp",
      "mt": "p",
      "a": 170
     },
@@ -5684,7 +5684,7 @@
      ],
      "d": "AlpicAir NEST 3R VE ir vertikāli uzstādāms rekuperators ar rotora tipa siltummaini. Maksimālā gaisa plūsma 300 m³/h, siltuma atgūšanas efektivitāte līdz 82%. Gaisa vadu diametrs 125 mm. Izmēri 599 x 375 x 700 mm. Ieteicamā platība: līdz 170 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-3r-ve-transparent.webp",
      "mt": "v",
      "a": 170
     },
@@ -5724,7 +5724,7 @@
      ],
      "d": "Rotora rekuperators ar sorbcijas (entalpijas) rotoru un augstu siltuma atgūšanas efektivitāti. Piemērots privātmājām un dzīvokļiem.",
      "st": 0,
-     "img": null,
+     "img": "img/nest-d350r-v-0.webp",
      "mt": "v",
      "a": 130
     },
@@ -5764,7 +5764,7 @@
      ],
      "d": "NEST D400R V komplektācija S ar entalpijas rotoru un mitruma atgūšanu ziemā.",
      "st": 0,
-     "img": null,
+     "img": "img/nest-d350r-v-s-0.webp",
      "mt": "v",
      "a": 130
     },
@@ -5808,7 +5808,7 @@
      ],
      "d": "AlpicAir NEST 400R HE ir horizontāli uzstādāms rekuperators ar rotora tipa siltummaini. Maksimālā gaisa plūsma 380 m³/h, siltuma atgūšanas efektivitāte līdz 77%. Gaisa vadu diametrs 200 mm. Izmēri 1000 x 560 x 610 mm. Ieteicamā platība: līdz 220 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-400r-he-transparent.webp",
      "mt": "h",
      "a": 220
     },
@@ -5848,7 +5848,7 @@
      ],
      "d": "AlpicAir NEST 400R VE ir vertikāli uzstādāms rekuperators ar rotora tipa siltummaini. Maksimālā gaisa plūsma 385 m³/h, siltuma atgūšanas efektivitāte līdz 77%. Gaisa vadu diametrs 160 mm. Izmēri 900 x 560 x 850 mm. Ieteicamā platība: līdz 220 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-400r-ve-transparent.webp",
      "mt": "v",
      "a": 220
     },
@@ -5884,7 +5884,7 @@
      ],
      "d": "Griestu rotora rekuperators ar entalpijas rotoru un A+ energoefektivitāti.",
      "st": 0,
-     "img": null,
+     "img": "img/nest-d400r-p-0.webp",
      "mt": "p",
      "a": 140
     },
@@ -5920,7 +5920,7 @@
      ],
      "d": "NEST D400R P komplektācija S ar entalpijas rotoru griestu montāžai.",
      "st": 0,
-     "img": null,
+     "img": "img/nest-d400r-p-s-0.webp",
      "mt": "p",
      "a": 140
     },
@@ -5956,7 +5956,7 @@
      ],
      "d": "Rotora rekuperators ar entalpijas rotoru, kas ziemā atgriež mitrumu telpās. Klusa darbība un A+ energoefektivitāte.",
      "st": 0,
-     "img": null,
+     "img": "img/nest-d450r-v-0.webp",
      "mt": "v",
      "a": 170
     },
@@ -5992,7 +5992,7 @@
      ],
      "d": "NEST D450R V komplektācija S ar sorbcijas rotoru un augstu siltuma atgūšanu 86%.",
      "st": 0,
-     "img": null,
+     "img": "img/nest-d450r-v-s-0.webp",
      "mt": "v",
      "a": 170
     },
@@ -6032,7 +6032,7 @@
      ],
      "d": null,
      "st": 0,
-     "img": null,
+     "img": "img/nest-d400r-h.webp",
      "mt": "h",
      "a": null
     },
@@ -6076,7 +6076,7 @@
      ],
      "d": "AlpicAir NEST 500R HE ir horizontāli uzstādāms rekuperators ar rotora tipa siltummaini. Maksimālā gaisa plūsma 520 m³/h, siltuma atgūšanas efektivitāte līdz 78%. Gaisa vadu diametrs 200 mm. Izmēri 1000 x 560 x 610 mm. Ieteicamā platība: līdz 300 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-400r-he-transparent.webp",
      "mt": "h",
      "a": 300
     },
@@ -6128,7 +6128,7 @@
      ],
      "d": "AlpicAir NEST 700R HE ir horizontāli uzstādāms rekuperators ar rotora tipa siltummaini. Maksimālā gaisa plūsma 520 m³/h, siltuma atgūšanas efektivitāte līdz 78%. Gaisa vadu diametrs 200 mm. Izmēri 1000 x 560 x 610 mm. Ieteicamā platība: līdz 410 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-700r-he-transparent.webp",
      "mt": "h",
      "a": 410
     },
@@ -6152,7 +6152,7 @@
      ],
      "d": "Plākšņu pretplūsmas rekuperators ar difūzijas entalpijas siltummaini un A+ energoefektivitāti.",
      "st": 0,
-     "img": null,
+     "img": "img/nest-d700x-v-0.webp",
      "mt": "v",
      "a": 210
     },
@@ -6196,7 +6196,7 @@
      ],
      "d": "AlpicAir NEST 700R VE ir vertikāli uzstādāms rekuperators ar rotora tipa siltummaini. Maksimālā gaisa plūsma 765 m³/h, siltuma atgūšanas efektivitāte līdz 74%. Gaisa vadu diametrs 250 mm. Izmēri 1100 x 655 x 980 mm. Ieteicamā platība: līdz 430 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-700r-ve-transparent.webp",
      "mt": "v",
      "a": 430
     },
@@ -6220,7 +6220,7 @@
      ],
      "d": "Jaudīgs rotora rekuperators lielām mājām un birojiem ar gaisa plūsmu līdz 942 m³/h.",
      "st": 0,
-     "img": null,
+     "img": "img/nest-d900r-v-0.webp",
      "mt": "v",
      "a": 320
     },
@@ -6244,7 +6244,7 @@
      ],
      "d": "NEST D900R V komplektācija S lielām telpām ar gaisa plūsmu līdz 942 m³/h.",
      "st": 0,
-     "img": null,
+     "img": "img/nest-d900r-v-s-0.webp",
      "mt": "v",
      "a": 320
     }
@@ -6256,7 +6256,7 @@
    "name": "NEST MINI",
    "tag": "Sienas rekuperators",
    "desc": "Decentralizēts sienas rekuperators bez gaisa vadiem — ideāls dzīvokļiem un atsevišķām telpām.",
-   "img": "https://alpicair.com/image/cache/catalog/vaizdas-500x500.png",
+   "img": "img/nest-alpicair-nest-mini-transparent.webp",
    "stats": [
     [
      "100",
@@ -6312,7 +6312,7 @@
      ],
      "d": "AlpicAir AlpicAir NEST MINI ir sienas rekuperators ar lokālu siltuma atgūšanu. Maksimālā gaisa plūsma 100 m³/h, siltuma atgūšanas efektivitāte līdz 82%. Gaisa vadu diametrs 85 mm. Ieteicamā platība: līdz 50 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-alpicair-nest-mini-transparent.webp",
      "mt": "w",
      "a": 50
     },
@@ -6352,7 +6352,7 @@
      ],
      "d": "AlpicAir AlpicAir NEST MINI S ir sienas rekuperators ar lokālu siltuma atgūšanu. Maksimālā gaisa plūsma 100 m³/h, siltuma atgūšanas efektivitāte līdz 82%. Gaisa vadu diametrs 85 mm. Izmēri 567 x 437 x 196 mm. Ieteicamā platība: līdz 50 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
      "st": 1,
-     "img": null,
+     "img": "img/nest-alpicair-nest-mini-s-transparent.webp",
      "mt": "w",
      "a": 50
     }

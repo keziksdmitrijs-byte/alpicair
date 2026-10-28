@@ -165,15 +165,21 @@ async function load(){
     if(cfg.token){const f=await getFile("catalog.json");sha=f.sha;DATA=JSON.parse(f.encoding==="base64"&&f.content?b64dec(f.content):await (await fetch(f.download_url)).text());status("Данные загружены из GitHub","good")}
     else{DATA=await (await fetch("catalog.json?t="+Date.now(),{cache:"no-store"})).json();status("Только просмотр — укажите токен (⚙ Доступ), чтобы сохранять","dirty")}
   }catch(e){status("Ошибка загрузки: "+e.message,"err");try{DATA=await (await fetch("catalog.json?t="+Date.now())).json()}catch(_){}}
-  DATA.series=DATA.series||[];renderSide();if(curId)renderMain();updSave();
+  DATA.series=DATA.series||[];
+  try{const dr=JSON.parse(localStorage.getItem(DRAFT)||"null");if(dr&&dr.data&&Array.isArray(dr.data.series)&&JSON.stringify(dr.data)!==JSON.stringify(DATA)){
+    if(confirm("Найдены несохранённые изменения от "+new Date(dr.savedAt).toLocaleString("ru-RU")+".\nВосстановить их?\n\n(«Отмена» — удалить черновик и работать с опубликованной версией)")){DATA=dr.data;dirty=true;status("Черновик восстановлен — не забудьте сохранить","dirty")}else localStorage.removeItem(DRAFT)}}catch(e){}
+  renderSide();if(curId)renderMain();updSave();
 }
 function status(t,cls=""){const s=$("#status");s.textContent=t;s.className="status "+cls}
-function markDirty(){dirty=true;status("Есть несохранённые изменения","dirty");updSave()}
-function updSave(){$("#bSave").disabled=!dirty||!cfg.token;$("#bSave").title=cfg.token?"":"Сначала укажите токен в «⚙ Доступ»"}
+const DRAFT="alpic-admin-draft";
+function saveDraft(){try{localStorage.setItem(DRAFT,JSON.stringify({savedAt:new Date().toISOString(),data:DATA}))}catch(e){}}
+function markDirty(){dirty=true;status(cfg.token?"Есть несохранённые изменения":"Есть несохранённые изменения — для публикации укажите токен (⚙ Доступ)","dirty");updSave();clearTimeout(markDirty.t);markDirty.t=setTimeout(saveDraft,600)}
+function updSave(){$("#bSave").disabled=!dirty;$("#bSave").title=cfg.token?"":"Для публикации нужен токен GitHub — нажмите, чтобы указать"}
 addEventListener("beforeunload",e=>{if(dirty){e.preventDefault();e.returnValue=""}});
 
 /* ---------- save ---------- */
 $("#bSave").onclick=async()=>{
+  if(!cfg.token){toast("Сначала укажите токен GitHub");$("#bSettings").click();$("#sMsg").className="status dirty";$("#sMsg").textContent="Ваши изменения сохранены как черновик в этом браузере. После ввода токена нажмите «Сохранить и опубликовать».";return}
   const ids=DATA.series.map(s=>s.id);const dup=ids.find((x,i)=>ids.indexOf(x)!==i);
   if(dup)return toast("Повторяется ID серии: "+dup);
   if(ids.some(x=>!/^[a-z0-9-]+$/.test(x)))return toast("ID серии: только латиница, цифры и «-»");
@@ -185,7 +191,7 @@ $("#bSave").onclick=async()=>{
     DATA.updated=new Date().toISOString().slice(0,10);
     try{sha=(await getFile("catalog.json")).sha}catch(e){}
     const r=await putFile("catalog.json",b64enc(JSON.stringify(DATA,null,1)),"Katalogs atjaunināts (admin)",sha);
-    sha=r.content.sha;dirty=false;status("Опубликовано ✓ Сайт обновится через 1–2 минуты","good");toast("Сохранено в GitHub");
+    sha=r.content.sha;dirty=false;localStorage.removeItem(DRAFT);status("Опубликовано ✓ Сайт обновится через 1–2 минуты","good");toast("Сохранено в GitHub");
   }catch(e){status("Ошибка сохранения: "+e.message,"err");$("#bSave").disabled=false}
   updSave();
 };
