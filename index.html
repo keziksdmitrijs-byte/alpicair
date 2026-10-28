@@ -142,12 +142,12 @@ h2{font-size:clamp(32px,4vw,54px);letter-spacing:-.03em;line-height:1.04;margin:
 .detail{position:fixed;inset:0;z-index:60;background:radial-gradient(900px 700px at 50% 30%,#2a1f52,var(--bg) 70%);display:grid;grid-template-columns:minmax(240px,1fr) minmax(320px,1.35fr) minmax(320px,400px);gap:30px;padding:96px 40px 40px;opacity:0;pointer-events:none;transition:opacity .35s;overflow:auto}
 .detail.show{opacity:1;pointer-events:auto}
 .detail .back{position:absolute;left:40px;top:28px;display:flex;gap:8px;align-items:center;border:1px solid var(--line);background:var(--panel);padding:10px 16px;border-radius:999px;font-weight:700;font-size:14px}
-.detail .left{align-self:center}
+.detail .left{align-self:start;position:sticky;top:0;padding-top:40px}
 .detail .crumb{color:var(--brand2);font-size:18px}
 .detail h2{font-size:clamp(40px,5vw,78px);line-height:.95;margin:10px 0 18px}
 .detail h2 span{display:block;color:var(--brand2)}
 .detail .desc{color:var(--ink2);line-height:1.6;font-size:16px;max-width:420px;margin:0}
-.detail .center{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:360px}
+.detail .center{position:sticky;top:0;align-self:start;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-height:360px}
 .detail .center .lamp2{width:40%;height:6px;border-radius:3px;background:linear-gradient(90deg,#3b3456,#f0ebff,#3b3456);box-shadow:0 10px 60px 16px rgba(182,163,255,.45);margin-bottom:22px}
 .detail .stage{width:min(560px,100%);aspect-ratio:1.2;border-radius:30px;background:radial-gradient(110% 90% at 50% 0%,#fff,#ebe6f6 60%,#d6cfea);display:grid;place-items:center;box-shadow:0 50px 90px -40px rgba(124,92,255,.8);overflow:hidden}
 .detail .stage img{width:86%;height:86%;object-fit:contain;mix-blend-mode:multiply;animation:pop .5s both}
@@ -235,6 +235,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   .links{display:none}.sysbtn{margin-left:auto}
   .detail{display:block}
   .detail>*+*{margin-top:24px}
+  .detail .left,.detail .center{position:static;padding-top:0}
   .detail .center{min-height:0;display:block;text-align:center}
   .detail .center .lamp2{margin:0 auto 18px}
   .detail .stage{width:100%;aspect-ratio:auto;height:70vw;max-height:420px}
