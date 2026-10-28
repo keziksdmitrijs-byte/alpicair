@@ -1,0 +1,6554 @@
+{
+ "updated": "2026-10-28",
+ "series": [
+  {
+   "id": "all-in-one",
+   "cat": "hp",
+   "name": "All in One",
+   "tag": "Siltumsūknis ar iebūvētu boileri",
+   "desc": "Integrēts gaiss-ūdens siltumsūknis ar iebūvētu karstā ūdens tvertni un divpakāpju kompresoru. Apkure, dzesēšana un karstais ūdens vienā kompaktā iekšējā blokā.",
+   "img": "https://alpicair.com/image/cache/catalog/air%20water/A2W%20both-500x500_1-500x500.png",
+   "stats": [
+    [
+     "6–12",
+     "kW apkure"
+    ],
+    [
+     "60 °C",
+     "ūdens līdz"
+    ],
+    [
+     "-25 °C",
+     "apsilde līdz"
+    ]
+   ],
+   "models": [
+    {
+     "m": "AWIB-60WRDC1C / AWO-60WRDC1B",
+     "n": "AlpicAir siltumsūknis All in One",
+     "l": "6 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R32"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "5,8"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "6"
+      ],
+      [
+       "Ūdens plūsma, l/min",
+       "10"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "975×702×396"
+      ],
+      [
+       "Elektriskais sildelements, kW",
+       "3"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "60"
+      ],
+      [
+       "Iekšējais bloks (P×A×Dz), mm",
+       "600×1800×650"
+      ],
+      [
+       "Karstā ūdens temperatūra, °C",
+       "40-80"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "+10…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWIB-80WRDC1A / AWO-80WRDC1A",
+     "n": "AlpicAir siltumsūknis All in One",
+     "l": "8 kW · 1F",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R32"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "7,7"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "8"
+      ],
+      [
+       "Ūdens plūsma, l/min",
+       "10"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "982×787×427"
+      ],
+      [
+       "Elektriskais sildelements, kW",
+       "6"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "60"
+      ],
+      [
+       "Iekšējais bloks (P×A×Dz), mm",
+       "600×1800×650"
+      ],
+      [
+       "Karstā ūdens temperatūra, °C",
+       "40-80"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "+10…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWIB-80WRDC3A / AWO-80WRDC3A",
+     "n": "AlpicAir siltumsūknis All in One",
+     "l": "8 kW · 3F",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R32"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "8,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "8"
+      ],
+      [
+       "Ūdens plūsma, l/min",
+       "10"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "982×787×395"
+      ],
+      [
+       "Elektriskais sildelements, kW",
+       "6"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "60"
+      ],
+      [
+       "Iekšējais bloks (P×A×Dz), mm",
+       "600×1800×650"
+      ],
+      [
+       "Karstā ūdens temperatūra, °C",
+       "40-80"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "+10…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWIB-100WRDC1A / AWO-100WRDC1A",
+     "n": "AlpicAir siltumsūknis All in One",
+     "l": "10 kW · 1F",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R32"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "9,35"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "10"
+      ],
+      [
+       "Ūdens plūsma, l/min",
+       "10"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "982×787×427"
+      ],
+      [
+       "Elektriskais sildelements, kW",
+       "6"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "60"
+      ],
+      [
+       "Iekšējais bloks (P×A×Dz), mm",
+       "600×1800×650"
+      ],
+      [
+       "Karstā ūdens temperatūra, °C",
+       "40-80"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "+10…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWIB-100WRDC3A / AWO-100WRDC3A",
+     "n": "AlpicAir siltumsūknis All in One",
+     "l": "10 kW · 3F",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R32"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "10"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "10"
+      ],
+      [
+       "Ūdens plūsma, l/min",
+       "10"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "982×787×395"
+      ],
+      [
+       "Elektriskais sildelements, kW",
+       "6"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "60"
+      ],
+      [
+       "Iekšējais bloks (P×A×Dz), mm",
+       "600×1800×650"
+      ],
+      [
+       "Karstā ūdens temperatūra, °C",
+       "40-80"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "+10…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWIB-160WRDC3A / AWO-160WRDC3A",
+     "n": "AlpicAir siltumsūknis All in One",
+     "l": "12 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R32"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "11"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "12"
+      ],
+      [
+       "Ūdens plūsma, l/min",
+       "10"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "940×820×460"
+      ],
+      [
+       "Elektriskais sildelements, kW",
+       "10"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "60"
+      ],
+      [
+       "Iekšējais bloks (P×A×Dz), mm",
+       "600×1800×650"
+      ],
+      [
+       "Karstā ūdens temperatūra, °C",
+       "40-80"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "+10…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    }
+   ]
+  },
+  {
+   "id": "split",
+   "cat": "hp",
+   "name": "Split",
+   "tag": "Gaiss-ūdens split sistēma",
+   "desc": "Split tipa siltumsūknis ar hidromoduli telpās — apkurei, dzesēšanai un karstajam ūdenim. Āra blokā tikai aukstumaģenta kontūrs.",
+   "img": "https://alpicair.com/image/cache/catalog/Split%20A-500x500.png",
+   "stats": [
+    [
+     "3,8–8,5",
+     "kW apkure"
+    ],
+    [
+     "60 °C",
+     "ūdens līdz"
+    ],
+    [
+     "-25 °C",
+     "apsilde līdz"
+    ]
+   ],
+   "models": [
+    {
+     "m": "AWI-40WRDC1 / AWO-40WRDC1",
+     "n": "AlpicAir siltumsūknis Split",
+     "l": "3,8 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R32"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "4"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "3,8"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "1133×568×390"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "60"
+      ],
+      [
+       "Iekšējais bloks (P×A×Dz), mm",
+       "860×318×460"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "+10…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWI-60WRDC1 / AWO-60WRDC1",
+     "n": "AlpicAir siltumsūknis Split",
+     "l": "5,8 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R32"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "6"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "5,8"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "1133×568×390"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "60"
+      ],
+      [
+       "Iekšējais bloks (P×A×Dz), mm",
+       "860×318×460"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "+10…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 0,
+     "img": null
+    },
+    {
+     "m": "AWI-80WRDC1 / AWO-80WRDC1",
+     "n": "AlpicAir siltumsūknis Split",
+     "l": "7 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R32"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "8"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "7"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "1133×568×390"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "60"
+      ],
+      [
+       "Iekšējais bloks (P×A×Dz), mm",
+       "860×318×460"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "+10…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 0,
+     "img": null
+    },
+    {
+     "m": "AWI-100WRDC1 / AWO-100WRDC1",
+     "n": "AlpicAir siltumsūknis Split",
+     "l": "8,5 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R32"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "9,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "8,5"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "1133×568×390"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "60"
+      ],
+      [
+       "Iekšējais bloks (P×A×Dz), mm",
+       "860×318×460"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "+10…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 0,
+     "img": null
+    }
+   ]
+  },
+  {
+   "id": "split-b",
+   "cat": "hp",
+   "name": "Split B",
+   "tag": "Jaunās paaudzes split",
+   "desc": "Uzlabota split sērija ar paplašinātu darba diapazonu — apkure līdz −30 °C āra temperatūrā.",
+   "img": "https://alpicair.com/image/cache/catalog/air%20water/Split%20B-500x500.png",
+   "stats": [
+    [
+     "4,3–8,3",
+     "kW apkure"
+    ],
+    [
+     "60 °C",
+     "ūdens līdz"
+    ],
+    [
+     "-30 °C",
+     "apsilde līdz"
+    ]
+   ],
+   "models": [
+    {
+     "m": "AWI-40WRDC1B / AWO-40WRDC1B",
+     "n": "AlpicAir siltumsūknis Split B",
+     "l": "4,3 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R32"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "4,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "4,3"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "1100×900×370"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "60"
+      ],
+      [
+       "Iekšējais bloks (P×A×Dz), mm",
+       "429×880×268"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-30…+35"
+      ]
+     ],
+     "d": null,
+     "st": 0,
+     "img": null
+    },
+    {
+     "m": "AWI-60WRDC1B / AWO-60WRDC1B",
+     "n": "AlpicAir siltumsūknis Split B",
+     "l": "6,2 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R32"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "6,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "6,2"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "1100×900×300"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "60"
+      ],
+      [
+       "Iekšējais bloks (P×A×Dz), mm",
+       "429×880×268"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-30…+35"
+      ]
+     ],
+     "d": null,
+     "st": 0,
+     "img": null
+    },
+    {
+     "m": "AWI-80WRDC3B / AWO-80WRDC3B",
+     "n": "AlpicAir siltumsūknis Split B",
+     "l": "8,3 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R32"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "8,4"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "8,3"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "993×960×385"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "60"
+      ],
+      [
+       "Iekšējais bloks (P×A×Dz), mm",
+       "429×880×268"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-30…+35"
+      ]
+     ],
+     "d": null,
+     "st": 0,
+     "img": null
+    },
+    {
+     "m": "AWI-100WRDC3B / AWO-100WRDC3B",
+     "n": "AlpicAir siltumsūknis Split B",
+     "l": "10 kW",
+     "s": [],
+     "d": null,
+     "st": 1,
+     "img": null
+    }
+   ]
+  },
+  {
+   "id": "monoblock",
+   "cat": "hp",
+   "name": "Monoblock",
+   "tag": "Viss vienā āra blokā",
+   "desc": "Monobloka siltumsūknis — visa dzesēšanas sistēma rūpnīcā noslēgtā āra blokā, telpās ienāk tikai ūdens caurules.",
+   "img": "https://alpicair.com/image/cache/catalog/air%20water/Mono%20blokas_1-500x500.png",
+   "stats": [
+    [
+     "4–15,5",
+     "kW apkure"
+    ],
+    [
+     "60 °C",
+     "ūdens līdz"
+    ],
+    [
+     "-25 °C",
+     "apsilde līdz"
+    ]
+   ],
+   "models": [
+    {
+     "m": "AWO-40CWRDC1",
+     "n": "AlpicAir siltumsūknis Monobloks",
+     "l": "4 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R32"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "3,8"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "4"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "1150×758×345"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "60"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWO-60CWRDC1",
+     "n": "AlpicAir siltumsūknis Monobloks",
+     "l": "6 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R32"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "5,8"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "6"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "1150×758×345"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "60"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWO-100CWRDC3",
+     "n": "AlpicAir siltumsūknis Monobloks",
+     "l": "10 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R32"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "8,8"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "10"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "1200×878×460"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "60"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWO-150CWRDC3",
+     "n": "AlpicAir siltumsūknis Monobloks",
+     "l": "15,5 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R32"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "14,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "15,5"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "1200×878×460"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "60"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    }
+   ]
+  },
+  {
+   "id": "monoblock-b",
+   "cat": "hp",
+   "name": "Monoblock B",
+   "tag": "Ūdens līdz 65 °C",
+   "desc": "Monobloka B sērija ar augstāku izejošā ūdens temperatūru — līdz 65 °C.",
+   "img": "https://alpicair.com/image/cache/catalog/air%20water/Mono%20blokas_1-500x500.png",
+   "stats": [
+    [
+     "6–15,7",
+     "kW apkure"
+    ],
+    [
+     "65 °C",
+     "ūdens līdz"
+    ],
+    [
+     "-25 °C",
+     "apsilde līdz"
+    ]
+   ],
+   "models": [
+    {
+     "m": "AWO-60CWRDC1B",
+     "n": "AlpicAir siltumsūknis Monobloks B",
+     "l": "6 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R32"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "6,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "6"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "1150×735×365"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "65"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 0,
+     "img": null
+    },
+    {
+     "m": "AWO-100CWRDC3B",
+     "n": "AlpicAir siltumsūknis Monobloks B",
+     "l": "10,2 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R32"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "10,2"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "10,2"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "1206×878×445"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "65"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 0,
+     "img": null
+    },
+    {
+     "m": "AWO-150CWRDC3B",
+     "n": "AlpicAir siltumsūknis Monobloks B",
+     "l": "15,7 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R32"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "15,4"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "15,7"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "1206×878×445"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "65"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 0,
+     "img": null
+    }
+   ]
+  },
+  {
+   "id": "monoblock-r290",
+   "cat": "hp",
+   "name": "Monoblock R290",
+   "tag": "Dabīgais aukstumaģents",
+   "desc": "Monobloks ar dabīgo aukstumaģentu R290 — ūdens līdz 80 °C, piemērots arī radiatoriem un vecākām ēkām.",
+   "img": "https://alpicair.com/image/cache/catalog/R290%20monoblock/R290%20monoblock-500x500.jpeg",
+   "stats": [
+    [
+     "6,2–15,5",
+     "kW apkure"
+    ],
+    [
+     "80 °C",
+     "ūdens līdz"
+    ],
+    [
+     "-25 °C",
+     "apsilde līdz"
+    ]
+   ],
+   "models": [
+    {
+     "m": "AWO-60CWNDC1",
+     "n": "AlpicAir siltumsūknis Monobloks R290",
+     "l": "6,2 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R290"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "6,2"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "6,2"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "1210×880×450"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "80"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWO-80CWNDC1",
+     "n": "AlpicAir siltumsūknis Monobloks R290",
+     "l": "8,4 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R290"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "8,3"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "8,4"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "1210×880×450"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "80"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWO-100CWNDC3",
+     "n": "AlpicAir siltumsūknis Monobloks R290",
+     "l": "10 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R290"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "10"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "10"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "1210×880×450"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "80"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWO-160CWNDC3",
+     "n": "AlpicAir siltumsūknis Monobloks R290",
+     "l": "15,5 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R290"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "15,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "15,5"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "940×1615×460"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "80"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+35"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    }
+   ]
+  },
+  {
+   "id": "maxx-r290",
+   "cat": "hp",
+   "name": "MAXX R290",
+   "tag": "Jaudīgs komerciālais monobloks",
+   "desc": "Liela jauda (30–39 kW) lieliem objektiem. Dabīgais aukstumaģents R290, ūdens līdz 85 °C.",
+   "img": "https://alpicair.com/image/cache/catalog/FOTO%20-500x500.jpeg",
+   "stats": [
+    [
+     "30–39",
+     "kW apkure"
+    ],
+    [
+     "85 °C",
+     "ūdens līdz"
+    ],
+    [
+     "-25 °C",
+     "apsilde līdz"
+    ]
+   ],
+   "models": [
+    {
+     "m": "AWO-300CWNDC3",
+     "n": "AlpicAir siltumsūknis MAXX R290",
+     "l": "30 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R290"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "30"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "30"
+      ],
+      [
+       "Ūdens plūsma, l/min",
+       "20 - 103,3"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "1384×1816×523"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "85"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+43"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWO-400CWNDC3",
+     "n": "AlpicAir siltumsūknis MAXX R290",
+     "l": "39 kW",
+     "s": [
+      [
+       "Aukstumaģents",
+       "R290"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "39"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "39"
+      ],
+      [
+       "Ūdens plūsma, l/min",
+       "20 - 135"
+      ],
+      [
+       "Āra bloks (P×A×Dz), mm",
+       "1384×1816×523"
+      ],
+      [
+       "Maks. ūdens temperatūra, °C",
+       "85"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+48"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+43"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    }
+   ]
+  },
+  {
+   "id": "hyper-nordic",
+   "cat": "ac",
+   "name": "Hyper Nordic",
+   "tag": "Apkure līdz −30 °C",
+   "desc": "Augstas efektivitātes invertora kondicionieris ekstremāliem Ziemeļu apstākļiem — silda arī pie −30 °C ārā.",
+   "img": "https://alpicair.com/image/cache/catalog/AWI_AWO_HRDC1A-500x500.png",
+   "stats": [
+    [
+     "-30 °C",
+     "apsilde līdz"
+    ],
+    [
+     "8,5",
+     "SEER līdz"
+    ],
+    [
+     "2,7–7,03",
+     "kW dzesēšana"
+    ]
+   ],
+   "models": [
+    {
+     "m": "AWI-20HRDC1A / AWO-20HRDC1A1",
+     "n": "Komplekts (iekšējais + āra bloks)",
+     "l": "2,7 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "13/44,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "3,5"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "2,7"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "996×301×225 / 899×596×378"
+      ],
+      [
+       "SEER / SCOP",
+       "8,5/5,1"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+52"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-30…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWI-40HRDC1A / AWO-40HRDC1A1",
+     "n": "Komplekts (iekšējais + āra bloks)",
+     "l": "3,53 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "13,5/45,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "4,2"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "3,53"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "996×301×225 / 899×596×378"
+      ],
+      [
+       "SEER / SCOP",
+       "8,5/5,1"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+52"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-30…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWI-60HRDC1A1 / AWO-60HRDC1A1",
+     "n": "Komplekts (iekšējais + āra bloks)",
+     "l": "5,3 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "16,5/62,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "5,57"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "5,3"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1101×327×249 / 980×790×427"
+      ],
+      [
+       "SEER / SCOP",
+       "6,6/4,4"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+52"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-30…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWI-80HRDC1A1 / AWO-80HRDC1A1",
+     "n": "Komplekts (iekšējais + āra bloks)",
+     "l": "7,03 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "16,5/65"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "7,034"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "7,034"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1101×327×249 / 980×790×427"
+      ],
+      [
+       "SEER / SCOP",
+       "6,5/4,1"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+52"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-30…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    }
+   ]
+  },
+  {
+   "id": "premium-pro-iii",
+   "cat": "ac",
+   "name": "Premium PRO III",
+   "tag": "Klusais flagmanis",
+   "desc": "Elegants sienas kondicionieris ar augstu SEER un klusu darbību. Apkure līdz −25 °C.",
+   "img": "https://alpicair.com/image/cache/catalog/Premiuim%20Pro%20III-500x500.png",
+   "stats": [
+    [
+     "-25 °C",
+     "apsilde līdz"
+    ],
+    [
+     "8,4",
+     "SEER līdz"
+    ],
+    [
+     "2,7–7,1",
+     "kW dzesēšana"
+    ]
+   ],
+   "models": [
+    {
+     "m": "AWI-26HRDC1G / AWO-26HRDC1G",
+     "n": "Komplekts (iekšējais + āra bloks)",
+     "l": "2,7 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "9/24,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "3"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "2,7"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "867×276×206 / 732×555×330"
+      ],
+      [
+       "SEER / SCOP",
+       "8,4/4,5"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWI-36HRDC1G / AWO-36HRDC1G",
+     "n": "Komplekts (iekšējais + āra bloks)",
+     "l": "3,51 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "9/25,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "3,81"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "3,51"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "867×276×206 / 732×555×330"
+      ],
+      [
+       "SEER / SCOP",
+       "7,1/4,1"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWI-54HRDC1G / AWO-54HRDC1G",
+     "n": "Komplekts (iekšējais + āra bloks)",
+     "l": "5,3 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "13,5/31,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "5,6"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "5,3"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "978×333×248 / 802×555×350"
+      ],
+      [
+       "SEER / SCOP",
+       "7,3/4,2"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 1/2 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWI-71HRDC1G / AWO-71HRDC1G",
+     "n": "Komplekts (iekšējais + āra bloks)",
+     "l": "7,1 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "15,5/41,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "7,8"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "7,1"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1116×333×248 / 958×660×402"
+      ],
+      [
+       "SEER / SCOP",
+       "7,0/4,2"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    }
+   ]
+  },
+  {
+   "id": "trendy-black",
+   "cat": "ac",
+   "name": "Trendy Black",
+   "tag": "Melns dizains",
+   "desc": "Dizaina kondicionieris melnā krāsā interjeriem, kur iekārtai jāizskatās tikpat labi kā jādarbojas.",
+   "img": "https://alpicair.com/image/cache/catalog/Kondiske-500x500.png",
+   "stats": [
+    [
+     "-25 °C",
+     "apsilde līdz"
+    ],
+    [
+     "8,5",
+     "SEER līdz"
+    ],
+    [
+     "2,7–5,3",
+     "kW dzesēšana"
+    ]
+   ],
+   "models": [
+    {
+     "m": "AWI-26HRDC1TB / AWO-26HRDC1T",
+     "n": "Komplekts (iekšējais + āra bloks)",
+     "l": "2,7 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "9,5/25"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "3"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "2,7"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "837×293×200 / 732×555×330"
+      ],
+      [
+       "SEER / SCOP",
+       "8,5/4,6"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWI-36HRDC1TB / AWO-36HRDC1T1",
+     "n": "Komplekts (iekšējais + āra bloks)",
+     "l": "3,51 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "9,5/25,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "3,81"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "3,51"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "837×293×200 / 732×555×330"
+      ],
+      [
+       "SEER / SCOP",
+       "7,2/4,1"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWI-54HRDC1TB / AWO-54HRDC1T1",
+     "n": "Komplekts (iekšējais + āra bloks)",
+     "l": "5,3 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "12,5/31,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "5,35"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "5,3"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "993×311×222 / 802×555×350"
+      ],
+      [
+       "SEER / SCOP",
+       "7,3/4,2"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 1/2 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    }
+   ]
+  },
+  {
+   "id": "trendy-white",
+   "cat": "ac",
+   "name": "Trendy White",
+   "tag": "Balts dizains",
+   "desc": "Trendy sērija baltā izpildījumā — tīras līnijas, augsta efektivitāte, apkure līdz −25 °C.",
+   "img": "https://alpicair.com/image/cache/catalog/AWI_AWO_HRDC1TW-500x500.png",
+   "stats": [
+    [
+     "-25 °C",
+     "apsilde līdz"
+    ],
+    [
+     "8,5",
+     "SEER līdz"
+    ],
+    [
+     "2,7–7,1",
+     "kW dzesēšana"
+    ]
+   ],
+   "models": [
+    {
+     "m": "AWI-26HRDC1TW / AWO-26HRDC1T",
+     "n": "Komplekts (iekšējais + āra bloks)",
+     "l": "2,7 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "11,5/25"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "3"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "2,7"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "837×293×200 / 732×555×330"
+      ],
+      [
+       "SEER / SCOP",
+       "8,5/4,6"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWI-36HRDC1TW1 / AWO-36HRDC1T1",
+     "n": "Komplekts (iekšējais + āra bloks)",
+     "l": "3,51 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "11,5/25,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "3,81"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "3,51"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "837×293×200 / 732×555×330"
+      ],
+      [
+       "SEER / SCOP",
+       "7,2/4,1"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWI-54HRDC1TW1 / AWO-54HRDC1T1",
+     "n": "Komplekts (iekšējais + āra bloks)",
+     "l": "5,3 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "12,5/25,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "5,35"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "5,3"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "993×311×222 / 802×555×350"
+      ],
+      [
+       "SEER / SCOP",
+       "7,3/4,2"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 1/2 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWI-71HRDC1TW1 / AWO-71HRDC1T1",
+     "n": "Komplekts (iekšējais + āra bloks)",
+     "l": "7,1 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "13/45"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "7,3"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "7,1"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "993×311×222 / 958×660×402"
+      ],
+      [
+       "SEER / SCOP",
+       "7,0/4,3"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    }
+   ]
+  },
+  {
+   "id": "eco-x",
+   "cat": "ac",
+   "name": "Eco X",
+   "tag": "Izdevīgais risinājums",
+   "desc": "Uzticams un ekonomisks sienas kondicionieris ikdienai — dzesēšana un apkure par saprātīgu cenu.",
+   "img": "https://alpicair.com/image/cache/catalog/ECO%20X-500x500.png",
+   "stats": [
+    [
+     "-15 °C",
+     "apsilde līdz"
+    ],
+    [
+     "6,7",
+     "SEER līdz"
+    ],
+    [
+     "2,65–7",
+     "kW dzesēšana"
+    ]
+   ],
+   "models": [
+    {
+     "m": "AWI-25HRDC1XD / AWO-25HRDC1XD",
+     "n": "Komplekts (iekšējais + āra bloks)",
+     "l": "2,65 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "7,5/18,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "2,7"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "2,65"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "750×285×200 / 649×456×244"
+      ],
+      [
+       "SEER / SCOP",
+       "6,5/4,0"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-10…+49"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-15…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWI-35HRDC1XD / AWO-35HRDC1XD",
+     "n": "Komplekts (iekšējais + āra bloks)",
+     "l": "3,5 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "8,0/21"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "3,6"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "3,5"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "750×285×200 / 708×530×258"
+      ],
+      [
+       "SEER / SCOP",
+       "6,2/4,0"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-10…+49"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-15…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWI-54HRDC1XD / AWO-54HRDC1XD",
+     "n": "Komplekts (iekšējais + āra bloks)",
+     "l": "5,1 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "10,0/23"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "5,2"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "5,1"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "900×310×225 / 715×537×280"
+      ],
+      [
+       "SEER / SCOP",
+       "6,7/4,0"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 1/2 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-10…+49"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-15…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWI-71HRDC1XD / AWO-71HRDC1XD",
+     "n": "Komplekts (iekšējais + āra bloks)",
+     "l": "7 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "12,5/39"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "7,2"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "7"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1082×330×233 / 900×700×350"
+      ],
+      [
+       "SEER / SCOP",
+       "6,1/4,0"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-10…+49"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-15…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    }
+   ]
+  },
+  {
+   "id": "kasetes",
+   "cat": "ac",
+   "name": "Kasešu PRO II",
+   "tag": "Iebūvē griestos",
+   "desc": "Kasešu tipa iekšējie bloki iebūvēšanai piekārtajos griestos — vienmērīga gaisa sadale uz četrām pusēm.",
+   "img": "https://alpicair.com/image/cache/catalog/OEM-grille_hand_off-1-AlpicAir-500x500.png",
+   "stats": [
+    [
+     "-20 °C",
+     "apsilde līdz"
+    ],
+    [
+     "6,8",
+     "SEER līdz"
+    ],
+    [
+     "2,8–15,24",
+     "kW dzesēšana"
+    ]
+   ],
+   "models": [
+    {
+     "m": "ACCMI-28HRDC1A",
+     "n": "Kasešu bloks (komplektā ar IS pulti)",
+     "l": "2,8 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "17"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "2,8"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "2,8"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "570×265×570"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "ACCMI-36HRDC1A",
+     "n": "Kasešu bloks (komplektā ar IS pulti)",
+     "l": "3,5 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "17"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "4"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "3,5"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "570×265×570"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "ACI-35HRDC1C / AOU-35HRDC1A",
+     "n": "Kasešu + āra bloka komplekts",
+     "l": "3,52 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "16,1/2,7/26,6"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "3,52"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "3,52"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "570×245×570 / 765×555×303"
+      ],
+      [
+       "SEER / SCOP",
+       "6,8/4,1"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "ACCMI-53HRDC1A",
+     "n": "Kasešu bloks (komplektā ar IS pulti)",
+     "l": "5 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "17"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "5,5"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "5"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "570×265×570"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 1/2 collas"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "ACI-53HRDC1C / AOU-53HRDC1A",
+     "n": "Kasešu + āra bloka komplekts",
+     "l": "5,28 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "16,2/2,7/32,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "5,57"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "5,28"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "570×245×570 / 805×554×330"
+      ],
+      [
+       "SEER / SCOP",
+       "6,5/4,1"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 1/2 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "ACMI-70HRDC1A",
+     "n": "Kasešu bloks (komplektā ar IS pulti)",
+     "l": "7 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "29"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "8"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "7"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "840×240×840"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 5/8 collas"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "ACI-71HRDC1A / AOU-71HRDC1C",
+     "n": "Kasešu + āra bloka komplekts",
+     "l": "7,03 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "21,6/6/41,9"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "7,62"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "7,03"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "830×205×830 / 890×673×342"
+      ],
+      [
+       "SEER / SCOP",
+       "6,3/4,1"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "3/8 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "ACI-105HRDC3A / AOU-105HRDC3A",
+     "n": "Kasešu + āra bloka komplekts (3 fāžu)",
+     "l": "10,55 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "27,2/6/80,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "11,14"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "10,55"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "830×245×830 / 946×810×410"
+      ],
+      [
+       "SEER / SCOP",
+       "6,3/3,9"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "3/8 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "ACI-140HRDC3A / AOU-140HRDC3C",
+     "n": "Kasešu + āra bloka komplekts (3 fāžu)",
+     "l": "14,07 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "29,3/6/90"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "16,12"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "14,07"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "830×287×830 / 980×975×415"
+      ],
+      [
+       "SEER / SCOP",
+       "6,1/4,0"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "3/8 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "ACI-180HRDC3A / AOU-180HRDC3C",
+     "n": "Kasešu + āra bloka komplekts (3 fāžu)",
+     "l": "15,24 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "29,3/6/92"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "18,17"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "15,24"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "830×287×830 / 980×975×415"
+      ],
+      [
+       "SEER / SCOP",
+       "6,1/4,0"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "3/8 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    }
+   ]
+  },
+  {
+   "id": "kanala",
+   "cat": "ac",
+   "name": "Kanālu PRO",
+   "tag": "Neredzams kondicionieris",
+   "desc": "Kanālu tipa iekārtas slēptai montāžai — gaiss tiek sadalīts pa vairākām telpām caur restītēm.",
+   "img": "https://alpicair.com/image/cache/catalog/ATI-HRDC1C-500x500.png",
+   "stats": [
+    [
+     "-20 °C",
+     "apsilde līdz"
+    ],
+    [
+     "6,6",
+     "SEER līdz"
+    ],
+    [
+     "2,65–15,24",
+     "kW dzesēšana"
+    ]
+   ],
+   "models": [
+    {
+     "m": "ATMI-26HRDC1A",
+     "n": "Kanāla bloks (komplektā ar pulti)",
+     "l": "2,65 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "18.5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "2,8"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "2,65"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "710×450×200"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/A6%20duct-right-500x500.jpg"
+    },
+    {
+     "m": "ATMI-36HRDC1A",
+     "n": "Kanāla bloks (komplektā ar pulti)",
+     "l": "3,5 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "19"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "4"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "3,5"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "710×450×200"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/A6%20duct-right-500x500.jpg"
+    },
+    {
+     "m": "ATMI-53HRDC1A",
+     "n": "Kanāla bloks (komplektā ar pulti)",
+     "l": "5 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "25"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "5,5"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "5"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1010×450×200"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 1/2 collas"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/A6%20duct-right-500x500.jpg"
+    },
+    {
+     "m": "ATI-53HRDC1C / AOU-53HRDC1A",
+     "n": "Kanāla + āra bloka komplekts",
+     "l": "5,28 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "24,4/32,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "6,01"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "5,28"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "700×245×750 / 805×554×330"
+      ],
+      [
+       "SEER / SCOP",
+       "6,5/4,1"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 1/2 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "ATI-71HRDC1C / AOU-71HRDC1C",
+     "n": "Kanāla + āra bloka komplekts",
+     "l": "7,09 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "31,8/41,9"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "8"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "7,09"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1000×245×750 / 890×673×342"
+      ],
+      [
+       "SEER / SCOP",
+       "6,6/4,2"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "3/8 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "ATI-105HRDC3C / AOU-105HRDC3A",
+     "n": "Kanāla + āra bloka komplekts (3 fāžu)",
+     "l": "10,55 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "38,4/75,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "11,72"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "10,55"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1200×245×750 / 946×810×410"
+      ],
+      [
+       "SEER / SCOP",
+       "6,1/4,0"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "3/8 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "ATI-140HRDC3C / AOU-140HRDC3C",
+     "n": "Kanāla + āra bloka komplekts (3 fāžu)",
+     "l": "14,07 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "40,4/90"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "16,12"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "14,07"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1200×245×750 / 980×975×415"
+      ],
+      [
+       "SEER / SCOP",
+       "6,1/4,0"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "3/8 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "ATI-180HRDC3C / AOU-180HRDC3C",
+     "n": "Kanāla + āra bloka komplekts (3 fāžu)",
+     "l": "15,24 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "42,9/92"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "18,18"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "15,24"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1200×300×750 / 980×975×415"
+      ],
+      [
+       "SEER / SCOP",
+       "6,1/4,0"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "3/8 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    }
+   ]
+  },
+  {
+   "id": "griestu-gridas",
+   "cat": "ac",
+   "name": "Griestu-grīdas PRO II",
+   "tag": "Universāla montāža",
+   "desc": "Konsoles tipa bloki, ko var montēt gan pie griestiem, gan pie grīdas — lielām telpām un komercobjektiem.",
+   "img": "https://alpicair.com/image/cache/catalog/Third-Ceiling-and-Floor-MUE_Standard_right_off-H4103-AlpicAir-500x500.png",
+   "stats": [
+    [
+     "-20 °C",
+     "apsilde līdz"
+    ],
+    [
+     "6,4",
+     "SEER līdz"
+    ],
+    [
+     "5,28–15,24",
+     "kW dzesēšana"
+    ]
+   ],
+   "models": [
+    {
+     "m": "AFI-53HRDC1A / AOU-53HRDC1A",
+     "n": "Griestu-grīdas komplekts",
+     "l": "5,28 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "28/32,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "5,57"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "5,28"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1068×235×675 / 805×554×330"
+      ],
+      [
+       "SEER / SCOP",
+       "6,2/4,0"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 1/2 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AFI-71HRDC1A / AOU-71HRDC1C",
+     "n": "Griestu-grīdas komplekts",
+     "l": "7,03 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "28/41,9"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "7,62"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "7,03"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1068×235×675 / 890×673×342"
+      ],
+      [
+       "SEER / SCOP",
+       "6,3/4,1"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "3/8 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AFI-105HRDC3A / AOU-105HRDC3A",
+     "n": "Griestu-grīdas komplekts (3 fāžu)",
+     "l": "10,55 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "41,5/80,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "11,72"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "10,55"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1650×235×675 / 946×810×410"
+      ],
+      [
+       "SEER / SCOP",
+       "6,4/4,1"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "3/8 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AFI-140HRDC3A / AOU-140HRDC3C",
+     "n": "Griestu-grīdas komplekts (3 fāžu)",
+     "l": "14,07 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "41,7/90"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "16,12"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "14,07"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1650×235×675 / 980×975×415"
+      ],
+      [
+       "SEER / SCOP",
+       "6,1/4,0"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "3/8 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AFI-180HRDC3A / AOU-180HRDC3C",
+     "n": "Griestu-grīdas komplekts (3 fāžu)",
+     "l": "15,24 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "42,3/92"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "18,17"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "15,24"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1650×235×675 / 980×975×415"
+      ],
+      [
+       "SEER / SCOP",
+       "6,1/4,0"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "3/8 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    }
+   ]
+  },
+  {
+   "id": "multi-ara",
+   "cat": "ac",
+   "name": "Multi-split āra bloki",
+   "tag": "Līdz 5 telpām no viena bloka",
+   "desc": "Viens āra bloks vairākiem iekšējiem blokiem — mazāk iekārtu uz fasādes, katrā telpā sava temperatūra.",
+   "img": "https://alpicair.com/image/cache/catalog/TM-OUTDOOR_1-500x500.png",
+   "stats": [
+    [
+     "-22 °C",
+     "apsilde līdz"
+    ],
+    [
+     "7,2",
+     "SEER līdz"
+    ],
+    [
+     "5,3–12,1",
+     "kW dzesēšana"
+    ]
+   ],
+   "models": [
+    {
+     "m": "AM2O-51HRDC1A",
+     "n": "Multi-split āra bloks",
+     "l": "5,3 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "32"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "5,65"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "5,3"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "822×550×352"
+      ],
+      [
+       "SEER / SCOP",
+       "7,2/4,2"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "2x 1/4; 2x 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+43"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-22…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AM3O-71HRDC1A",
+     "n": "Multi-split āra bloks",
+     "l": "7,1 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "47.5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "8,6"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "7,1"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "964×660×402"
+      ],
+      [
+       "SEER / SCOP",
+       "7,1/4,3"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "3×1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+43"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-22…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AM4O-81HRDC1A",
+     "n": "Multi-split āra bloks",
+     "l": "8 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "51"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "9,5"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "8"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "964×660×402"
+      ],
+      [
+       "SEER / SCOP",
+       "7,2/4,2"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "4×1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+43"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-22…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AM4O-100HRDC1A",
+     "n": "Multi-split āra bloks",
+     "l": "10,6 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "72"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "12"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "10,6"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1020×826×427"
+      ],
+      [
+       "SEER / SCOP",
+       "7,2/4,0"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "4×1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+43"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-22…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AM5O-120HRDC1A",
+     "n": "Multi-split āra bloks",
+     "l": "12,1 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "73"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "13"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "12,1"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1020×826×427"
+      ],
+      [
+       "SEER / SCOP",
+       "7,2/4,0"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "5×1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+43"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-22…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    }
+   ]
+  },
+  {
+   "id": "multi-ieksejie",
+   "cat": "ac",
+   "name": "Multi-split iekšējie bloki",
+   "tag": "Sienas, kasešu un kanālu",
+   "desc": "Iekšējie bloki multi-split sistēmām — Premium PRO III, Trendy, kasešu un kanālu tipa.",
+   "img": "https://alpicair.com/image/cache/catalog/Cosmo-A1-1-500x500.png",
+   "stats": [
+    [
+     "-25 °C",
+     "apsilde līdz"
+    ],
+    [
+     "2,6–7,1",
+     "kW dzesēšana"
+    ]
+   ],
+   "models": [
+    {
+     "m": "ACCMI-26HRDC1A",
+     "n": "Kasešu tipa iekšējais bloks PRO II (MULTI-SPLIT)",
+     "l": "2,6 kW · Kasete",
+     "s": [
+      [
+       "Masa, kg",
+       "17"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "2,6"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "2,7"
+      ],
+      [
+       "Elektropieslēgums",
+       "1Phase, 220-240V, 50Hz"
+      ],
+      [
+       "Gaisa plūsma, m3/h",
+       "560/540/490/450/420/380/350"
+      ],
+      [
+       "Kasete (PxAxDz), mm",
+       "570×265×570"
+      ],
+      [
+       "Panelis (PxAxDz), mm",
+       "620×47.5×620"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8"
+      ],
+      [
+       "Skaņas spiediens SH/MH/M/ML/L/SL, dB(A)",
+       "41/39/36/34/32/30/28"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/GMV-ND%20%20TE-T-500x500.png"
+    },
+    {
+     "m": "ATMI-26HRDC1A",
+     "n": "Kanālu tipa iekšējais bloks PRO II (MULTI-SPLIT)",
+     "l": "2,65 kW · Kanāls",
+     "s": [
+      [
+       "Masa, kg",
+       "18.5"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "2,65"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "2,8"
+      ],
+      [
+       "Elektropieslēgums",
+       "1Phase, 220-240V, 50Hz"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "710×450×200"
+      ],
+      [
+       "Gaisa plūsma, m3/h",
+       "700/670/640/610/580/550/520"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8"
+      ],
+      [
+       "Skaņas spiediens SH/MH/M/ML/L/SL, dB(A)",
+       "41/39/38/37/36/35/34"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/image_2022_03_01T14_53_45_167Z-500x500.png"
+    },
+    {
+     "m": "AWI-26HRDC1G",
+     "n": "Sienas iekšējais bloks",
+     "l": "2,7 kW · Premium",
+     "s": [
+      [
+       "Masa, kg",
+       "9"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "3"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "2,7"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "867×276×206"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/Cosmo-A1-1-500x500.png"
+    },
+    {
+     "m": "AWI-26HRDC1TB",
+     "n": "Sienas iekšējais bloks",
+     "l": "2,7 kW · Trendy B",
+     "s": [
+      [
+       "Masa, kg",
+       "9.5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "3"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "2,7"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "837×293×200"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/AlpicAir-1-500x500.png"
+    },
+    {
+     "m": "AWI-26HRDC1TW",
+     "n": "Sienas iekšējais bloks",
+     "l": "2,7 kW · Trendy W",
+     "s": [
+      [
+       "Masa, kg",
+       "9.5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "3"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "2,7"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "837×293×200"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/trendy-white-1-500x500.png"
+    },
+    {
+     "m": "ACCMI-36HRDC1A",
+     "n": "Kasešu tipa iekšējais bloks PRO II (MULTI-SPLIT)",
+     "l": "3,5 kW · Kasete",
+     "s": [
+      [
+       "Masa, kg",
+       "17"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "3,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "4"
+      ],
+      [
+       "Elektropieslēgums",
+       "1Phase, 220-240V, 50Hz"
+      ],
+      [
+       "Gaisa plūsma, m3/h",
+       "560/540/490/450/420/380/350"
+      ],
+      [
+       "Kasete (PxAxDz), mm",
+       "570×265×570"
+      ],
+      [
+       "Panelis (PxAxDz), mm",
+       "620×47.5×620"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8"
+      ],
+      [
+       "Skaņas spiediens SH/MH/M/ML/L/SL, dB(A)",
+       "41/39/36/34/32/30/28"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/GMV-ND%20%20TE-T-500x500.png"
+    },
+    {
+     "m": "ATMI-36HRDC1A",
+     "n": "Kanālu tipa iekšējais bloks PRO II (MULTI-SPLIT)",
+     "l": "3,5 kW · Kanāls",
+     "s": [
+      [
+       "Masa, kg",
+       "19"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "3,5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "4"
+      ],
+      [
+       "Elektropieslēgums",
+       "1Phase, 220-240V, 50Hz"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "710×450×200"
+      ],
+      [
+       "Gaisa plūsma, m3/h",
+       "650/560/520/480/450/410/380"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8"
+      ],
+      [
+       "Skaņas spiediens SH/MH/M/ML/L/SL, dB(A)",
+       "39/37/36/35/34/33/32"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/image_2022_03_01T14_53_45_167Z-500x500.png"
+    },
+    {
+     "m": "AWI-36HRDC1G",
+     "n": "Sienas iekšējais bloks",
+     "l": "3,5 kW · Premium",
+     "s": [
+      [
+       "Masa, kg",
+       "9"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "3,8"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "3,5"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "867×276×206"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/Cosmo-A1-1-500x500.png"
+    },
+    {
+     "m": "AWI-36HRDC1TB",
+     "n": "Sienas iekšējais bloks",
+     "l": "3,51 kW · Trendy B",
+     "s": [
+      [
+       "Masa, kg",
+       "9.5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "3,81"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "3,51"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "837×293×200"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/AlpicAir-1-500x500.png"
+    },
+    {
+     "m": "AWI-36HRDC1TW1",
+     "n": "Sienas iekšējais bloks",
+     "l": "3,51 kW · Trendy W",
+     "s": [
+      [
+       "Masa, kg",
+       "9.5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "3,81"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "3,51"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "837×293×200"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/trendy-white-1-500x500.png"
+    },
+    {
+     "m": "ACCMI-53HRDC1A",
+     "n": "Kasešu tipa iekšējais bloks PRO II (MULTI-SPLIT)",
+     "l": "5 kW · Kasete",
+     "s": [
+      [
+       "Masa, kg",
+       "17"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "5,5"
+      ],
+      [
+       "Elektropieslēgums",
+       "1Phase, 220-240V, 50Hz"
+      ],
+      [
+       "Gaisa plūsma, m3/h",
+       "650/540/490/450/420/380/350"
+      ],
+      [
+       "Kasete (PxAxDz), mm",
+       "570×265×570"
+      ],
+      [
+       "Panelis (PxAxDz), mm",
+       "620×47.5×620"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 1/2"
+      ],
+      [
+       "Skaņas spiediens SH/MH/M/ML/L/SL, dB(A)",
+       "39/36/34/32/30/28"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/GMV-ND%20%20TE-T-500x500.png"
+    },
+    {
+     "m": "ATMI-53HRDC1A",
+     "n": "Kanālu tipa iekšējais bloks PRO II (MULTI-SPLIT)",
+     "l": "5 kW · Kanāls",
+     "s": [
+      [
+       "Masa, kg",
+       "25"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "5,5"
+      ],
+      [
+       "Elektropieslēgums",
+       "1Phase, 220-240V, 50Hz"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1010×450×200"
+      ],
+      [
+       "Gaisa plūsma, m3/h",
+       "880/840/810/790/770/750/730"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 1/2"
+      ],
+      [
+       "Skaņas spiediens SH/MH/M/ML/L/SL, dB(A)",
+       "41/39/39/38/38/37/34"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/image_2022_03_01T14_53_45_167Z-500x500.png"
+    },
+    {
+     "m": "AWI-54HRDC1TB",
+     "n": "Sienas iekšējais bloks",
+     "l": "5,2 kW · Trendy B",
+     "s": [
+      [
+       "Masa, kg",
+       "13"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "5,6"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "5,2"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "993×311×222"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 1/2 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/AlpicAir-1-500x500.png"
+    },
+    {
+     "m": "AWI-54HRDC1TW1",
+     "n": "Sienas iekšējais bloks",
+     "l": "5,2 kW · Trendy W",
+     "s": [
+      [
+       "Masa, kg",
+       "13"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "5,6"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "5,2"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "993×311×222"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 1/2 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/trendy-white-1-500x500.png"
+    },
+    {
+     "m": "AWI-54HRDC1G",
+     "n": "Sienas iekšējais bloks",
+     "l": "5,3 kW · Premium",
+     "s": [
+      [
+       "Masa, kg",
+       "13.5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "5,6"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "5,3"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "978×333×248"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 1/2 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/Cosmo-A1-1-500x500.png"
+    },
+    {
+     "m": "ACMI-70HRDC1A",
+     "n": "Kasešu tipa iekšējais bloks PRO II (MULTI-SPLIT)",
+     "l": "7 kW · Kasete",
+     "s": [
+      [
+       "Masa, kg",
+       "29"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "7"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "8"
+      ],
+      [
+       "Elektropieslēgums",
+       "1Phase, 220-240V, 50Hz"
+      ],
+      [
+       "Gaisa plūsma, m3/h",
+       "1100/1050/950/910/870/830/800"
+      ],
+      [
+       "Kasete (PxAxDz), mm",
+       "840×240×840"
+      ],
+      [
+       "Panelis (PxAxDz), mm",
+       "950×52×950"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 5/8"
+      ],
+      [
+       "Skaņas spiediens SH/MH/M/ML/L/SL, dB(A)",
+       "44/43/42/40/39/38/37"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/GMV-ND%20%20TE-T-500x500.png"
+    },
+    {
+     "m": "AWI-71HRDC1G",
+     "n": "Sienas iekšējais bloks",
+     "l": "7,1 kW · Premium",
+     "s": [
+      [
+       "Masa, kg",
+       "15.5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "7,8"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "7,1"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1116×333×248"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/Cosmo-A1-1-500x500.png"
+    },
+    {
+     "m": "AWI-71HRDC1TW1",
+     "n": "Sienas iekšējais bloks",
+     "l": "7,1 kW · Trendy W",
+     "s": [
+      [
+       "Masa, kg",
+       "13"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "7,3"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "7,1"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "993×311×222"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-25…+30"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/trendy-white-1-500x500.png"
+    }
+   ]
+  },
+  {
+   "id": "kondensatori",
+   "cat": "ac",
+   "name": "Kompresoru-kondensatoru bloki",
+   "tag": "PRO II āra bloki",
+   "desc": "Atsevišķi āra bloki PRO II sērijas iekšējiem blokiem, arī 3 fāžu versijās.",
+   "img": "https://alpicair.com/image/cache/catalog/AOU-71HRDC1A-AlpicAir-500x500.png",
+   "stats": [
+    [
+     "-20 °C",
+     "apsilde līdz"
+    ],
+    [
+     "3,5–15,24",
+     "kW dzesēšana"
+    ]
+   ],
+   "models": [
+    {
+     "m": "AOU-35HRDC1B",
+     "n": "Kondensatora agregāts (āra bloks)",
+     "l": "3,5 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "23.2"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "3,81"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "3,5"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "720×495×270"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 3/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AOU-53HRDC1B",
+     "n": "Kondensatora agregāts (āra bloks)",
+     "l": "5,3 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "36.1"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "5,5"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "5,3"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "805×554×330"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "1/4 - 1/2 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AOU-71HRDC1B",
+     "n": "Kondensatora agregāts (āra bloks)",
+     "l": "7,03 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "46.9"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "7,3"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "7,03"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "890×673×342"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "3/8 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AOU-105HRDC3A",
+     "n": "Kondensatora agregāts (3 fāžu)",
+     "l": "10,55 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "80.5"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "11,14"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "10,55"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "946×810×410"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "3/8 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AOU-140HRDC3C",
+     "n": "Kondensatora agregāts (3 fāžu)",
+     "l": "14,07 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "90"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "16,12"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "14,07"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "980×975×415"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "3/8 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AOU-180HRDC3C",
+     "n": "Kondensatora agregāts (3 fāžu)",
+     "l": "15,24 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "92"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "18,18"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "15,24"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "980×975×415"
+      ],
+      [
+       "Savienojuma cauruļu diametrs",
+       "3/8 - 5/8 collas"
+      ],
+      [
+       "Darbība dzesēšanā, °C",
+       "-15…+50"
+      ],
+      [
+       "Darbība apsildē, °C",
+       "-20…+24"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    }
+   ]
+  },
+  {
+   "id": "ventilatorkonvektori",
+   "cat": "ac",
+   "name": "HW ventilatorkonvektori",
+   "tag": "Ūdens fankoili",
+   "desc": "Ūdens ventilatorkonvektori darbam kopā ar siltumsūkni — dzesēšana un apkure ar ūdeni.",
+   "img": "https://alpicair.com/image/cache/catalog/ACI_26_45_1120x672-500x500.png",
+   "stats": [
+    [
+     "2,5–12,9",
+     "kW dzesēšana"
+    ]
+   ],
+   "models": [
+    {
+     "m": "AWI-25HW1D",
+     "n": "Ūdens sienas ventilatorkonvektors",
+     "l": "2,5 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "10"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "3,2/2,4/2,1"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "2,5/1,9/1,7"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "845×275×180"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/AWI_HW1_560x336-500x500.png"
+    },
+    {
+     "m": "ACI-26HW1",
+     "n": "Ūdens kasešu ventilatorkonvektors",
+     "l": "3 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "16,5/3,0"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "4,00/3,50/3,08"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "3,00/2,58/2,16"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "575×261×575"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "ACI-37HW1",
+     "n": "Ūdens kasešu ventilatorkonvektors",
+     "l": "3,7 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "16,5/3,0"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "5,10/4,30/3,83"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "3,70/3,18/2,66"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "575×261×575"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AWI-42HW1D",
+     "n": "Ūdens sienas ventilatorkonvektors",
+     "l": "4,2 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "12"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "5,4/4,5/3,9"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "4,2/3,5/3,0"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "940×298×200"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/AWI_HW1_560x336-500x500.png"
+    },
+    {
+     "m": "ACI-50HW1",
+     "n": "Ūdens kasešu ventilatorkonvektors",
+     "l": "4,37 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "16,5/3,0"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "5,82/4,66/3,97"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "4,37/3,50/2,96"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "575×261×575"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "ACI-61HW1",
+     "n": "Ūdens kasešu ventilatorkonvektors",
+     "l": "7 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "25,0/6,0"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "11,55/9,24/7,51"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "7,00/5,62/4,72"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "840×230×840"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "ACI-82HW1",
+     "n": "Ūdens kasešu ventilatorkonvektors",
+     "l": "8,22 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "30,5/6,0"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "13,85/11,08/9,00"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "8,22/7,39/6,54"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "840×300×840"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "ACI-110HW1",
+     "n": "Ūdens kasešu ventilatorkonvektors",
+     "l": "12,9 kW",
+     "s": [
+      [
+       "Masa, kg",
+       "35,0/6,0"
+      ],
+      [
+       "Sildīšanas jauda, kW",
+       "17,6/14,08/11,44"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "12,9/11,51/10,21"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "840×300×840"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    }
+   ]
+  },
+  {
+   "id": "sausinataji",
+   "cat": "ac",
+   "name": "Gaisa sausinātāji",
+   "tag": "20–40 l diennaktī",
+   "desc": "Mobilie gaisa sausinātāji mitrām telpām, pagrabiem un būvobjektiem.",
+   "img": "https://alpicair.com/image/cache/catalog/DH20EE%D1%81%D1%80-web-500x500.png",
+   "stats": [
+    [
+     "2",
+     "modeļi"
+    ]
+   ],
+   "models": [
+    {
+     "m": "AR-24TN1",
+     "n": "Gaisa sausinātājs",
+     "l": "20 l/dnn.",
+     "s": [
+      [
+       "Masa, kg",
+       "15"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "367×582×246"
+      ],
+      [
+       "Veiktspēja",
+       "20 l/24h"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "AR-40TN1",
+     "n": "Gaisa sausinātājs",
+     "l": "40 l/dnn.",
+     "s": [
+      [
+       "Masa, kg",
+       "22"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "390×628×286"
+      ],
+      [
+       "Veiktspēja",
+       "40 l/24h"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    }
+   ]
+  },
+  {
+   "id": "kemperiem",
+   "cat": "ac",
+   "name": "Kemperu kondicionieri",
+   "tag": "Invertors uz jumta",
+   "desc": "Jumta kondicionieris kemperiem un treileriem ar invertora tehnoloģiju.",
+   "img": "https://alpicair.com/image/cache/catalog/Camper%20OU%20AlpicAir-500x500.png",
+   "stats": [
+    [
+     "2,7",
+     "kW dzesēšana"
+    ]
+   ],
+   "models": [
+    {
+     "m": "AMI/AMO-25HRDC1",
+     "n": "Komplekts kemperim",
+     "l": "2,7 kW",
+     "s": [
+      [
+       "Sildīšanas jauda, kW",
+       "2,5"
+      ],
+      [
+       "Dzesēšanas jauda, kW",
+       "2,7"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "610×485×49 / 1077×720×283"
+      ],
+      [
+       "EER / COP",
+       "2,8/3,2"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null
+    }
+   ]
+  },
+  {
+   "id": "nest-x",
+   "cat": "rv",
+   "name": "NEST X",
+   "tag": "Pretplūsmas rekuperatori",
+   "desc": "NEST X rekuperatori ar pretplūsmas plākšņu siltummaini — vertikālai, horizontālai vai griestu montāžai. E versijās entalpijas siltummainis atgūst arī mitrumu.",
+   "img": null,
+   "stats": [
+    [
+     "760",
+     "m³/h līdz"
+    ],
+    [
+     "87%",
+     "siltuma atgūšana"
+    ],
+    [
+     "440 m²",
+     "platība līdz"
+    ]
+   ],
+   "models": [
+    {
+     "m": "NEST 2X V",
+     "n": "AlpicAir NEST 2X V ir vertikāli uzstādāms rekuperators ar pretplūsmas plātņu siltummaini.",
+     "l": "2X V",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "23"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "595×315×698"
+      ],
+      [
+       "Montāžas veids",
+       "Vertikālais"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 100 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "87"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "180"
+      ]
+     ],
+     "d": "AlpicAir NEST 2X V ir vertikāli uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 180 m³/h, siltuma atgūšanas efektivitāte līdz 87%. Gaisa vadu diametrs 100 mm. Izmēri 595 x 315 x 698 mm. Ieteicamā platība: līdz 100 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "v",
+     "a": 100
+    },
+    {
+     "m": "NEST 2X V E",
+     "n": "AlpicAir NEST 2X V E ir vertikāli uzstādāms rekuperators ar pretplūsmas plātņu siltummaini.",
+     "l": "2X V E",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "23"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "595×315×698"
+      ],
+      [
+       "Montāžas veids",
+       "Vertikālais"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 100 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "78"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "180"
+      ]
+     ],
+     "d": "AlpicAir NEST 2X V E ir vertikāli uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 180 m³/h, siltuma atgūšanas efektivitāte līdz 78%. Gaisa vadu diametrs 100 mm. Izmēri 595 x 315 x 698 mm. Ieteicamā platība: līdz 100 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "v",
+     "a": 100
+    },
+    {
+     "m": "NEST 2X P",
+     "n": "AlpicAir NEST 2X P ir pie griestiem uzstādāms rekuperators ar pretplūsmas plātņu siltummaini.",
+     "l": "2X P",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "30"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1010×590×250"
+      ],
+      [
+       "Montāžas veids",
+       "Griestu"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 120 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "80"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "200"
+      ]
+     ],
+     "d": "AlpicAir NEST 2X P ir pie griestiem uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 200 m³/h, siltuma atgūšanas efektivitāte līdz 80%. Gaisa vadu diametrs 125 mm. Izmēri 1010 x 590 x 250 mm. Ieteicamā platība: līdz 120 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "p",
+     "a": 120
+    },
+    {
+     "m": "NEST 2X P E",
+     "n": "AlpicAir NEST 2X P E ir pie griestiem uzstādāms rekuperators ar pretplūsmas plātņu siltummaini.",
+     "l": "2X P E",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "30"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1010×590×250"
+      ],
+      [
+       "Montāžas veids",
+       "Griestu"
+      ],
+      [
+       "Siltummaiņa tips",
+       "Pretplūsmas, entalpijas"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 120 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "80"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "200"
+      ]
+     ],
+     "d": "AlpicAir NEST 2X P E ir pie griestiem uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 200 m³/h, siltuma atgūšanas efektivitāte līdz 80%. Gaisa vadu diametrs 125 mm. Izmēri 1010 x 590 x 250 mm. Ieteicamā platība: līdz 120 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "p",
+     "a": 120
+    },
+    {
+     "m": "NEST 400X P",
+     "n": "AlpicAir NEST 400X P ir pie griestiem uzstādāms rekuperators ar pretplūsmas plātņu siltummaini.",
+     "l": "400X P",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "65"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1300×770×330"
+      ],
+      [
+       "Montāžas veids",
+       "Griestu"
+      ],
+      [
+       "Siltummaiņa tips",
+       "Pretplūsmas"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 220 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "81"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "380"
+      ]
+     ],
+     "d": "AlpicAir NEST 400X P ir pie griestiem uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 380 m³/h, siltuma atgūšanas efektivitāte līdz 81%. Gaisa vadu diametrs 200 mm. Izmēri 1300 x 770 x 330 mm. Ieteicamā platība: līdz 220 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "p",
+     "a": 220
+    },
+    {
+     "m": "NEST 3X P",
+     "n": "AlpicAir NEST 3X P ir pie griestiem uzstādāms rekuperators ar pretplūsmas plātņu siltummaini.",
+     "l": "3X P",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "53"
+      ],
+      [
+       "Piezīme",
+       "Zems korpuss 324 mm"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1228×690×324"
+      ],
+      [
+       "Montāžas veids",
+       "Griestu"
+      ],
+      [
+       "Siltummaiņa tips",
+       "Pretplūsmas"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 220 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "80"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "400"
+      ]
+     ],
+     "d": "AlpicAir NEST 3X P ir pie griestiem uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 400 m³/h, siltuma atgūšanas efektivitāte līdz 80%. Gaisa vadu diametrs 160 mm. Izmēri 1228 x 690 x 324 mm. Ieteicamā platība: līdz 220 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "p",
+     "a": 220
+    },
+    {
+     "m": "NEST 3X P E",
+     "n": "AlpicAir NEST 3X P E ir pie griestiem uzstādāms rekuperators ar pretplūsmas plātņu siltummaini.",
+     "l": "3X P E",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "53"
+      ],
+      [
+       "Piezīme",
+       "Iebūvēts entalpijas siltummainis"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1228×690×324"
+      ],
+      [
+       "Montāžas veids",
+       "Griestu"
+      ],
+      [
+       "Siltummaiņa tips",
+       "Pretplūsmas, entalpijas"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 220 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "80"
+      ],
+      [
+       "Gaisa vadu diametrs, mm",
+       "160"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "400"
+      ]
+     ],
+     "d": "AlpicAir NEST 3X P E ir pie griestiem uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 400 m³/h, siltuma atgūšanas efektivitāte līdz 80%. Gaisa vadu diametrs 160 mm. Izmēri 1228 x 690 x 324 mm. Ieteicamā platība: līdz 220 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "p",
+     "a": 220
+    },
+    {
+     "m": "NEST 3X V",
+     "n": "AlpicAir NEST 3X V ir vertikāli uzstādāms rekuperators ar pretplūsmas plātņu siltummaini.",
+     "l": "3X V",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "42"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "599×538×810"
+      ],
+      [
+       "Montāžas veids",
+       "Vertikālais"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 230 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "87"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "400"
+      ]
+     ],
+     "d": "AlpicAir NEST 3X V ir vertikāli uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 400 m³/h, siltuma atgūšanas efektivitāte līdz 87%. Gaisa vadu diametrs 160 mm. Izmēri 599 x 538 x 810 mm. Ieteicamā platība: līdz 230 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "v",
+     "a": 230
+    },
+    {
+     "m": "NEST 3X V E",
+     "n": "AlpicAir NEST 3X V E ir vertikāli uzstādāms rekuperators ar pretplūsmas plātņu siltummaini.",
+     "l": "3X V E",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "42"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "599×538×810"
+      ],
+      [
+       "Montāžas veids",
+       "Vertikālais"
+      ],
+      [
+       "Siltummaiņa tips",
+       "Pretplūsmas, entalpijas"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 230 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "87"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "400"
+      ]
+     ],
+     "d": "AlpicAir NEST 3X V E ir vertikāli uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 400 m³/h, siltuma atgūšanas efektivitāte līdz 87%. Gaisa vadu diametrs 160 mm. Izmēri 599 x 538 x 810 mm. Ieteicamā platība: līdz 230 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "v",
+     "a": 230
+    },
+    {
+     "m": "NEST 4X P",
+     "n": "AlpicAir NEST 4X P ir pie griestiem uzstādāms rekuperators ar pretplūsmas plātņu siltummaini.",
+     "l": "4X P",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "53"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1228×690×324"
+      ],
+      [
+       "Montāžas veids",
+       "Griestu"
+      ],
+      [
+       "Siltummaiņa tips",
+       "Pretplūsmas"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 320 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "79"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "500"
+      ]
+     ],
+     "d": "AlpicAir NEST 4X P ir pie griestiem uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 500 m³/h, siltuma atgūšanas efektivitāte līdz 79%. Gaisa vadu diametrs 160 mm. Izmēri 1228 x 690 x 324 mm. Ieteicamā platība: līdz 320 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "p",
+     "a": 320
+    },
+    {
+     "m": "NEST 4X P E",
+     "n": "AlpicAir NEST 4X P E ir pie griestiem uzstādāms rekuperators ar pretplūsmas plātņu siltummaini.",
+     "l": "4X P E",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "53"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1228×690×324"
+      ],
+      [
+       "Montāžas veids",
+       "Griestu"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 320 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "79"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "500"
+      ]
+     ],
+     "d": "AlpicAir NEST 4X P E ir pie griestiem uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 500 m³/h, siltuma atgūšanas efektivitāte līdz 79%. Gaisa vadu diametrs 160 mm. Izmēri 1228 x 690 x 324 mm. Ieteicamā platība: līdz 320 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "p",
+     "a": 320
+    },
+    {
+     "m": "NEST 4X V",
+     "n": "AlpicAir NEST 4X V ir vertikāli uzstādāms rekuperators ar pretplūsmas plātņu siltummaini.",
+     "l": "4X V",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "42"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "599×538×824"
+      ],
+      [
+       "Montāžas veids",
+       "Vertikālais"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 310 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "81"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "500"
+      ]
+     ],
+     "d": "AlpicAir NEST 4X V ir vertikāli uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 500 m³/h, siltuma atgūšanas efektivitāte līdz 81%. Gaisa vadu diametrs 160 mm. Izmēri 599 x 538 x 824 mm. Ieteicamā platība: līdz 310 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "v",
+     "a": 310
+    },
+    {
+     "m": "NEST 4X V E",
+     "n": "AlpicAir NEST 4X V E ir vertikāli uzstādāms rekuperators ar pretplūsmas plātņu siltummaini.",
+     "l": "4X V E",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "42"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "599×538×824"
+      ],
+      [
+       "Montāžas veids",
+       "Vertikālais"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 310 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "71"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "500"
+      ]
+     ],
+     "d": "AlpicAir NEST 4X V E ir vertikāli uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 500 m³/h, siltuma atgūšanas efektivitāte līdz 71%. Gaisa vadu diametrs 160 mm. Izmēri 599 x 538 x 824 mm. Ieteicamā platība: līdz 310 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "v",
+     "a": 310
+    },
+    {
+     "m": "NEST 700X V",
+     "n": "AlpicAir NEST 700X V ir vertikāli uzstādāms rekuperators ar pretplūsmas plātņu siltummaini.",
+     "l": "700X V",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "42"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "599×538×824"
+      ],
+      [
+       "Montāžas veids",
+       "Vertikālais"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 430 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "81"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "500"
+      ]
+     ],
+     "d": "AlpicAir NEST 700X V ir vertikāli uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 500 m³/h, siltuma atgūšanas efektivitāte līdz 81%. Gaisa vadu diametrs 160 mm. Izmēri 599 x 538 x 824 mm. Ieteicamā platība: līdz 430 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "v",
+     "a": 430
+    },
+    {
+     "m": "NEST 700X V E",
+     "n": "AlpicAir NEST 700X V E ir vertikāli uzstādāms rekuperators ar pretplūsmas plātņu siltummaini.",
+     "l": "700X V E",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "42"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "599×538×824"
+      ],
+      [
+       "Montāžas veids",
+       "Vertikālais"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 430 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "75"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "500"
+      ]
+     ],
+     "d": "AlpicAir NEST 700X V E ir vertikāli uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 500 m³/h, siltuma atgūšanas efektivitāte līdz 75%. Gaisa vadu diametrs 160 mm. Izmēri 599 x 538 x 824 mm. Ieteicamā platība: līdz 430 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "v",
+     "a": 430
+    },
+    {
+     "m": "NEST 700X P",
+     "n": "AlpicAir NEST 700X P ir pie griestiem uzstādāms rekuperators ar pretplūsmas plātņu siltummaini.",
+     "l": "700X P",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "93"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1380×1070×350"
+      ],
+      [
+       "Montāžas veids",
+       "Griestu"
+      ],
+      [
+       "Siltummaiņa tips",
+       "Pretplūsmas"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 390 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "82"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "700"
+      ]
+     ],
+     "d": "AlpicAir NEST 700X P ir pie griestiem uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 700 m³/h, siltuma atgūšanas efektivitāte līdz 82%. Gaisa vadu diametrs 250 mm. Izmēri 1380 x 1070 x 350 mm. Ieteicamā platība: līdz 390 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "p",
+     "a": 390
+    },
+    {
+     "m": "NEST 700X P E",
+     "n": "AlpicAir NEST 700X P E ir pie griestiem uzstādāms rekuperators ar pretplūsmas plātņu siltummaini.",
+     "l": "700X P E",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "93"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1380×1070×350"
+      ],
+      [
+       "Montāžas veids",
+       "Griestu"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 390 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "80"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "700"
+      ]
+     ],
+     "d": "AlpicAir NEST 700X P E ir pie griestiem uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 700 m³/h, siltuma atgūšanas efektivitāte līdz 80%. Gaisa vadu diametrs 250 mm. Izmēri 1380 x 1070 x 350 mm. Ieteicamā platība: līdz 390 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "p",
+     "a": 390
+    },
+    {
+     "m": "NEST 700X H",
+     "n": "AlpicAir NEST 700X H ir horizontāli uzstādāms rekuperators ar pretplūsmas plātņu siltummaini.",
+     "l": "700X H",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "110"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1200×670×780"
+      ],
+      [
+       "Montāžas veids",
+       "Horizontālais"
+      ],
+      [
+       "Siltummaiņa tips",
+       "Rotācijas"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 440 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "81"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "760"
+      ]
+     ],
+     "d": "AlpicAir NEST 700X H ir horizontāli uzstādāms rekuperators ar pretplūsmas plākšņu siltummaini. Maksimālā gaisa plūsma 760 m³/h, siltuma atgūšanas efektivitāte līdz 81%. Gaisa vadu diametrs 250 mm. Izmēri 1200 x 670 x 780 mm. Ieteicamā platība: līdz 440 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "h",
+     "a": 440
+    }
+   ]
+  },
+  {
+   "id": "nest-r",
+   "cat": "rv",
+   "name": "NEST R",
+   "tag": "Rotācijas rekuperatori",
+   "desc": "NEST R rekuperatori ar rotora tipa (sorbcijas/entalpijas) siltummaini — augsta siltuma atgūšana, mitruma atgūšana ziemā, kluss darbs. Vertikālai, horizontālai un griestu montāžai.",
+   "img": null,
+   "stats": [
+    [
+     "942",
+     "m³/h līdz"
+    ],
+    [
+     "86%",
+     "siltuma atgūšana"
+    ],
+    [
+     "430 m²",
+     "platība līdz"
+    ]
+   ],
+   "models": [
+    {
+     "m": "NEST D250R P",
+     "n": "NEST D250R P rekuperators",
+     "l": "D250R P",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "42"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "602×310×842"
+      ],
+      [
+       "Ieteicamā platība",
+       "Līdz 85 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "80"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "250"
+      ]
+     ],
+     "d": "Kompakts griestu rotora rekuperators ar otrās paaudzes sorbcijas rotoru. Slēpjams zem griestiem.",
+     "st": 0,
+     "img": null,
+     "mt": "p",
+     "a": 85
+    },
+    {
+     "m": "NEST D250R P S",
+     "n": "NEST D250R P S rekuperators",
+     "l": "D250R P S",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "42"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "602×310×842"
+      ],
+      [
+       "Ieteicamā platība",
+       "Līdz 85 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "80"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "250"
+      ]
+     ],
+     "d": "NEST D250R P komplektācija S — kompakts griestu rekuperators ar sorbcijas rotoru.",
+     "st": 0,
+     "img": null,
+     "mt": "p",
+     "a": 85
+    },
+    {
+     "m": "NEST 350R PE",
+     "n": "AlpicAir NEST 350R PE ir pie griestiem uzstādāms rekuperators ar rotora tipa siltummaini.",
+     "l": "350R PE",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "71"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "900×160×395"
+      ],
+      [
+       "Montāžas veids",
+       "Griestu"
+      ],
+      [
+       "Siltummaiņa tips",
+       "Rotācijas"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 170 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "83"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "300"
+      ]
+     ],
+     "d": "AlpicAir NEST 350R PE ir pie griestiem uzstādāms rekuperators ar rotora tipa siltummaini. Maksimālā gaisa plūsma 300 m³/h, siltuma atgūšanas efektivitāte līdz 83%. Gaisa vadu diametrs 200 mm. Izmēri 900 x 160 x 395 mm. Ieteicamā platība: līdz 170 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "p",
+     "a": 170
+    },
+    {
+     "m": "NEST 3R VE",
+     "n": "AlpicAir NEST 3R VE ir vertikāli uzstādāms rekuperators ar rotora tipa siltummaini.",
+     "l": "3R VE",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "40"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "599×375×700"
+      ],
+      [
+       "Montāžas veids",
+       "Vertikālais"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 170 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "82"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "300"
+      ]
+     ],
+     "d": "AlpicAir NEST 3R VE ir vertikāli uzstādāms rekuperators ar rotora tipa siltummaini. Maksimālā gaisa plūsma 300 m³/h, siltuma atgūšanas efektivitāte līdz 82%. Gaisa vadu diametrs 125 mm. Izmēri 599 x 375 x 700 mm. Ieteicamā platība: līdz 170 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "v",
+     "a": 170
+    },
+    {
+     "m": "NEST D350R V",
+     "n": "NEST D350R V rekuperators",
+     "l": "D350R V",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "45"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "495×512×598"
+      ],
+      [
+       "Ieteicamā platība",
+       "Līdz 130 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "86"
+      ],
+      [
+       "Gaisa vadu diametrs, mm",
+       "160"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "352"
+      ]
+     ],
+     "d": "Rotora rekuperators ar sorbcijas (entalpijas) rotoru un augstu siltuma atgūšanas efektivitāti. Piemērots privātmājām un dzīvokļiem.",
+     "st": 0,
+     "img": null,
+     "mt": "v",
+     "a": 130
+    },
+    {
+     "m": "NEST D350R V S",
+     "n": "NEST D350R V S rekuperators",
+     "l": "D350R V S",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "45"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "495×512×598"
+      ],
+      [
+       "Ieteicamā platība",
+       "Līdz 130 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "86"
+      ],
+      [
+       "Gaisa vadu diametrs, mm",
+       "160"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "352"
+      ]
+     ],
+     "d": "NEST D400R V komplektācija S ar entalpijas rotoru un mitruma atgūšanu ziemā.",
+     "st": 0,
+     "img": null,
+     "mt": "v",
+     "a": 130
+    },
+    {
+     "m": "NEST 400R HE",
+     "n": "AlpicAir NEST 400R HE ir horizontāli uzstādāms rekuperators ar rotora tipa siltummaini.",
+     "l": "400R HE",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "78"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1000×560×610"
+      ],
+      [
+       "Montāžas veids",
+       "Horizontālais"
+      ],
+      [
+       "Siltummaiņa tips",
+       "Rotācijas"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 220 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "77"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "380"
+      ]
+     ],
+     "d": "AlpicAir NEST 400R HE ir horizontāli uzstādāms rekuperators ar rotora tipa siltummaini. Maksimālā gaisa plūsma 380 m³/h, siltuma atgūšanas efektivitāte līdz 77%. Gaisa vadu diametrs 200 mm. Izmēri 1000 x 560 x 610 mm. Ieteicamā platība: līdz 220 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "h",
+     "a": 220
+    },
+    {
+     "m": "NEST 400R VE",
+     "n": "AlpicAir NEST 400R VE ir vertikāli uzstādāms rekuperators ar rotora tipa siltummaini.",
+     "l": "400R VE",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "75"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "900×560×850"
+      ],
+      [
+       "Montāžas veids",
+       "Vertikālais"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 220 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "77"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "385"
+      ]
+     ],
+     "d": "AlpicAir NEST 400R VE ir vertikāli uzstādāms rekuperators ar rotora tipa siltummaini. Maksimālā gaisa plūsma 385 m³/h, siltuma atgūšanas efektivitāte līdz 77%. Gaisa vadu diametrs 160 mm. Izmēri 900 x 560 x 850 mm. Ieteicamā platība: līdz 220 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "v",
+     "a": 220
+    },
+    {
+     "m": "NEST D400R P",
+     "n": "NEST D400R P rekuperators",
+     "l": "D400R P",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "65"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "700×310×1170"
+      ],
+      [
+       "Ieteicamā platība",
+       "Līdz 140 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "84"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "421"
+      ]
+     ],
+     "d": "Griestu rotora rekuperators ar entalpijas rotoru un A+ energoefektivitāti.",
+     "st": 0,
+     "img": null,
+     "mt": "p",
+     "a": 140
+    },
+    {
+     "m": "NEST D400R P S",
+     "n": "NEST D400R P S rekuperators",
+     "l": "D400R P S",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "65"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "700×310×1170"
+      ],
+      [
+       "Ieteicamā platība",
+       "Līdz 140 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "84"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "421"
+      ]
+     ],
+     "d": "NEST D400R P komplektācija S ar entalpijas rotoru griestu montāžai.",
+     "st": 0,
+     "img": null,
+     "mt": "p",
+     "a": 140
+    },
+    {
+     "m": "NEST D450R V",
+     "n": "NEST D450R V rekuperators",
+     "l": "D450R V",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "60"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "585×655×680"
+      ],
+      [
+       "Ieteicamā platība",
+       "Līdz 170 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "86"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "496"
+      ]
+     ],
+     "d": "Rotora rekuperators ar entalpijas rotoru, kas ziemā atgriež mitrumu telpās. Klusa darbība un A+ energoefektivitāte.",
+     "st": 0,
+     "img": null,
+     "mt": "v",
+     "a": 170
+    },
+    {
+     "m": "NEST D450R V S",
+     "n": "NEST D450R V S rekuperators",
+     "l": "D450R V S",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "60"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "585×655×680"
+      ],
+      [
+       "Ieteicamā platība",
+       "Līdz 170 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "86"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "496"
+      ]
+     ],
+     "d": "NEST D450R V komplektācija S ar sorbcijas rotoru un augstu siltuma atgūšanu 86%.",
+     "st": 0,
+     "img": null,
+     "mt": "v",
+     "a": 170
+    },
+    {
+     "m": "NEST D400R H",
+     "n": "NEST D400R H rekuperators",
+     "l": "D400R H",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "49"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "515×567×660"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "84"
+      ],
+      [
+       "Gaisa vadu diametrs, mm",
+       "160"
+      ],
+      [
+       "Min. gaisa plūsma, m³/h",
+       "139"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "500"
+      ]
+     ],
+     "d": null,
+     "st": 0,
+     "img": null,
+     "mt": "h",
+     "a": null
+    },
+    {
+     "m": "NEST 500R HE",
+     "n": "AlpicAir NEST 500R HE ir horizontāli uzstādāms rekuperators ar rotora tipa siltummaini.",
+     "l": "500R HE",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "73"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1000×560×610"
+      ],
+      [
+       "Montāžas veids",
+       "Horizontālais"
+      ],
+      [
+       "Siltummaiņa tips",
+       "Rotācijas"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 300 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "78"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "520"
+      ]
+     ],
+     "d": "AlpicAir NEST 500R HE ir horizontāli uzstādāms rekuperators ar rotora tipa siltummaini. Maksimālā gaisa plūsma 520 m³/h, siltuma atgūšanas efektivitāte līdz 78%. Gaisa vadu diametrs 200 mm. Izmēri 1000 x 560 x 610 mm. Ieteicamā platība: līdz 300 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "h",
+     "a": 300
+    },
+    {
+     "m": "NEST 700R HE",
+     "n": "AlpicAir NEST 700R HE ir horizontāli uzstādāms rekuperators ar rotora tipa siltummaini.",
+     "l": "700R HE",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "73"
+      ],
+      [
+       "Piezīme",
+       "Elektriskais pēcsildītājs"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1000×560×610"
+      ],
+      [
+       "Montāžas veids",
+       "Horizontālais"
+      ],
+      [
+       "Siltummaiņa tips",
+       "Rotācijas"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 410 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "78"
+      ],
+      [
+       "Gaisa vadu diametrs, mm",
+       "250"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "520"
+      ]
+     ],
+     "d": "AlpicAir NEST 700R HE ir horizontāli uzstādāms rekuperators ar rotora tipa siltummaini. Maksimālā gaisa plūsma 520 m³/h, siltuma atgūšanas efektivitāte līdz 78%. Gaisa vadu diametrs 200 mm. Izmēri 1000 x 560 x 610 mm. Ieteicamā platība: līdz 410 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "h",
+     "a": 410
+    },
+    {
+     "m": "NEST D700X V",
+     "n": "NEST D700X V rekuperators",
+     "l": "D700X V",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Ieteicamā platība",
+       "Līdz 210 m²"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "621"
+      ]
+     ],
+     "d": "Plākšņu pretplūsmas rekuperators ar difūzijas entalpijas siltummaini un A+ energoefektivitāti.",
+     "st": 0,
+     "img": null,
+     "mt": "v",
+     "a": 210
+    },
+    {
+     "m": "NEST 700R VE",
+     "n": "AlpicAir NEST 700R VE ir vertikāli uzstādāms rekuperators ar rotora tipa siltummaini.",
+     "l": "700R VE",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "107"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "1100×655×980"
+      ],
+      [
+       "Montāžas veids",
+       "Vertikālais"
+      ],
+      [
+       "Siltummaiņa tips",
+       "Rotācijas"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 430 m²"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "74"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "765"
+      ]
+     ],
+     "d": "AlpicAir NEST 700R VE ir vertikāli uzstādāms rekuperators ar rotora tipa siltummaini. Maksimālā gaisa plūsma 765 m³/h, siltuma atgūšanas efektivitāte līdz 74%. Gaisa vadu diametrs 250 mm. Izmēri 1100 x 655 x 980 mm. Ieteicamā platība: līdz 430 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "v",
+     "a": 430
+    },
+    {
+     "m": "NEST D900R V",
+     "n": "NEST D900R V rekuperators",
+     "l": "D900R V",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Ieteicamā platība",
+       "Līdz 320 m²"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "942"
+      ]
+     ],
+     "d": "Jaudīgs rotora rekuperators lielām mājām un birojiem ar gaisa plūsmu līdz 942 m³/h.",
+     "st": 0,
+     "img": null,
+     "mt": "v",
+     "a": 320
+    },
+    {
+     "m": "NEST D900R V S",
+     "n": "NEST D900R V S rekuperators",
+     "l": "D900R V S",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Ieteicamā platība",
+       "Līdz 320 m²"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "942"
+      ]
+     ],
+     "d": "NEST D900R V komplektācija S lielām telpām ar gaisa plūsmu līdz 942 m³/h.",
+     "st": 0,
+     "img": null,
+     "mt": "v",
+     "a": 320
+    }
+   ]
+  },
+  {
+   "id": "nest-mini",
+   "cat": "rv",
+   "name": "NEST MINI",
+   "tag": "Sienas rekuperators",
+   "desc": "Decentralizēts sienas rekuperators bez gaisa vadiem — ideāls dzīvokļiem un atsevišķām telpām.",
+   "img": "https://alpicair.com/image/cache/catalog/vaizdas-500x500.png",
+   "stats": [
+    [
+     "100",
+     "m³/h līdz"
+    ],
+    [
+     "82%",
+     "siltuma atgūšana"
+    ],
+    [
+     "50 m²",
+     "platība līdz"
+    ]
+   ],
+   "models": [
+    {
+     "m": "NEST MINI",
+     "n": "AlpicAir AlpicAir NEST MINI ir sienas rekuperators ar lokālu siltuma atgūšanu.",
+     "l": "MINI",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Piezīme",
+       "Iebūvēts CO2 sensors, IS pults, vadība no viedtālruņa, montāža pie sienas bez gaisa vadiem"
+      ],
+      [
+       "Montāžas veids",
+       "Sienas"
+      ],
+      [
+       "Siltummaiņa tips",
+       "Pretplūsmas"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 50 m²"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "335×680×625"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "82"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "100"
+      ]
+     ],
+     "d": "AlpicAir AlpicAir NEST MINI ir sienas rekuperators ar lokālu siltuma atgūšanu. Maksimālā gaisa plūsma 100 m³/h, siltuma atgūšanas efektivitāte līdz 82%. Gaisa vadu diametrs 85 mm. Ieteicamā platība: līdz 50 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "w",
+     "a": 50
+    },
+    {
+     "m": "NEST MINI S",
+     "n": "Sienas pieplūdes-nosūces iekārta",
+     "l": "MINI S",
+     "s": [
+      [
+       "Vadība",
+       "4.3” touch pad"
+      ],
+      [
+       "Masa, kg",
+       "10"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "567×437×196"
+      ],
+      [
+       "Ieteicamā platība",
+       "līdz 50 m²"
+      ],
+      [
+       "Efektivitāte",
+       "līdz 90%"
+      ],
+      [
+       "Siltuma atgūšana, %",
+       "82"
+      ],
+      [
+       "Maks. gaisa plūsma, m³/h",
+       "100"
+      ]
+     ],
+     "d": "AlpicAir AlpicAir NEST MINI S ir sienas rekuperators ar lokālu siltuma atgūšanu. Maksimālā gaisa plūsma 100 m³/h, siltuma atgūšanas efektivitāte līdz 82%. Gaisa vadu diametrs 85 mm. Izmēri 567 x 437 x 196 mm. Ieteicamā platība: līdz 50 m². EC ventilatori, energoefektīva darbība un elastīgas vadības iespējas.",
+     "st": 1,
+     "img": null,
+     "mt": "w",
+     "a": 50
+    }
+   ]
+  },
+  {
+   "id": "comfort-fresh-air",
+   "cat": "rv",
+   "name": "Comfort Fresh Air",
+   "tag": "Efektivitāte līdz 95%",
+   "desc": "ACFA pieplūdes-nosūces iekārtas ar augstas efektivitātes pretplūsmas siltummaini.",
+   "img": "https://alpicair.com/image/cache/catalog/ACFA2-500x500.png",
+   "stats": [
+    [
+     "95%",
+     "siltuma atgūšana"
+    ]
+   ],
+   "models": [
+    {
+     "m": "ACFA-350T",
+     "n": "Pieplūdes-nosūces iekārta",
+     "l": "ACFA-350T",
+     "s": [
+      [
+       "Masa, kg",
+       "40"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "595×975×480"
+      ],
+      [
+       "Efektivitāte",
+       "līdz 95%"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": null,
+     "mt": "v",
+     "a": null
+    },
+    {
+     "m": "ACFA-500T",
+     "n": "Pieplūdes-nosūces iekārta",
+     "l": "ACFA-500T",
+     "s": [
+      [
+       "Masa, kg",
+       "50"
+      ],
+      [
+       "Izmēri (P×A×Dz), mm",
+       "655×1085×625"
+      ],
+      [
+       "Efektivitāte",
+       "līdz 95%"
+      ]
+     ],
+     "d": null,
+     "st": 1,
+     "img": "https://alpicair.com/image/cache/catalog/ARVQ-500x500.png",
+     "mt": "v",
+     "a": null
+    }
+   ]
+  },
+  {
+   "id": "vadiba",
+   "cat": "ctl",
+   "name": "Vadība un piederumi",
+   "tag": "Pultis, WiFi, integrācija",
+   "desc": "Pultis, centrālā vadība, WiFi moduļi un Modbus/BACnet integrācija — lai visu sistēmu varētu pievienot vienam sienas panelim.",
+   "img": null,
+   "stats": [
+    [
+     "12",
+     "pozīcijas"
+    ],
+    [
+     "WiFi",
+     "Modbus · BACnet"
+    ]
+   ],
+   "models": [
+    {
+     "m": "CCM30/BKE-B",
+     "n": "Vadības pults",
+     "l": "CCM30/BKE-B",
+     "s": [],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "CE52-24/F",
+     "n": "Vadības pults",
+     "l": "CE52-24/F",
+     "s": [],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "KJR-120N/BGEF",
+     "n": "Vadības pults",
+     "l": "KJR-120N/BGEF",
+     "s": [],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "ME30-44/D2",
+     "n": "Kontrolieris",
+     "l": "ME30-44/D2",
+     "s": [],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "MK010",
+     "n": "Piederums",
+     "l": "MK010",
+     "s": [],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "Modbus adapteris",
+     "n": "Piederums",
+     "l": "Modbus adapteris",
+     "s": [],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "Pults D serijai",
+     "n": "Tehniskie dati tiek precizēti.",
+     "l": "Pults D serijai",
+     "s": [],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "Pults Touchscreen Wifi",
+     "n": "Tehniskie dati tiek precizēti.",
+     "l": "Pults Touchscreen Wifi",
+     "s": [],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "RG10",
+     "n": "Vadības pults",
+     "l": "RG10",
+     "s": [],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "WIFI AX modulis",
+     "n": "Piederums",
+     "l": "WIFI AX modulis",
+     "s": [],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "XE73-44",
+     "n": "Vadības pults",
+     "l": "XE73-44",
+     "s": [],
+     "d": null,
+     "st": 1,
+     "img": null
+    },
+    {
+     "m": "XK76",
+     "n": "Vadības pults",
+     "l": "XK76",
+     "s": [],
+     "d": null,
+     "st": 1,
+     "img": null
+    }
+   ]
+  }
+ ]
+}

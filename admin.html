@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>AlpicAir — админ-панель</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e0a1c;--bg2:#151027;--card:#1b1530;--line:rgba(255,255,255,.1);--ink:#f3f0ff;--ink2:#b8b0d6;--muted:#8a82a8;--brand:#7c5cff;--brand2:#b6a3ff;--ok:#3ee0a8;--warn:#ffb547;--bad:#ff5d6c}
+*{box-sizing:border-box}
+body{margin:0;font-family:Manrope,system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:14px}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+header.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:12px;padding:12px 20px;background:rgba(14,10,28,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);flex-wrap:wrap}
+header.top h1{font-size:16px;margin:0;letter-spacing:.08em}
+header.top h1 span{color:var(--brand2)}
+.sp{flex:1}
+.btn{border:1px solid var(--line);background:rgba(255,255,255,.06);border-radius:10px;padding:8px 12px;font-weight:700;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+a.btn{text-decoration:none;color:inherit}
+.btn:hover{border-color:var(--brand2)}
+.btn.pri{background:var(--brand);border-color:var(--brand)}
+.btn.pri:disabled{opacity:.5;cursor:default}
+.btn.ok{background:var(--ok);border-color:var(--ok);color:#0b2a1f}
+.btn.del{color:var(--bad)}
+.btn.sm{padding:5px 9px;font-size:12px;border-radius:8px}
+.status{font-size:13px;color:var(--ink2)}
+.status.dirty{color:var(--warn)}
+.status.err{color:var(--bad)}
+.status.good{color:var(--ok)}
+.layout{display:grid;grid-template-columns:320px 1fr;min-height:calc(100vh - 58px)}
+aside.side{border-right:1px solid var(--line);background:var(--bg2);padding:14px;position:sticky;top:58px;height:calc(100vh - 58px);overflow:auto}
+.cats{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.cats button{border:1px solid var(--line);background:transparent;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:700;color:var(--ink2)}
+.cats button.on{background:#fff;color:#140f26}
+.search{width:100%;padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.05);margin-bottom:10px}
+.slist{display:grid;gap:4px}
+.sitem{display:flex;align-items:center;gap:10px;padding:8px;border-radius:10px;border:1px solid transparent;cursor:pointer}
+.sitem:hover{background:rgba(255,255,255,.04)}
+.sitem.on{background:rgba(124,92,255,.18);border-color:rgba(124,92,255,.5)}
+.sitem .th{width:44px;height:34px;border-radius:7px;background:#ece8f6;flex:0 0 44px;display:grid;place-items:center;overflow:hidden}
+.sitem .th img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.sitem b{display:block;font-size:13px}
+.sitem small{color:var(--muted);font-size:11.5px}
+.sitem .dot{width:8px;height:8px;border-radius:50%;margin-left:auto;flex:0 0 8px}
+main{padding:22px 26px 80px;max-width:1100px}
+.empty{color:var(--muted);padding:60px 0;text-align:center}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:16px}
+.card h2{margin:0 0 14px;font-size:18px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.card h3{margin:0 0 10px;font-size:15px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+label.f{display:grid;gap:5px;font-size:12px;color:var(--ink2);font-weight:600}
+label.f input,label.f select,label.f textarea,.row input{padding:9px 11px;border-radius:9px;border:1px solid var(--line);background:rgba(255,255,255,.05);width:100%}
+label.f textarea{min-height:70px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid rgba(124,92,255,.6);outline-offset:0}
+select option{background:#1b1530}
+.photo{display:grid;grid-template-columns:160px 1fr;gap:14px;align-items:start}
+.pv{width:160px;height:120px;border-radius:12px;background:radial-gradient(110% 90% at 50% 0%,#fff,#e6e1f2);display:grid;place-items:center;overflow:hidden;color:#6b6388;font-size:12px;text-align:center}
+.pv img{width:90%;height:90%;object-fit:contain;mix-blend-mode:multiply}
+.drop{border:1.5px dashed var(--line);border-radius:12px;padding:12px;text-align:center;color:var(--muted);font-size:12.5px;cursor:pointer}
+.drop.over{border-color:var(--brand2);color:var(--brand2)}
+.rows{display:grid;gap:6px}
+.row{display:grid;grid-template-columns:1fr 1fr auto;gap:6px;align-items:center}
+.row .ctl{display:flex;gap:4px}
+.row .ctl button{border:1px solid var(--line);background:transparent;border-radius:7px;width:28px;height:30px;color:var(--ink2)}
+.row .ctl button:hover{color:#fff;border-color:var(--brand2)}
+.models{display:grid;gap:8px}
+.model{border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.02)}
+.model>summary{list-style:none;display:flex;align-items:center;gap:10px;padding:10px 12px;cursor:pointer}
+.model>summary::-webkit-details-marker{display:none}
+.model>summary .chev{transition:transform .2s;color:var(--muted)}
+.model[open]>summary .chev{transform:rotate(90deg)}
+.model>summary b{font-size:13.5px}
+.model>summary .lbl{font-size:12px;color:var(--brand2);background:rgba(124,92,255,.15);padding:2px 8px;border-radius:999px}
+.model>summary .st{font-size:11px;font-weight:800;padding:2px 8px;border-radius:999px}
+.st.y{background:rgba(62,224,168,.15);color:var(--ok)}.st.n{background:rgba(255,181,71,.15);color:var(--warn)}
+.model .body{padding:4px 14px 16px;display:grid;gap:12px}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap}
+.chk{display:flex;align-items:center;gap:8px;font-weight:600;color:var(--ink2)}
+.chk input{width:18px;height:18px;accent-color:var(--ok)}
+.hint{font-size:12px;color:var(--muted);line-height:1.5}
+dialog{border:1px solid var(--line);background:var(--bg2);color:var(--ink);border-radius:18px;padding:22px;max-width:560px;width:calc(100% - 32px)}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+dialog h2{margin:0 0 10px}
+dialog ol{padding-left:18px;line-height:1.7;color:var(--ink2)}
+dialog code{background:rgba(255,255,255,.08);padding:1px 6px;border-radius:6px}
+.toast{position:fixed;left:50%;bottom:20px;transform:translate(-50%,120px);background:#fff;color:#140f26;padding:11px 16px;border-radius:999px;font-weight:700;z-index:50;transition:transform .3s}
+.toast.show{transform:translate(-50%,0)}
+@media (max-width:860px){.layout{grid-template-columns:1fr}aside.side{position:static;height:auto;max-height:46vh}.grid2,.grid3,.photo{grid-template-columns:1fr}main{padding:16px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>ALPICAIR <span>· админ-панель</span></h1>
+  <span class="status" id="status">Загрузка…</span>
+  <span class="sp"></span>
+  <a class="btn" href="./" target="_blank">Открыть сайт ↗</a>
+  <button class="btn" id="bExport" title="Скачать резервную копию данных">⬇ JSON</button>
+  <label class="btn" title="Загрузить данные из файла">⬆ JSON<input type="file" id="fImport" accept=".json,application/json" hidden></label>
+  <button class="btn" id="bSettings">⚙ Доступ</button>
+  <button class="btn pri" id="bSave" disabled>Сохранить и опубликовать</button>
+</header>
+<div class="layout">
+  <aside class="side">
+    <div class="cats" id="cats"></div>
+    <input class="search" id="q" placeholder="Поиск серии или модели…">
+    <button class="btn" id="bAddSeries" style="width:100%;justify-content:center;margin-bottom:10px">＋ Новая серия</button>
+    <div class="slist" id="slist"></div>
+  </aside>
+  <main id="main"><div class="empty">Выберите серию слева или создайте новую.</div></main>
+</div>
+
+<dialog id="dlg">
+  <h2>Доступ к GitHub</h2>
+  <p class="hint">Изменения сохраняются прямо в репозиторий сайта. Для этого нужен личный токен GitHub — его создаёте вы сами, он хранится только в этом браузере.</p>
+  <ol>
+    <li>Откройте <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" style="color:var(--brand2)">github.com → Settings → Fine-grained tokens</a></li>
+    <li>Repository access: <b>Only select repositories</b> → <code id="repoName">alpicair</code></li>
+    <li>Permissions → Repository → <b>Contents: Read and write</b></li>
+    <li>Создайте токен и вставьте его ниже</li>
+  </ol>
+  <div class="grid2" style="margin:10px 0">
+    <label class="f">Владелец (owner)<input id="sOwner"></label>
+    <label class="f">Репозиторий<input id="sRepo"></label>
+  </div>
+  <label class="f" style="margin-bottom:10px">Ветка<input id="sBranch" value="main"></label>
+  <label class="f">Токен<input id="sToken" type="password" autocomplete="off" placeholder="github_pat_…"></label>
+  <label class="chk" style="margin:12px 0"><input type="checkbox" id="sRemember"> Запомнить на этом компьютере</label>
+  <div class="toolbar"><button class="btn pri" id="sOk">Проверить и сохранить</button><button class="btn" id="sForget">Забыть токен</button><button class="btn" id="sClose">Закрыть</button></div>
+  <p class="status" id="sMsg" style="margin-top:10px"></p>
+</dialog>
+<div class="toast" id="toast"></div>
+
+<script>
+const CATS={hp:{n:"Тепловые насосы",lv:"Siltumsūkņi",c:"#ff8a3d"},ac:{n:"Кондиционеры",lv:"Kondicionieri",c:"#38c6ff"},rv:{n:"Рекуперация",lv:"Rekuperācija",c:"#3ee0a8"},ctl:{n:"Управление",lv:"Vadība",c:"#b6a3ff"}};
+const MT={v:"Вертикальный",h:"Горизонтальный",p:"Потолочный",w:"Настенный"};
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let DATA={series:[]},sha=null,dirty=false,curId=null,catF="all";
+const pendingImgs={}; // path -> base64 (без префикса)
+const previews={};    // path -> dataURL (для показа до публикации)
+
+/* ---------- settings ---------- */
+function guessRepo(){const h=location.hostname.match(/^([^.]+)\.github\.io$/);const seg=location.pathname.split("/").filter(Boolean)[0];return {owner:h?h[1]:"keziksdmitrijs-byte",repo:h&&seg&&!seg.includes(".")?seg:"alpicair"}}
+function getCfg(){const g=guessRepo();let c={};try{c=JSON.parse(localStorage.getItem("alpic-admin")||sessionStorage.getItem("alpic-admin")||"{}")}catch(e){}return {owner:c.owner||g.owner,repo:c.repo||g.repo,branch:c.branch||"main",token:c.token||"",remember:!!c.remember}}
+function setCfg(c){try{localStorage.removeItem("alpic-admin");sessionStorage.removeItem("alpic-admin");(c.remember?localStorage:sessionStorage).setItem("alpic-admin",JSON.stringify(c))}catch(e){}}
+let cfg=getCfg();
+
+/* ---------- GitHub API ---------- */
+const b64enc=str=>{const b=new TextEncoder().encode(str);let s="";for(let i=0;i<b.length;i+=0x8000)s+=String.fromCharCode.apply(null,b.subarray(i,i+0x8000));return btoa(s)};
+const b64dec=b=>new TextDecoder().decode(Uint8Array.from(atob(b.replace(/\n/g,"")),c=>c.charCodeAt(0)));
+async function gh(path,opt={}){
+  const r=await fetch(`https://api.github.com/repos/${cfg.owner}/${cfg.repo}/${path}`,{...opt,headers:{"Accept":"application/vnd.github+json",...(cfg.token?{"Authorization":"Bearer "+cfg.token}:{}),...(opt.body?{"Content-Type":"application/json"}:{})}});
+  if(!r.ok){let m="";try{m=(await r.json()).message}catch(e){}throw new Error(r.status+" "+m)}
+  return r.json();
+}
+async function getFile(path){return gh(`contents/${path}?ref=${encodeURIComponent(cfg.branch)}&t=${Date.now()}`)}
+async function putFile(path,b64,message,fileSha){return gh(`contents/${path}`,{method:"PUT",body:JSON.stringify({message,content:b64,branch:cfg.branch,...(fileSha?{sha:fileSha}:{})})})}
+
+/* ---------- load ---------- */
+async function load(){
+  status("Загрузка данных…");
+  try{
+    if(cfg.token){const f=await getFile("catalog.json");sha=f.sha;DATA=JSON.parse(f.encoding==="base64"&&f.content?b64dec(f.content):await (await fetch(f.download_url)).text());status("Данные загружены из GitHub","good")}
+    else{DATA=await (await fetch("catalog.json?t="+Date.now(),{cache:"no-store"})).json();status("Только просмотр — укажите токен (⚙ Доступ), чтобы сохранять","dirty")}
+  }catch(e){status("Ошибка загрузки: "+e.message,"err");try{DATA=await (await fetch("catalog.json?t="+Date.now())).json()}catch(_){}}
+  DATA.series=DATA.series||[];renderSide();if(curId)renderMain();updSave();
+}
+function status(t,cls=""){const s=$("#status");s.textContent=t;s.className="status "+cls}
+function markDirty(){dirty=true;status("Есть несохранённые изменения","dirty");updSave()}
+function updSave(){$("#bSave").disabled=!dirty||!cfg.token;$("#bSave").title=cfg.token?"":"Сначала укажите токен в «⚙ Доступ»"}
+addEventListener("beforeunload",e=>{if(dirty){e.preventDefault();e.returnValue=""}});
+
+/* ---------- save ---------- */
+$("#bSave").onclick=async()=>{
+  const ids=DATA.series.map(s=>s.id);const dup=ids.find((x,i)=>ids.indexOf(x)!==i);
+  if(dup)return toast("Повторяется ID серии: "+dup);
+  if(ids.some(x=>!/^[a-z0-9-]+$/.test(x)))return toast("ID серии: только латиница, цифры и «-»");
+  $("#bSave").disabled=true;
+  try{
+    const imgs=Object.keys(pendingImgs);
+    for(let i=0;i<imgs.length;i++){status(`Загрузка фото ${i+1}/${imgs.length}…`);let s0=null;try{s0=(await getFile(imgs[i])).sha}catch(e){}await putFile(imgs[i],pendingImgs[imgs[i]],"Foto: "+imgs[i],s0);delete pendingImgs[imgs[i]]}
+    status("Сохранение каталога…");
+    DATA.updated=new Date().toISOString().slice(0,10);
+    try{sha=(await getFile("catalog.json")).sha}catch(e){}
+    const r=await putFile("catalog.json",b64enc(JSON.stringify(DATA,null,1)),"Katalogs atjaunināts (admin)",sha);
+    sha=r.content.sha;dirty=false;status("Опубликовано ✓ Сайт обновится через 1–2 минуты","good");toast("Сохранено в GitHub");
+  }catch(e){status("Ошибка сохранения: "+e.message,"err");$("#bSave").disabled=false}
+  updSave();
+};
+
+/* ---------- export / import ---------- */
+$("#bExport").onclick=()=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify(DATA,null,1)],{type:"application/json"}));a.download="alpicair-catalog-"+new Date().toISOString().slice(0,10)+".json";a.click()};
+$("#fImport").onchange=async e=>{const f=e.target.files[0];if(!f)return;try{const d=JSON.parse(await f.text());if(!Array.isArray(d.series))throw new Error("нет поля series");if(!confirm(`Заменить текущие данные (${DATA.series.length} серий) данными из файла (${d.series.length} серий)?`))return;DATA=d;curId=null;renderSide();$("#main").innerHTML='<div class="empty">Данные загружены из файла. Не забудьте сохранить.</div>';markDirty()}catch(err){toast("Ошибка файла: "+err.message)}e.target.value=""};
+
+/* ---------- settings dialog ---------- */
+const dlg=$("#dlg");
+$("#bSettings").onclick=()=>{$("#sOwner").value=cfg.owner;$("#sRepo").value=cfg.repo;$("#sBranch").value=cfg.branch;$("#sToken").value=cfg.token;$("#sRemember").checked=cfg.remember;$("#repoName").textContent=cfg.owner+"/"+cfg.repo;$("#sMsg").textContent="";dlg.showModal()};
+$("#sClose").onclick=()=>dlg.close();
+$("#sForget").onclick=()=>{cfg.token="";setCfg(cfg);$("#sToken").value="";$("#sMsg").textContent="Токен удалён из браузера";updSave()};
+$("#sOk").onclick=async()=>{
+  cfg={owner:$("#sOwner").value.trim(),repo:$("#sRepo").value.trim(),branch:$("#sBranch").value.trim()||"main",token:$("#sToken").value.trim(),remember:$("#sRemember").checked};
+  $("#sMsg").className="status";$("#sMsg").textContent="Проверка…";
+  try{const r=await gh("");if(!r.permissions||!r.permissions.push)throw new Error("у токена нет права записи (Contents: Read and write)");setCfg(cfg);$("#sMsg").className="status good";$("#sMsg").textContent="Готово — доступ на запись есть";
+    if(!dirty)await load();else{try{sha=(await getFile("catalog.json")).sha}catch(e){}}updSave();setTimeout(()=>dlg.close(),700)}
+  catch(e){$("#sMsg").className="status err";$("#sMsg").textContent="Ошибка: "+e.message}
+};
+
+/* ---------- sidebar ---------- */
+function imgSrc(p){return p?(previews[p]||p):""}
+function renderSide(){
+  const cats=[["all","Все",DATA.series.length],...Object.entries(CATS).map(([k,c])=>[k,c.n,DATA.series.filter(s=>s.cat===k).length])];
+  $("#cats").innerHTML=cats.map(([k,n,c])=>`<button data-k="${k}" class="${catF===k?"on":""}">${n} ${c}</button>`).join("");
+  $("#cats").querySelectorAll("button").forEach(b=>b.onclick=()=>{catF=b.dataset.k;renderSide()});
+  const q=$("#q").value.toLowerCase().trim();
+  const list=DATA.series.filter(s=>(catF==="all"||s.cat===catF)&&(!q||(s.name+" "+s.id+" "+s.models.map(m=>m.m+" "+m.l).join(" ")).toLowerCase().includes(q)));
+  $("#slist").innerHTML=list.map(s=>`<div class="sitem ${s.id===curId?"on":""}" data-id="${esc(s.id)}"><div class="th">${s.img?`<img src="${esc(imgSrc(s.img))}" referrerpolicy="no-referrer" alt="">`:"—"}</div><div><b>${esc(s.name)}</b><small>${CATS[s.cat]?.n||s.cat} · ${s.models.length} мод.</small></div><span class="dot" style="background:${CATS[s.cat]?.c||"#888"}"></span></div>`).join("")||'<div class="hint">Ничего не найдено</div>';
+  $("#slist").querySelectorAll(".sitem").forEach(el=>el.onclick=()=>{curId=el.dataset.id;renderSide();renderMain();scrollTo(0,0)});
+}
+$("#q").oninput=renderSide;
+
+/* ---------- image upload ---------- */
+function slug(s){return String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,40)||"foto"}
+async function processImage(file,base){
+  const bmp=await createImageBitmap(file);const max=1200,k=Math.min(1,max/Math.max(bmp.width,bmp.height));
+  const c=document.createElement("canvas");c.width=Math.round(bmp.width*k);c.height=Math.round(bmp.height*k);
+  const x=c.getContext("2d");x.fillStyle="#fff";x.fillRect(0,0,c.width,c.height);x.drawImage(bmp,0,0,c.width,c.height);
+  const url=c.toDataURL("image/webp",.86);const path=`img/${slug(base)}-${Date.now().toString(36)}.webp`;
+  pendingImgs[path]=url.split(",")[1];previews[path]=url;return path;
+}
+function photoField(obj,keyName,base,label){
+  const id="ph"+Math.random().toString(36).slice(2,8);
+  return {html:`<div class="photo"><div class="pv" id="${id}pv">${obj[keyName]?`<img src="${esc(imgSrc(obj[keyName]))}" referrerpolicy="no-referrer" alt="">`:"нет фото"}</div><div style="display:grid;gap:8px"><label class="f">${label}<input id="${id}u" value="${esc(obj[keyName]||"")}" placeholder="https://… или img/…"></label><div class="drop" id="${id}d">Перетащите фото сюда или нажмите, чтобы выбрать<br><span style="font-size:11px">JPG/PNG/WebP — будет уменьшено до 1200 px</span><input type="file" accept="image/*" hidden id="${id}f"></div>${obj[keyName]?`<button class="btn sm del" id="${id}x" style="justify-self:start">Убрать фото</button>`:""}</div></div>`,
+  bind:()=>{
+    const u=$("#"+id+"u"),d=$("#"+id+"d"),f=$("#"+id+"f"),pv=$("#"+id+"pv"),xb=$("#"+id+"x");
+    const set=v=>{obj[keyName]=v||null;if(!v)delete obj[keyName];pv.innerHTML=v?`<img src="${esc(imgSrc(v))}" referrerpolicy="no-referrer" alt="">`:"нет фото";u.value=v||"";markDirty();renderSide()};
+    u.onchange=()=>set(u.value.trim());
+    if(xb)xb.onclick=()=>{set("");xb.remove()};
+    d.onclick=()=>f.click();
+    const take=async file=>{if(!file||!file.type.startsWith("image/"))return toast("Нужен файл изображения");d.textContent="Обработка…";try{set(await processImage(file,base()));toast("Фото добавлено — опубликуется при сохранении")}catch(e){toast("Не удалось обработать фото")}d.innerHTML="Перетащите фото сюда или нажмите, чтобы выбрать"};
+    f.onchange=()=>take(f.files[0]);
+    d.ondragover=e=>{e.preventDefault();d.classList.add("over")};d.ondragleave=()=>d.classList.remove("over");
+    d.ondrop=e=>{e.preventDefault();d.classList.remove("over");take(e.dataTransfer.files[0])};
+  }};
+}
+
+/* ---------- rows editor (specs / stats) ---------- */
+function rowsEditor(arr,ph1,ph2,onChange){
+  const id="r"+Math.random().toString(36).slice(2,8);
+  const draw=()=>{const box=$("#"+id);box.innerHTML=arr.map((r,i)=>`<div class="row"><input data-i="${i}" data-j="0" value="${esc(r[0])}" placeholder="${ph1}"><input data-i="${i}" data-j="1" value="${esc(r[1])}" placeholder="${ph2}"><div class="ctl"><button data-a="up" data-i="${i}" title="Выше">↑</button><button data-a="dn" data-i="${i}" title="Ниже">↓</button><button data-a="rm" data-i="${i}" title="Удалить">✕</button></div></div>`).join("")+`<div><button class="btn sm" data-a="add">＋ строка</button></div>`;
+    box.querySelectorAll("input").forEach(inp=>inp.oninput=()=>{arr[+inp.dataset.i][+inp.dataset.j]=inp.value;onChange()});
+    box.querySelectorAll("button").forEach(b=>b.onclick=()=>{const i=+b.dataset.i,a=b.dataset.a;
+      if(a==="add")arr.push(["",""]);else if(a==="rm")arr.splice(i,1);else if(a==="up"&&i>0)[arr[i-1],arr[i]]=[arr[i],arr[i-1]];else if(a==="dn"&&i<arr.length-1)[arr[i+1],arr[i]]=[arr[i],arr[i+1]];
+      onChange();draw()})};
+  return {html:`<div class="rows" id="${id}"></div>`,bind:draw};
+}
+
+/* ---------- main editor ---------- */
+const S=()=>DATA.series.find(s=>s.id===curId);
+function renderMain(openIdx){
+  const s=S();if(!s){$("#main").innerHTML='<div class="empty">Выберите серию слева или создайте новую.</div>';return}
+  s.stats=s.stats||[];s.models=s.models||[];
+  const ph=photoField(s,"img",()=>s.id,"Фото серии (ссылка или загруженный файл)");
+  const st=rowsEditor(s.stats,"Значение (напр. -30 °C)","Подпись (напр. apsilde līdz)",markDirty);
+  const idx=DATA.series.indexOf(s);
+  $("#main").innerHTML=`
+  <div class="card"><h2>${esc(s.name)} <span class="hint">#${esc(s.id)}</span><span class="sp"></span>
+    <a class="btn sm" href="./#/s/${esc(s.id)}" target="_blank">Посмотреть на сайте ↗</a>
+    <button class="btn sm" id="sUp" ${idx===0?"disabled":""}>↑ выше</button><button class="btn sm" id="sDn" ${idx===DATA.series.length-1?"disabled":""}>↓ ниже</button>
+    <button class="btn sm del" id="sDel">Удалить серию</button></h2>
+    <div class="grid3">
+      <label class="f">Название (на сайте)<input id="fName" value="${esc(s.name)}"></label>
+      <label class="f">Категория<select id="fCat">${Object.entries(CATS).map(([k,c])=>`<option value="${k}" ${s.cat===k?"selected":""}>${c.n} (${c.lv})</option>`).join("")}</select></label>
+      <label class="f">ID в ссылке (латиница)<input id="fId" value="${esc(s.id)}"></label>
+    </div>
+    <div class="grid2" style="margin-top:12px">
+      <label class="f">Краткий слоган<input id="fTag" value="${esc(s.tag||"")}"></label>
+      <div></div>
+    </div>
+    <label class="f" style="margin-top:12px">Описание серии<textarea id="fDesc">${esc(s.desc||"")}</textarea></label>
+  </div>
+  <div class="card"><h3>Фото серии</h3>${ph.html}<p class="hint" style="margin:10px 0 0">Если фото нет — на сайте показывается рисунок. У отдельной модели можно задать своё фото.</p></div>
+  <div class="card"><h3>Ключевые цифры (крупно вверху карточки, до 3 шт.)</h3>${st.html}</div>
+  <div class="card"><h2>Модели <span class="hint">${s.models.length} шт.</span><span class="sp"></span><button class="btn sm pri" id="mAdd">＋ Добавить модель</button></h2><div class="models" id="models"></div></div>`;
+  ph.bind();st.bind();
+  const bind=(sel,fn)=>{$(sel).oninput=fn};
+  bind("#fName",e=>{s.name=e.target.value;markDirty();renderSide()});
+  bind("#fTag",e=>{s.tag=e.target.value;markDirty()});
+  bind("#fDesc",e=>{s.desc=e.target.value;markDirty()});
+  $("#fCat").onchange=e=>{s.cat=e.target.value;markDirty();renderSide();renderMain()};
+  $("#fId").onchange=e=>{const v=slug(e.target.value);if(DATA.series.some(x=>x!==s&&x.id===v)){toast("Такой ID уже есть");e.target.value=s.id;return}if(v!==s.id&&!confirm("Изменить ID? Старые ссылки на эту серию перестанут работать."))return void(e.target.value=s.id);s.id=v;curId=v;markDirty();renderSide();renderMain()};
+  $("#sDel").onclick=()=>{if(!confirm(`Удалить серию «${s.name}» со всеми моделями (${s.models.length})?`))return;DATA.series.splice(idx,1);curId=null;markDirty();renderSide();renderMain()};
+  $("#sUp").onclick=()=>{DATA.series.splice(idx,1);DATA.series.splice(idx-1,0,s);markDirty();renderSide();renderMain()};
+  $("#sDn").onclick=()=>{DATA.series.splice(idx,1);DATA.series.splice(idx+1,0,s);markDirty();renderSide();renderMain()};
+  $("#mAdd").onclick=()=>{s.models.push({m:"NEW-MODEL",n:"",l:"Jauns",s:[],d:null,st:1,img:null,...(s.cat==="rv"?{mt:"v",a:null}:{})});markDirty();renderMain(s.models.length-1)};
+  renderModels(s,openIdx);
+}
+function renderModels(s,openIdx){
+  const box=$("#models");
+  box.innerHTML=s.models.map((m,i)=>`<details class="model" data-i="${i}" ${i===openIdx?"open":""}><summary><span class="chev">▶</span><b>${esc(m.m)}</b><span class="lbl">${esc(m.l)}</span>${s.cat==="rv"&&m.mt?`<span class="hint">${MT[m.mt]||""}${m.a?" · до "+m.a+" м²":""}</span>`:""}<span class="sp"></span><span class="st ${m.st?"y":"n"}">${m.st?"на складе":"под заказ"}</span></summary><div class="body"></div></details>`).join("")||'<div class="hint">Моделей пока нет.</div>';
+  box.querySelectorAll("details").forEach(d=>{const fill=()=>{if(d.open&&!d.dataset.f){d.dataset.f=1;modelEditor(s,+d.dataset.i,d.querySelector(".body"))}};d.ontoggle=fill;fill()});
+  if(openIdx!=null){const el=box.querySelector(`[data-i="${openIdx}"]`);el&&el.scrollIntoView({block:"center"})}
+}
+function modelEditor(s,i,body){
+  const m=s.models[i];m.s=m.s||[];
+  const ph=photoField(m,"img",()=>s.id+"-"+m.m,"Своё фото модели (необязательно — иначе фото серии)");
+  const sp=rowsEditor(m.s,"Параметр (напр. Masa, kg)","Значение",()=>markDirty());
+  body.innerHTML=`
+   <div class="grid3">
+     <label class="f">Код модели<input data-k="m" value="${esc(m.m)}"></label>
+     <label class="f">Подпись кнопки на сайте<input data-k="l" value="${esc(m.l)}"></label>
+     <label class="f">Тип / краткое название<input data-k="n" value="${esc(m.n||"")}"></label>
+   </div>
+   ${s.cat==="rv"?`<div class="grid3"><label class="f">Исполнение<select data-k="mt">${Object.entries(MT).map(([k,v])=>`<option value="${k}" ${m.mt===k?"selected":""}>${v}</option>`).join("")}</select></label><label class="f">Рекомендуемая площадь, до м²<input data-k="a" type="number" min="0" value="${m.a??""}"></label><div></div></div>`:""}
+   <label class="f">Описание модели (если пусто — показывается «Тип»)<textarea data-k="d">${esc(m.d||"")}</textarea></label>
+   <label class="chk"><input type="checkbox" data-k="st" ${m.st?"checked":""}> На складе (иначе «под заказ»)</label>
+   <div>${ph.html}</div>
+   <div><h3 style="margin:6px 0 8px">Технические данные</h3>${sp.html}</div>
+   <div class="toolbar"><button class="btn sm" data-a="up">↑ выше</button><button class="btn sm" data-a="dn">↓ ниже</button><button class="btn sm" data-a="dup">⧉ Дублировать</button><select class="btn sm" data-a="mv"><option value="">Перенести в серию…</option>${DATA.series.filter(x=>x!==s).map(x=>`<option value="${esc(x.id)}">${esc(x.name)}</option>`).join("")}</select><span class="sp"></span><button class="btn sm del" data-a="rm">Удалить модель</button></div>`;
+  ph.bind();sp.bind();
+  const summ=body.parentElement.querySelector("summary");
+  const refreshSum=()=>{summ.querySelector("b").textContent=m.m;summ.querySelector(".lbl").textContent=m.l;const stEl=summ.querySelector(".st");stEl.className="st "+(m.st?"y":"n");stEl.textContent=m.st?"на складе":"под заказ"};
+  body.querySelectorAll("[data-k]").forEach(el=>{const k=el.dataset.k;el.oninput=el.onchange=()=>{
+    if(k==="st")m.st=el.checked?1:0;else if(k==="a")m.a=el.value===""?null:+el.value;else if(k==="d")m.d=el.value.trim()?el.value:null;else m[k]=el.value;
+    markDirty();refreshSum()}});
+  body.querySelectorAll("[data-a]").forEach(b=>{const a=b.dataset.a;
+    if(a==="mv"){b.onchange=()=>{const t=DATA.series.find(x=>x.id===b.value);if(!t)return;s.models.splice(i,1);t.models.push(m);markDirty();toast(`Перенесено в «${t.name}»`);renderSide();renderMain()};return}
+    b.onclick=()=>{
+      if(a==="rm"){if(!confirm(`Удалить модель ${m.m}?`))return;s.models.splice(i,1);markDirty();renderSide();renderMain();return}
+      if(a==="dup"){const c=JSON.parse(JSON.stringify(m));c.m+=" (kopija)";s.models.splice(i+1,0,c);markDirty();renderMain(i+1);return}
+      if(a==="up"&&i>0){[s.models[i-1],s.models[i]]=[s.models[i],s.models[i-1]];markDirty();renderMain(i-1)}
+      if(a==="dn"&&i<s.models.length-1){[s.models[i+1],s.models[i]]=[s.models[i],s.models[i+1]];markDirty();renderMain(i+1)}
+    }});
+}
+$("#bAddSeries").onclick=()=>{
+  const name=prompt("Название новой серии:");if(!name)return;
+  let id=slug(name);while(DATA.series.some(s=>s.id===id))id+="-2";
+  const cat=catF!=="all"?catF:"ac";
+  DATA.series.push({id,cat,name,tag:"",desc:"",img:null,stats:[],models:[]});curId=id;markDirty();renderSide();renderMain();
+};
+function toast(t){const el=$("#toast");el.textContent=t;el.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove("show"),2400)}
+load();
+</script>
+</body>
+</html>
