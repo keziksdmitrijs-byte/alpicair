@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AlpicAir — viena sistēma, viens panelis</title>
+<link rel="icon" type="image/png" href="img/favicon.png">
 <meta name="description" content="AlpicAir siltumsūkņi, kondicionieri un rekuperatori — viena zīmola klimata sistēma, ko vada viens sienas panelis.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -478,6 +479,12 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 .tabs[hidden],.wall-area[hidden]{display:none!important}
 @media (max-width:1100px){.devices{grid-template-columns:1fr;max-width:640px;margin-left:auto;margin-right:auto}.dev-card .pic{aspect-ratio:1.6}}
 @media (max-width:560px){.dev-card .body{padding:20px}.dev-card h3{font-size:28px}.dev-card .acts{grid-template-columns:1fr}.mdl-in{padding:20px 16px 40px}}
+
+.logo img{display:block;height:26px;width:auto}
+.wp-brand img{height:1.15em;width:auto;display:block;margin:0 auto;opacity:.9}
+.wp-brand{font-size:6cqw}
+.flogo{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.flogo img{height:18px;width:auto;opacity:.9}
+@media (max-width:560px){.logo img{height:18px}}
 </style>
 </head>
 <body>
@@ -492,7 +499,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 </defs></svg>
 
 <nav class="top" id="nav"><div class="wrap">
-  <a class="logo" href="#"><svg viewBox="0 0 48 32"><path d="M2 28L18 4l8 12" stroke="#b6a3ff" stroke-width="4" fill="none" stroke-linejoin="round"/><path d="M14 28L30 4l16 24" stroke="#7c5cff" stroke-width="4" fill="none" stroke-linejoin="round"/></svg>ALPICAIR</a>
+  <a class="logo" href="#" aria-label="AlpicAir"><img src="img/logo-light.png" alt="AlpicAir" width="140" height="22"></a>
   <div class="links"><a href="#ka-strada">Kā tas strādā</a><a href="#iekartas">Iekārtas</a><a href="#piedavajums">Piedāvājums</a></div>
   <button class="sysbtn" id="openSys"><svg width="16" height="16"><use href="#i-layers"/></svg>Mana sistēma <span class="n" id="sysN">0</span></button>
 </div></nav>
@@ -616,7 +623,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
           <div class="wp-metrics" id="wpMet"></div>
           <div class="wp-devs" id="wpDevs"></div>
         </div>
-        <div class="wp-brand">ALPICAIR</div>
+        <div class="wp-brand"><img src="img/logo.png" alt="AlpicAir"></div>
       </div>
       <div class="wp-cap">Sienas panelis dzīvojamā istabā</div>
     </div>
@@ -694,7 +701,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   </div>
 </div></section>
 
-<footer class="site"><div class="wrap"><div><b style="color:#fff">AlpicAir</b> — siltumsūkņi, kondicionieri, rekuperatori</div><div>Tehniskie dati: BVT Partneri katalogs · Foto: alpicair.com · Cenas pēc pieprasījuma</div></div></footer>
+<footer class="site"><div class="wrap"><div class="flogo"><img src="img/logo-light.png" alt="AlpicAir" width="112" height="18"><span>siltumsūkņi, kondicionieri, rekuperatori</span></div><div>Tehniskie dati: BVT Partneri katalogs · Foto: alpicair.com · Cenas pēc pieprasījuma</div></div></footer>
 
 <div class="detail" id="detail" role="dialog" aria-modal="true"></div>
 <div class="ov" id="ov"></div>
