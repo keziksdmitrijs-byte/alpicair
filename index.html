@@ -225,7 +225,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 
 
 /* plan offer */
-.plan{position:relative;overflow:hidden;border-radius:36px;padding:56px;background:linear-gradient(135deg,#2b1f5c 0%,#1a1236 55%,#122a3a 100%);border:1px solid var(--line);display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center}
+.plan{position:relative;overflow:hidden;overflow:clip;border-radius:36px;padding:56px;align-items:start;background:linear-gradient(135deg,#2b1f5c 0%,#1a1236 55%,#122a3a 100%);border:1px solid var(--line);display:grid;grid-template-columns:1fr 1.05fr;gap:44px}
 .plan::after{content:"";position:absolute;right:-120px;top:-120px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(62,224,168,.22),transparent 70%);pointer-events:none}
 .steps{display:grid;gap:14px;margin:26px 0 28px;counter-reset:st}
 .steps div{display:flex;gap:14px;align-items:flex-start}
@@ -243,6 +243,43 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 @keyframes pinIn{from{opacity:0;transform:translateY(-8px)}}
 .blueprint .pin circle{transition:r .3s}
 .plan h2{font-size:clamp(28px,3.2vw,44px)}
+.pform{position:relative;z-index:1;background:rgba(10,7,22,.55);border:1px solid var(--line);border-radius:26px;padding:24px;display:grid;gap:14px;backdrop-filter:blur(10px)}
+.pform h3{margin:0;font-size:22px;letter-spacing:-.02em}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pf{display:grid;gap:6px;font-size:12.5px;font-weight:700;color:var(--ink2)}
+.pf input:not([type=range]):not([type=checkbox]),.pf textarea{font:inherit;font-weight:500;font-size:14px;color:#fff;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:12px;padding:11px 12px;width:100%;resize:vertical}
+.pf input:focus,.pf textarea:focus{outline:2px solid rgba(124,92,255,.6);border-color:transparent}
+.pf input.bad{border-color:#ff5d6c}
+.pf input[type=range]{accent-color:var(--vent);width:100%}
+.pf b{color:#fff}
+.ptags{display:flex;flex-wrap:wrap;gap:8px}
+.ptags label{cursor:pointer}
+.ptags input{position:absolute;opacity:0;pointer-events:none}
+.ptags span{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:13px;font-weight:700;color:var(--ink2);transition:all .2s}
+.ptags input:checked+span{background:var(--brand);border-color:var(--brand);color:#fff}
+.ptags input:focus-visible+span{outline:2px solid var(--brand2)}
+.pdrop{display:grid;justify-items:center;gap:4px;text-align:center;padding:18px;border:1.5px dashed rgba(127,211,255,.45);border-radius:16px;background:rgba(56,198,255,.06);color:#9fdcff;cursor:pointer;transition:all .2s}
+.pdrop:hover,.pdrop.over{background:rgba(56,198,255,.14);border-color:#7fd3ff}
+.pdrop.bad{border-color:#ff5d6c}
+.pdrop b{color:#fff;font-size:14px}
+.pdrop span{font-size:12px;color:var(--muted)}
+.pfiles{display:grid;gap:6px}
+.pfiles:empty{display:none}
+.pfiles div{display:flex;align-items:center;gap:10px;font-size:13px;background:rgba(255,255,255,.05);border-radius:10px;padding:8px 10px}
+.pfiles div span{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pfiles small{color:var(--muted)}
+.pfiles button{border:0;background:none;color:var(--muted);font-size:18px}
+.pcons{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;color:var(--ink2);line-height:1.45;cursor:pointer}
+.pcons input{width:18px;height:18px;accent-color:var(--vent);flex:0 0 18px;margin-top:1px}
+.perr{color:#ff8a95;font-size:13px;font-weight:600}
+.perr:empty{display:none}
+.thanks{position:fixed;inset:0;z-index:95;display:grid;place-items:center;background:rgba(5,3,12,.7);backdrop-filter:blur(6px);padding:16px}
+.thanks div{max-width:440px;text-align:center;background:#1b1530;border:1px solid var(--line);border-radius:26px;padding:32px}
+.thanks .ok{width:64px;height:64px;border-radius:50%;background:var(--vent);color:#0b2a1f;display:grid;place-items:center;margin:0 auto 14px;font-size:30px;font-weight:800}
+.thanks h3{margin:0 0 8px;font-size:24px}
+.thanks p{color:var(--ink2);line-height:1.55;margin:0 0 18px}
+@media (max-width:560px){.pgrid{grid-template-columns:1fr}.pform{padding:18px}}
+
 @media (max-width:900px){.plan{grid-template-columns:1fr;padding:30px 22px}}
 @media (max-width:1100px){
   .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -367,29 +404,44 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
         <div><p style="margin:0"><b>Mēs aprēķinām un izvēlamies</b><span>Jauda pēc platības un telpām, rekuperatora gaisa plūsma, iekārtu izvietojums.</span></p></div>
         <div><p style="margin:0"><b>Saņemiet piedāvājumu</b><span>Konkrēti modeļi, montāža un vadība no viena Sonoff NSPanel Pro paneļa.</span></p></div>
       </div>
-      <div class="ctas" id="planCtas"></div>
+    </div>
+    <form class="pform" id="pform" method="POST" enctype="multipart/form-data" novalidate>
+      <h3>Pieprasīt piedāvājumu</h3>
+      <div class="pgrid">
+        <label class="pf">Vārds, uzvārds *<input name="Vārds" required autocomplete="name"></label>
+        <label class="pf">Tālrunis *<input name="Tālrunis" type="tel" required autocomplete="tel" placeholder="+371 …"></label>
+        <label class="pf">E-pasts *<input name="email" type="email" required autocomplete="email"></label>
+        <label class="pf">Pilsēta / adrese<input name="Adrese" autocomplete="address-level2"></label>
+      </div>
+      <label class="pf"><span>Mājas platība: <b id="pAreaV">150</b> m²</span><input type="range" id="pArea" min="30" max="450" step="10" value="150"></label>
+      <input type="hidden" name="Mājas platība, m²" id="pAreaH" value="150">
+      <div class="pf">Kas interesē
+        <div class="ptags">
+          <label><input type="checkbox" name="Interesē[]" value="Siltumsūknis"><span>Siltumsūknis</span></label>
+          <label><input type="checkbox" name="Interesē[]" value="Kondicionieri"><span>Kondicionieri</span></label>
+          <label><input type="checkbox" name="Interesē[]" value="Rekuperators"><span>Rekuperators</span></label>
+          <label><input type="checkbox" name="Interesē[]" value="NSPanel Pro vadība"><span>Vadība ar NSPanel Pro</span></label>
+        </div>
+      </div>
+      <div class="pdrop" id="pdrop" tabindex="0" role="button" aria-label="Pievienot mājas plānu">
+        <svg viewBox="0 0 48 40" width="44" height="36"><rect x="2" y="2" width="44" height="36" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 20h20M22 2v36M22 26h24M34 2v24" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+        <b id="pdropT">Pievienot mājas plānu *</b>
+        <span id="pdropS">PDF, JPG, PNG vai DWG · līdz 10 MB · var vairākus failus</span>
+        <input type="file" id="pfile" name="attachment" accept=".pdf,.jpg,.jpeg,.png,.webp,.heic,.dwg,.dxf" multiple hidden>
+      </div>
+      <div class="pfiles" id="pfiles"></div>
+      <label class="pf">Komentārs<textarea name="Komentārs" rows="3" placeholder="Stāvu skaits, apkures veids, vēlmes…"></textarea></label>
+      <input type="hidden" name="Izvēlētās iekārtas" id="pSys">
+      <input type="hidden" name="_subject" value="AlpicAir — piedāvājuma pieprasījums ar mājas plānu">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" id="pNext">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <label class="pcons"><input type="checkbox" id="pcons" required><span>Piekrītu, ka mani dati tiek izmantoti piedāvājuma sagatavošanai un saziņai ar mani.</span></label>
+      <div class="perr" id="perr"></div>
+      <button class="btn pri" type="submit" id="psend" style="width:100%">Nosūtīt pieprasījumu</button>
       <div class="note2" id="planNote"></div>
-    </div>
-    <div class="blueprint" aria-hidden="true">
-      <svg viewBox="0 0 400 348">
-        <defs><pattern id="bpg" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" class="bp-thin"/></pattern></defs>
-        <rect width="400" height="348" fill="url(#bpg)"/>
-        <path class="bp-line" d="M40 40H360V308H40Z M40 170H200 M200 40V308 M200 210H360 M120 170V308 M280 40V210"/>
-        <path class="bp-thin" d="M150 40v-8M150 32h50M200 32v8" />
-        <text class="bp-txt" x="70" y="100">DZĪVOJAMĀ</text><text class="bp-txt" x="70" y="114" style="fill:#5fb4e6">32 m²</text>
-        <text class="bp-txt" x="215" y="100">VIRTUVE</text><text class="bp-txt" x="215" y="114" style="fill:#5fb4e6">14 m²</text>
-        <text class="bp-txt" x="298" y="100">GUĻAMĀ</text><text class="bp-txt" x="298" y="114" style="fill:#5fb4e6">16 m²</text>
-        <text class="bp-txt" x="52" y="250">TEHN.</text>
-        <text class="bp-txt" x="140" y="250">GUĻAMĀ</text><text class="bp-txt" x="140" y="264" style="fill:#5fb4e6">18 m²</text>
-        <text class="bp-txt" x="230" y="262">BĒRNU ISTABA</text><text class="bp-txt" x="230" y="276" style="fill:#5fb4e6">15 m²</text>
-        <g class="pin" style="animation-delay:.2s"><circle cx="80" cy="200" r="11" fill="#ff8a3d"/><text x="80" y="204" text-anchor="middle" font-size="11" font-weight="800" fill="#1a1530" font-family="Manrope">S</text></g>
-        <g class="pin" style="animation-delay:.4s"><circle cx="120" cy="58" r="11" fill="#38c6ff"/><text x="120" y="62" text-anchor="middle" font-size="11" font-weight="800" fill="#1a1530" font-family="Manrope">K</text></g>
-        <g class="pin" style="animation-delay:.6s"><circle cx="320" cy="58" r="11" fill="#38c6ff"/><text x="320" y="62" text-anchor="middle" font-size="11" font-weight="800" fill="#1a1530" font-family="Manrope">K</text></g>
-        <g class="pin" style="animation-delay:.8s"><circle cx="80" cy="290" r="11" fill="#3ee0a8"/><text x="80" y="294" text-anchor="middle" font-size="11" font-weight="800" fill="#1a1530" font-family="Manrope">R</text></g>
-        <g class="pin" style="animation-delay:1s"><rect x="186" y="150" width="28" height="28" rx="6" fill="#f4f4f6"/><rect x="190" y="154" width="20" height="20" rx="3" fill="#0b0b14"/><text x="200" y="168" text-anchor="middle" font-size="8" font-weight="800" fill="#ff8a3d" font-family="Manrope">22°</text></g>
-        <g font-family="Manrope" font-size="10" font-weight="700" fill="#cfe9ff"><circle cx="58" cy="330" r="5" fill="#ff8a3d"/><text x="68" y="334">siltumsūknis</text><circle cx="148" cy="330" r="5" fill="#38c6ff"/><text x="158" y="334">kondicionieris</text><circle cx="248" cy="330" r="5" fill="#3ee0a8"/><text x="258" y="334">rekuperators</text></g>
-      </svg>
-    </div>
+      <div class="ctas" id="planCtas" style="margin-top:10px"></div>
+    </form>
   </div>
 </div></section>
 
@@ -548,18 +600,54 @@ document.getElementById("closeDrawer").onclick=closeDrawer;ov.onclick=closeDrawe
 function sysText(){return [...sys].map(fromKey).filter(Boolean).map(({s,m})=>`• ${m.m} — ${s.name}, ${m.l}`).join("\n")}
 function mailHref(){const body="Labdien!\n\nPielikumā mājas plāns. Lūdzu, sagatavojiet piedāvājumu AlpicAir sistēmai (siltumsūknis / kondicionieri / rekuperators) ar vadību no Sonoff NSPanel Pro.\n\nMājas platība: ~"+(typeof area!=="undefined"?area:"")+" m²\nAdrese / pilsēta: \nTālrunis: \n"+(sys.size?"\nInteresējošās iekārtas:\n"+sysText()+"\n":"")+"\n(Lūdzu, pievienojiet plānu kā pielikumu.)";
   return `mailto:${CONTACTS.email}?subject=${encodeURIComponent("Piedāvājuma pieprasījums — mājas plāns")}&body=${encodeURIComponent(body)}`}
+const lvNum=n=>{let d=String(n||"").replace(/\D/g,"");if(d.length===8)d="371"+d;return d};
 function renderPlan(){
   const c=CONTACTS,el=document.getElementById("planCtas"),b=[];
-  if(c.email)b.push(`<a class="btn pri" id="planMail" href="${mailHref()}">✉ Nosūtīt plānu e-pastā</a>`);
-  if(c.whatsapp)b.push(`<a class="btn gho" href="https://wa.me/${String(c.whatsapp).replace(/\D/g,"")}?text=${encodeURIComponent("Labdien! Vēlos nosūtīt mājas plānu AlpicAir piedāvājumam.")}" target="_blank" rel="noopener">WhatsApp</a>`);
-  if(c.phone)b.push(`<a class="btn gho" href="tel:${String(c.phone).replace(/[^\d+]/g,"")}">☎ ${esc(c.phone)}</a>`);
+  if(c.whatsapp)b.push(`<a class="btn gho" href="https://wa.me/${lvNum(c.whatsapp)}?text=${encodeURIComponent("Labdien! Vēlos nosūtīt mājas plānu AlpicAir piedāvājumam.")}" target="_blank" rel="noopener">WhatsApp</a>`);
+  if(c.phone)b.push(`<a class="btn gho" href="tel:+${lvNum(c.phone)}">☎ ${esc(c.phone)}</a>`);
+  if(c.email)b.push(`<a class="btn gho" id="planMail" href="${mailHref()}">✉ ${esc(c.email)}</a>`);
   el.innerHTML=b.join("");
-  document.getElementById("planNote").textContent=b.length?(c.email?`Plānu pievienojiet e-pastam kā pielikumu · ${c.email}`:""):"Kontakti drīzumā.";
-  document.getElementById("planSys").style.display=c.email?"":"none";
+  const f=document.getElementById("pform");
+  if(c.formKey||c.email){f.action="https://formsubmit.co/"+encodeURIComponent(c.formKey||c.email).replace(/%40/g,"@");document.getElementById("planNote").textContent="Vai sazinieties ar mums tieši:"}
+  else{document.getElementById("psend").disabled=true;document.getElementById("planNote").textContent="Forma drīzumā būs pieejama."}
+  document.getElementById("planSys").style.display=(c.email||c.formKey)?"":"none";
 }
 document.getElementById("planCtas").addEventListener("click",e=>{const a=e.target.closest("#planMail");if(a)a.href=mailHref()});
-document.getElementById("planSys").onclick=()=>{if(CONTACTS.email)location.href=mailHref()};
+document.getElementById("planSys").onclick=()=>{closeDrawer();const t=document.querySelector('#pform input[name="Komentārs"],#pform textarea');document.getElementById("piedavajums").scrollIntoView({behavior:"smooth"});setTimeout(()=>document.querySelector('#pform input[name="Vārds"]').focus({preventScroll:true}),700)};
 renderPlan();
+
+/* plan form */
+(function(){
+  const f=document.getElementById("pform"),fi=document.getElementById("pfile"),drop=document.getElementById("pdrop"),list=document.getElementById("pfiles"),err=document.getElementById("perr");
+  const pA=document.getElementById("pArea"),pAV=document.getElementById("pAreaV"),pAH=document.getElementById("pAreaH");
+  const syncA=v=>{pA.value=v;pAV.textContent=v;pAH.value=v};syncA(area);
+  pA.oninput=()=>syncA(pA.value);
+  const MAX=10*1024*1024;let files=[];
+  const fmt=n=>n>1048576?(n/1048576).toFixed(1)+" MB":Math.round(n/1024)+" KB";
+  function setFiles(arr){files=arr;const dt=new DataTransfer();files.forEach(x=>dt.items.add(x));fi.files=dt.files;
+    list.innerHTML=files.map((x,i)=>`<div>📄<span>${esc(x.name)}</span><small>${fmt(x.size)}</small><button type="button" data-i="${i}" aria-label="Noņemt">×</button></div>`).join("");
+    list.querySelectorAll("button").forEach(b=>b.onclick=()=>setFiles(files.filter((_,i)=>i!==+b.dataset.i)));
+    const tot=files.reduce((a,x)=>a+x.size,0);document.getElementById("pdropT").textContent=files.length?`Pievienoti ${files.length} faili · ${fmt(tot)}`:"Pievienot mājas plānu *";
+    drop.classList.toggle("bad",tot>MAX);err.textContent=tot>MAX?"Failu kopējais izmērs pārsniedz 10 MB — samaziniet vai nosūtiet pa daļām.":"";}
+  const add=list2=>setFiles([...files,...[...list2]]);
+  drop.onclick=()=>fi.click();drop.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();fi.click()}};
+  fi.onchange=()=>{const n=[...fi.files];setFiles([...files.filter(x=>!n.includes(x)),...n].filter((x,i,a)=>a.findIndex(y=>y.name===x.name&&y.size===x.size)===i))};
+  drop.ondragover=e=>{e.preventDefault();drop.classList.add("over")};drop.ondragleave=()=>drop.classList.remove("over");
+  drop.ondrop=e=>{e.preventDefault();drop.classList.remove("over");add(e.dataTransfer.files)};
+  f.addEventListener("submit",e=>{
+    err.textContent="";f.querySelectorAll(".bad").forEach(x=>x.classList.remove("bad"));
+    const req=[...f.querySelectorAll("input[required]:not([type=checkbox])")].filter(x=>!x.value.trim()||(x.type==="email"&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(x.value)));
+    req.forEach(x=>x.classList.add("bad"));
+    const tot=files.reduce((a,x)=>a+x.size,0);
+    let msg=req.length?"Lūdzu, aizpildiet atzīmētos laukus.":!files.length?"Lūdzu, pievienojiet mājas plānu.":tot>MAX?"Faili pārsniedz 10 MB.":!document.getElementById("pcons").checked?"Lūdzu, apstipriniet piekrišanu datu apstrādei.":"";
+    if(!files.length)drop.classList.add("bad");
+    if(msg||!f.action){e.preventDefault();err.textContent=msg||"Forma nav pieejama.";{const t=(req[0]||drop).getBoundingClientRect();scrollTo({top:scrollY+t.top-innerHeight/2,behavior:"smooth"});(req[0]||null)?.focus({preventScroll:true})}return}
+    document.getElementById("pSys").value=sys.size?sysText():"—";
+    document.getElementById("pNext").value=location.origin+location.pathname+"#paldies";
+    const b=document.getElementById("psend");b.textContent="Sūta…";setTimeout(()=>{b.disabled=true},0);
+  });
+  if(location.hash==="#paldies"){const t=document.createElement("div");t.className="thanks";t.innerHTML=`<div><div class="ok">✓</div><h3>Paldies! Pieprasījums nosūtīts</h3><p>Esam saņēmuši jūsu mājas plānu. Sagatavosim piedāvājumu un sazināsimies ar jums tuvākajā laikā.</p><button class="btn pri">Labi</button></div>`;document.body.appendChild(t);t.querySelector("button").onclick=()=>{t.remove();history.replaceState(null,"",location.pathname)}}
+})();
 document.getElementById("copySys").onclick=()=>{if(!sys.size){toast("Sistēma ir tukša");return}
   const txt="AlpicAir sistēma (vadība: Sonoff NSPanel Pro):\n"+[...sys].map(fromKey).filter(Boolean).map(({s,m})=>`• ${m.m} — ${s.name}, ${m.l}`).join("\n");
   (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(()=>toast("Saraksts nokopēts"),()=>toast("Neizdevās nokopēt"))};
