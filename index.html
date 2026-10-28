@@ -167,6 +167,25 @@ h2{font-size:clamp(32px,4vw,54px);letter-spacing:-.03em;line-height:1.04;margin:
 .chip{border:1px solid var(--line);background:transparent;border-radius:999px;padding:8px 14px;font-weight:700;font-size:13px;transition:all .2s}
 .chip:hover{border-color:var(--brand2)}
 .chip.on{background:var(--brand);border-color:var(--brand);box-shadow:0 6px 20px -6px rgba(124,92,255,.9)}
+.chip.fit:not(.on){border-color:var(--vent);color:var(--vent)}
+.chip.no{opacity:.35}
+.chips.grp{display:block;max-height:none;overflow:visible}
+.mg{margin-bottom:12px}
+.mg h5{margin:0 0 7px;font-family:Teko;letter-spacing:.14em;text-transform:uppercase;font-size:15px;color:var(--muted);font-weight:600;display:flex;align-items:center;gap:8px}
+.mg h5 svg{width:16px;height:16px;color:var(--brand2)}
+.mg .row{display:flex;flex-wrap:wrap;gap:8px}
+.area{border:1px solid var(--line);border-radius:18px;padding:14px 16px 12px;margin-bottom:16px;background:rgba(62,224,168,.06)}
+.area .top{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;color:var(--ink2);font-weight:600}
+.area .top b{font-size:22px;color:#fff;font-weight:800;letter-spacing:-.02em}
+.area input{width:100%;margin:10px 0 4px;accent-color:var(--vent)}
+.area .hint{font-size:12px;color:var(--muted);line-height:1.4}
+.area .hint b{color:var(--vent)}
+.wall-area{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:-20px 0 34px;padding:16px 20px;border:1px solid var(--line);border-radius:20px;background:rgba(62,224,168,.06)}
+.wall-area label{font-weight:700;font-size:14px;color:var(--ink2)}
+.wall-area input{flex:1 1 220px;accent-color:var(--vent)}
+.wall-area b{font-size:22px;min-width:90px}
+.tile .fitb{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);background:var(--vent);color:#0b2a1f;font-size:11px;font-weight:800;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.tile .fitb.z{background:#3a3354;color:#cfc8e6}
 .mcode{font-family:Teko;letter-spacing:.14em;font-size:19px;color:var(--brand2);margin:18px 0 2px;word-break:break-word}
 .mname{color:var(--ink2);font-size:13.5px;margin-bottom:10px;line-height:1.45}
 table.sp{width:100%;border-collapse:collapse;font-size:14px}
@@ -266,7 +285,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
       <a class="btn pri" href="#serijas">Apskatīt sērijas <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
       <a class="btn gho" href="#panelis">Kā tas darbojas</a>
     </div>
-    <div class="stats"><div><b data-count="27">0</b><span>sērijas</span></div><div><b data-count="162">0</b><span>modeļi</span></div><div><b data-count="1">0</b><span>panelis visam</span></div></div>
+    <div class="stats"><div><b data-count="26">0</b><span>sērijas</span></div><div><b data-count="162">0</b><span>modeļi</span></div><div><b data-count="1">0</b><span>panelis visam</span></div></div>
   </div>
   <div class="scene" id="scene">
     <div class="wall"></div>
@@ -311,6 +330,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
     <p class="sub">Modeļi apvienoti sērijās. Atveriet sēriju, izvēlieties jaudu un skatiet tehniskos datus un foto.</p>
   </div>
   <div class="tabs" id="tabs"></div>
+  <div class="wall-area" id="wallArea" hidden><label for="aw">Mājas platība</label><input type="range" id="aw" min="30" max="450" step="10"><b><span id="awv"></span> m²</b></div>
   <div class="grid" id="grid"></div>
 </div></section>
 
@@ -379,11 +399,12 @@ function renderTabs(){
   const list=[["all","Visas",SERIES.length],...Object.entries(CATS).map(([k,c])=>[k,c.n,SERIES.filter(s=>s.cat===k).length])];
   tabsEl.innerHTML=list.map(([k,n,c])=>`<button class="tab ${cat===k?"on":""}" data-k="${k}">${n}<span>${c}</span></button>`).join("");
   tabsEl.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{cat=b.dataset.k;renderTabs();renderGrid()});
+  document.getElementById("wallArea").hidden=cat!=="rv";
 }
 const facts=s=>s.stats.slice(0,2).map(x=>/līdz$/.test(x[1])?`${x[1]} ${x[0]}`:`${x[0]} ${x[1]}`).join(" · ");
 function renderGrid(){
   const list=SERIES.filter(s=>cat==="all"||s.cat===cat);
-  grid.innerHTML=list.map((s,i)=>`<button class="tile" data-id="${s.id}" style="animation-delay:${Math.min(i,12)*45}ms"><div class="lamp"></div><div class="box"><span class="cat" style="background:${CATS[s.cat].c}">${CATS[s.cat].s}</span><span class="cnt">${s.models.length} ${s.models.length===1?"modelis":"modeļi"}</span>${visual(s)}</div><h3 class="cap">${esc(s.name)}</h3><p>${esc(facts(s)||s.tag)}</p></button>`).join("");
+  grid.innerHTML=list.map((s,i)=>`<button class="tile" data-id="${s.id}" style="animation-delay:${Math.min(i,12)*45}ms"><div class="lamp"></div><div class="box"><span class="cat" style="background:${CATS[s.cat].c}">${CATS[s.cat].s}</span><span class="cnt">${s.models.length} ${s.models.length===1?"modelis":"modeļi"}</span>${visual(s)}${cat==="rv"&&s.cat==="rv"?fitBadge(s):""}</div><h3 class="cap">${esc(s.name)}</h3><p>${esc(facts(s)||s.tag)}</p></button>`).join("");
 }
 grid.addEventListener("click",e=>{const t=e.target.closest(".tile");if(t)location.hash="#/s/"+t.dataset.id});
 
@@ -392,7 +413,7 @@ const det=document.getElementById("detail");let cur=null,curM=0;
 const seriesList=()=>SERIES.filter(s=>cat==="all"||s.cat===cat);
 function openSeries(id){
   const s=byId[id];if(!s)return closeSeries();
-  if(cur!==s){cur=s;curM=0}
+  if(cur!==s){cur=s;curM=0;if(s.cat==="rv"){const b=bestFit(s);if(b>=0)curM=b}}
   const L=seriesList().includes(s)?seriesList():SERIES,idx=L.indexOf(s);
   const w=s.name.split(" "),t1=w.length>1?w.slice(0,-1).join(" "):s.name,t2=w.length>1?w.at(-1):"";
   det.innerHTML=`<button class="back" id="dBack"><svg width="16" height="16"><use href="#i-left"/></svg>Visas sērijas</button>
@@ -404,9 +425,29 @@ function openSeries(id){
   det.querySelector("#pNext").onclick=()=>{location.hash="#/s/"+L[(idx+1)%L.length].id};
   renderModel();det.classList.add("show");document.body.classList.add("lock");det.scrollTop=0;
 }
+let area=150;try{area=+localStorage.getItem("alpic-area")||150}catch(e){}
+const MT={v:"Vertikālie",h:"Horizontālie",p:"Griestu",w:"Sienas"};
+const MTI={v:'<svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2" stroke="currentColor" stroke-width="2" fill="none"/></svg>',h:'<svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="2" stroke="currentColor" stroke-width="2" fill="none"/></svg>',p:'<svg viewBox="0 0 24 24"><path d="M3 4h18" stroke="currentColor" stroke-width="2"/><rect x="5" y="7" width="14" height="6" rx="2" stroke="currentColor" stroke-width="2" fill="none"/></svg>',w:'<svg viewBox="0 0 24 24"><path d="M4 3v18" stroke="currentColor" stroke-width="2"/><circle cx="13" cy="12" r="6" stroke="currentColor" stroke-width="2" fill="none"/></svg>'};
+const fits=(m)=>m.a==null?null:m.a>=area;
+function bestFit(s){let b=-1;s.models.forEach((m,i)=>{if(m.a!=null&&m.a>=area&&(b<0||m.a<s.models[b].a))b=i});return b}
+function fitBadge(s){const n=s.models.filter(m=>fits(m)).length;const any=s.models.some(m=>m.a!=null);return `<span class="fitb ${n?"":"z"}">${n?`${n} piemēroti ${area} m²`:any?`Par mazu ${area} m²`:`Platība pēc projekta`}</span>`}
+function setArea(v,from){area=+v;try{localStorage.setItem("alpic-area",area)}catch(e){}
+  const aw=document.getElementById("aw");aw.value=area;document.getElementById("awv").textContent=area;
+  if(cat==="rv")grid.querySelectorAll(".tile").forEach(t=>{const f=t.querySelector(".fitb");if(f)f.outerHTML=fitBadge(byId[t.dataset.id])});
+  if(cur&&cur.cat==="rv"){const b=bestFit(cur);if(b>=0)curM=b;renderModel()}}
+document.getElementById("aw").oninput=e=>setArea(e.target.value);
 function renderModel(){
   const s=cur,m=s.models[curM],k=key(s,curM);
-  det.querySelector("#chips").innerHTML=s.models.map((x,i)=>`<button class="chip ${i===curM?"on":""}" data-i="${i}">${esc(x.l)}</button>`).join("");
+  const chipsEl=det.querySelector("#chips"),chip=(x,i)=>{const f=s.cat==="rv"?fits(x):null;return `<button class="chip ${i===curM?"on":""} ${f===true&&i===bestFit(s)?"fit":""} ${f===false?"no":""}" data-i="${i}">${esc(x.l)}</button>`};
+  if(s.cat==="rv"){
+    const groups={};s.models.forEach((x,i)=>{(groups[x.mt]=groups[x.mt]||[]).push(i)});
+    const order=["v","h","p","w"].filter(g=>groups[g]);
+    const bf=bestFit(s);
+    chipsEl.className="chips grp";
+    chipsEl.innerHTML=`<div class="area"><div class="top"><span>Mājas platība</span><b>${area} m²</b></div><input type="range" id="ad" min="30" max="450" step="10" value="${area}" aria-label="Mājas platība"><div class="hint">${bf>=0?`Ieteicams: <b>${esc(s.models[bf].l)}</b> (līdz ${s.models[bf].a} m²). Zaļi — piemērotākais, pelēkie — par mazu.`:`Šajā sērijā nav modeļa ${area} m² platībai — skatiet citu sēriju.`}</div></div>`+
+      order.map(g=>`<div class="mg"><h5>${MTI[g]}${MT[g]}</h5><div class="row">${groups[g].sort((a,b)=>(s.models[a].a??9999)-(s.models[b].a??9999)||s.models[a].l.localeCompare(s.models[b].l)).map(i=>chip(s.models[i],i)).join("")}</div></div>`).join("");
+    const ad=chipsEl.querySelector("#ad");ad.oninput=e=>{area=+e.target.value;chipsEl.querySelector(".area .top b").textContent=area+" m²"};ad.onchange=e=>setArea(e.target.value);
+  } else {chipsEl.className="chips";chipsEl.innerHTML=s.models.map(chip).join("")}
   det.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{curM=+b.dataset.i;renderModel()});
   const stage=det.querySelector("#stage"),u=imgOf(s,m);
   if(stage.dataset.u!==String(u)){stage.dataset.u=String(u);stage.innerHTML=visual(s,m)}
@@ -453,6 +494,7 @@ const nav=document.getElementById("nav");addEventListener("scroll",()=>nav.class
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
 document.querySelectorAll("[data-count]").forEach(el=>{const to=+el.dataset.count,t0=performance.now();(function f(t){const k=Math.min(1,(t-t0)/1400);el.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)})(t0)});
+document.getElementById("aw").value=area;document.getElementById("awv").textContent=area;
 renderTabs();renderGrid();updSys();route();
 </script>
 </body>
