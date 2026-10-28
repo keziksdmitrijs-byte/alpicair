@@ -419,6 +419,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 @media (max-width:900px){
   .scrolly .sticky{grid-template-columns:1fr;grid-template-rows:auto 1fr;padding:74px 16px 16px;gap:8px;align-items:start}
   .stage{order:-1;height:auto;aspect-ratio:1020/560;width:100%}
+  .stage.is3d{aspect-ratio:1/.82;max-height:52vh}
   .s-text{height:auto;min-height:40vh}
   .s-step{justify-content:flex-start}
   .s-step h1,.s-step h2{font-size:clamp(28px,8vw,40px);margin:6px 0 10px}
@@ -434,6 +435,49 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   .s-hint{display:none}
 }
 
+
+.h3d{position:absolute;inset:0;width:100%;height:100%;display:block;border-radius:28px;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.stage.is3d .house{visibility:hidden}
+.out3d{display:none;position:absolute;left:16px;top:14px;z-index:2;background:rgba(14,10,28,.6);backdrop-filter:blur(6px);border-radius:12px;padding:7px 12px;line-height:1.15}
+.stage.is3d .out3d{display:block}
+.out3d span{display:block;font-size:10px;font-weight:800;letter-spacing:.14em;color:#cfc8e6}
+.out3d b{font-size:17px;color:#fff}
+@media (max-width:900px){.out3d{left:8px;top:8px;padding:4px 8px}.out3d b{font-size:12px}.out3d span{font-size:8px}.h3d{border-radius:18px}}
+
+/* devices */
+.devices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px;perspective:1200px}
+.dev-card{position:relative;border-radius:30px;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column;transform-style:preserve-3d;transition:transform .25s ease,box-shadow .4s,border-color .4s;will-change:transform}
+.dev-card:hover{box-shadow:0 40px 80px -40px color-mix(in srgb,var(--c) 70%,transparent);border-color:color-mix(in srgb,var(--c) 45%,transparent)}
+.dev-card .pic{position:relative;aspect-ratio:1.25;background:radial-gradient(110% 90% at 50% 0%,#fff,#ebe6f6 60%,#d6cfea);display:grid;place-items:center;overflow:hidden}
+.dev-card .pic img{width:78%;height:78%;object-fit:contain;mix-blend-mode:multiply;transition:transform .6s cubic-bezier(.2,.9,.3,1);transform:translateZ(30px)}
+.dev-card:hover .pic img{transform:scale(1.07)}
+.dev-card .pic::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--c)}
+.dev-card .badge2{position:absolute;left:16px;top:16px;background:var(--c);color:#140f26;font-weight:800;font-size:12px;padding:6px 12px;border-radius:999px}
+.dev-card .body{padding:26px 26px 24px;display:flex;flex-direction:column;gap:14px;flex:1}
+.dev-card .kick{color:var(--c);font-size:18px}
+.dev-card h3{margin:-6px 0 0;font-size:34px;letter-spacing:-.03em}
+.dev-card .lead{color:var(--ink2);line-height:1.55;font-size:15px;margin:0}
+.dev-card ul{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:12px}
+.dev-card li{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start}
+.dev-card li i{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 20%,transparent);color:var(--c);font-style:normal;font-weight:800;font-size:13px}
+.dev-card li b{display:block;font-size:14.5px;margin-bottom:2px}
+.dev-card li span{color:var(--ink2);font-size:13.5px;line-height:1.45}
+.dev-card .st3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;border-top:1px solid var(--line);padding-top:16px;margin-top:auto}
+.dev-card .st3 b{display:block;font-size:19px;font-weight:800;letter-spacing:-.02em;white-space:nowrap}
+.dev-card .st3 span{font-family:Teko,Manrope,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-size:13px}
+.dev-card .acts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.dev-card .acts .btn{padding:12px 14px;font-size:14px}
+.dev-card .acts .btn.pri{background:var(--c);color:#140f26;box-shadow:0 12px 30px -12px var(--c)}
+.mdl{position:fixed;inset:0;z-index:58;background:rgba(9,6,20,.92);backdrop-filter:blur(10px);overflow:auto;opacity:0;pointer-events:none;transition:opacity .3s}
+.mdl.show{opacity:1;pointer-events:auto}
+.mdl-in{max-width:1280px;margin:0 auto;padding:30px 24px 60px}
+.mdl-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:30px;position:relative}
+.mdl-head h2{margin:4px 0 0}
+.mdl-head .x{position:static;flex:0 0 44px;width:44px;height:44px;font-size:22px}
+.mdl .wall-area{margin:0 0 34px}
+.tabs[hidden],.wall-area[hidden]{display:none!important}
+@media (max-width:1100px){.devices{grid-template-columns:1fr;max-width:640px;margin-left:auto;margin-right:auto}.dev-card .pic{aspect-ratio:1.6}}
+@media (max-width:560px){.dev-card .body{padding:20px}.dev-card h3{font-size:28px}.dev-card .acts{grid-template-columns:1fr}.mdl-in{padding:20px 16px 40px}}
 </style>
 </head>
 <body>
@@ -449,7 +493,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 
 <nav class="top" id="nav"><div class="wrap">
   <a class="logo" href="#"><svg viewBox="0 0 48 32"><path d="M2 28L18 4l8 12" stroke="#b6a3ff" stroke-width="4" fill="none" stroke-linejoin="round"/><path d="M14 28L30 4l16 24" stroke="#7c5cff" stroke-width="4" fill="none" stroke-linejoin="round"/></svg>ALPICAIR</a>
-  <div class="links"><a href="#ka-strada">Kā tas strādā</a><a href="#serijas">Sērijas</a><a href="#piedavajums">Piedāvājums</a></div>
+  <div class="links"><a href="#ka-strada">Kā tas strādā</a><a href="#iekartas">Iekārtas</a><a href="#piedavajums">Piedāvājums</a></div>
   <button class="sysbtn" id="openSys"><svg width="16" height="16"><use href="#i-layers"/></svg>Mana sistēma <span class="n" id="sysN">0</span></button>
 </div></nav>
 <div class="progress" id="progress"></div>
@@ -560,6 +604,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
       </svg>
 
       <!-- big wall panel -->
+      <div class="out3d"><span>ĀRĀ</span><b id="tOut3d">−5 °C</b></div>
       <div class="wp" id="wp" aria-label="AlpicAir sienas panelis">
         <div class="wp-scr">
           <div class="wp-top"><span id="wpClock">07:30</span><span class="wp-chip" id="wpChip">Gaidīšana</span></div>
@@ -580,16 +625,22 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   </div>
 </section>
 
-<section id="serijas" style="padding-top:20px"><div class="wrap">
+<section id="iekartas"><div class="wrap">
   <div class="reveal">
-    <div class="kick cap">AlpicAir · katalogs</div>
-    <h2>Izvēlieties sēriju</h2>
-    <p class="sub">Modeļi apvienoti sērijās. Atveriet sēriju, izvēlieties jaudu un skatiet tehniskos datus un foto.</p>
+    <div class="kick cap">AlpicAir · iekārtas</div>
+    <h2>Izvēlieties iekārtu</h2>
+    <p class="sub">Trīs iekārtas, kas kopā rada pilnu komfortu mājā — siltumu, vēsumu un svaigu gaisu. Visas no viena zīmola un vadāmas no viena paneļa.</p>
   </div>
-  <div class="tabs" id="tabs"></div>
-  <div class="wall-area" id="wallArea" hidden><label for="aw">Mājas platība</label><input type="range" id="aw" min="30" max="450" step="10"><b><span id="awv"></span> m²</b></div>
-  <div class="grid" id="grid"></div>
+  <div class="devices" id="devices"></div>
 </div></section>
+<div class="mdl" id="mdl" role="dialog" aria-modal="true">
+  <div class="mdl-in">
+    <div class="mdl-head"><div><div class="kick cap" id="mdlKick"></div><h2 id="mdlTitle"></h2></div><button class="x" id="mdlClose" aria-label="Aizvērt">×</button></div>
+    <div class="tabs" id="tabs" hidden></div>
+    <div class="wall-area" id="wallArea" hidden><label for="aw">Mājas platība</label><input type="range" id="aw" min="30" max="450" step="10"><b><span id="awv"></span> m²</b></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</div>
 
 <section id="piedavajums" style="padding-top:20px"><div class="wrap">
   <div class="plan reveal">
@@ -701,11 +752,11 @@ function openSeries(id){
   if(cur!==s){cur=s;curM=0;if(s.cat==="rv"){const b=bestFit(s);if(b>=0)curM=b}}
   const L=seriesList().includes(s)?seriesList():SERIES,idx=L.indexOf(s);
   const w=s.name.split(" "),t1=w.length>1?w.slice(0,-1).join(" "):s.name,t2=w.length>1?w.at(-1):"";
-  det.innerHTML=`<button class="back" id="dBack"><svg width="16" height="16"><use href="#i-left"/></svg>Visas sērijas</button>
+  det.innerHTML=`<button class="back" id="dBack"><svg width="16" height="16"><use href="#i-left"/></svg>Visi modeļi</button>
   <div class="left"><div class="crumb cap">${pad(idx+1)} / ${pad(L.length)} · ${CATS[s.cat].n}</div><h2>${esc(t1)}${t2?`<span>${esc(t2)}</span>`:""}</h2><p class="desc">${esc(s.desc)}</p><p class="desc" style="margin-top:12px;color:var(--brand2);font-weight:700">${esc(s.tag)}</p></div>
   <div class="center"><div class="lamp2"></div><div class="stage" id="stage"></div><div class="pager"><button id="pPrev" aria-label="Iepriekšējā sērija"><svg width="18" height="18"><use href="#i-left"/></svg></button><span>${pad(idx+1)} / ${pad(L.length)}</span><button id="pNext" aria-label="Nākamā sērija"><svg width="18" height="18"><use href="#i-arrow"/></svg></button></div></div>
   <aside class="spec"><div class="kpis" style="grid-template-columns:repeat(${Math.max(1,s.stats.length)},1fr)">${s.stats.map(x=>`<div><b>${esc(x[0])}</b><span>${esc(x[1])}</span></div>`).join("")}</div><div class="chips" id="chips"></div><div id="mbody"></div></aside>`;
-  det.querySelector("#dBack").onclick=()=>{location.hash="#serijas"};
+  det.querySelector("#dBack").onclick=()=>{location.hash="#/m/"+s.cat};
   det.querySelector("#pPrev").onclick=()=>{location.hash="#/s/"+L[(idx-1+L.length)%L.length].id};
   det.querySelector("#pNext").onclick=()=>{location.hash="#/s/"+L[(idx+1)%L.length].id};
   renderModel();det.classList.add("show");document.body.classList.add("lock");det.scrollTop=0;
@@ -743,9 +794,43 @@ function renderModel(){
   <div class="note"><svg width="22" height="22" style="color:var(--brand2);flex:0 0 22px"><use href="#i-panel"/></svg>Vadāms kopā ar pārējām AlpicAir iekārtām no viena sienas paneļa.</div>`;
   det.querySelector("#mAdd").onclick=()=>{toggleSys(k);renderModel()};
 }
-function closeSeries(){det.classList.remove("show");document.body.classList.remove("lock");cur=null}
-function route(){const m=location.hash.match(/^#\/s\/([\w-]+)/);if(m)openSeries(m[1]);else{const was=!!cur;closeSeries();if(was&&location.hash==="#serijas")document.getElementById("serijas").scrollIntoView()}}
+function closeSeries(){det.classList.remove("show");document.body.classList.toggle("lock",document.getElementById("mdl").classList.contains("show"));cur=null}
+function route(){const h=location.hash,m=h.match(/^#\/s\/([\w-]+)/),mm=h.match(/^#\/m\/(hp|ac|rv)/);
+  if(mm)openModels(mm[1]);else if(!m)closeModels();
+  if(m)openSeries(m[1]);else closeSeries();}
 addEventListener("hashchange",route);
+
+/* devices */
+const DEV={
+ hp:{name:"Siltumsūknis",tag:"Apkure un karstais ūdens",img:"all-in-one",c:"#ff8a3d",chk:"Siltumsūknis",
+  lead:"Gaiss-ūdens siltumsūknis aizstāj katlu: silda māju caur grīdas apkuri vai radiatoriem un uzsilda karsto ūdeni — ar elektrību, bet daudzkārt efektīvāk nekā elektriskais sildītājs.",
+  ben:[["Viens avots apkurei un ūdenim","All in One ar iebūvētu tvertni — atsevišķs katls un boileris nav vajadzīgi."],["Siltums no āra gaisa","No 1 kW elektrības iegūst vairākus kW siltuma. Darbojas līdz −25 °C."],["Grīdas apkure un radiatori","R290 modeļi uzsilda ūdeni līdz 80–85 °C — der arī esošiem radiatoriem."],["Vasarā var dzesēt","Tā pati sistēma ar ventilatorkonvektoriem atvēsina māju."],["Dabīgais aukstumaģents","Monoblock R290 un MAXX R290 — ar videi draudzīgo R290."]],
+  st:[["4–39 kW","jauda"],["−25 °C","darbība līdz"],["85 °C","ūdens līdz"]]},
+ ac:{name:"Kondicionieris",tag:"Vēsums vasarā, siltums ziemā",img:"hyper-nordic",c:"#38c6ff",chk:"Kondicionieri",
+  lead:"Gaiss-gaiss siltumsūknis: vasarā ātri atvēsina telpu, ziemā ekonomiski silda. Katrai istabai sava temperatūra un savs režīms.",
+  ben:[["Dzesē un silda","Ziemā — lēta papildu apkure; Hyper Nordic silda pat −30 °C salā."],["Augsta efektivitāte","SEER līdz 8,5 un A+++ klase — zems elektrības patēriņš."],["Katrai telpai savs režīms","Multi-split: līdz 5 iekšējiem blokiem no viena āra bloka."],["Jebkuram interjeram","Sienas, kasešu, kanālu un griestu-grīdas bloki; Trendy — melnā vai baltā."],["Kluss un viedi vadāms","Nakts režīms, WiFi vadība un vienots sienas panelis."]],
+  st:[["−30 °C","apsilde līdz"],["8,5","SEER līdz"],["2,7–15 kW","jauda"]]},
+ rv:{name:"Rekuperators",tag:"Svaigs gaiss bez siltuma zudumiem",img:"nest-x",c:"#3ee0a8",chk:"Rekuperators",
+  lead:"Ventilācija ar siltuma atgūšanu: nepārtraukti ievada svaigu, filtrētu gaisu un izvada mitro, piesārņoto — bet siltums paliek mājā.",
+  ben:[["Svaigs gaiss 24/7","Logi var palikt ciet — zems CO₂, labāks miegs un koncentrēšanās."],["Siltums paliek mājā","Atgūst līdz 87% siltuma no izplūstošā gaisa — mazāki apkures rēķini."],["Bez mitruma un pelējuma","Izvada lieko mitrumu no virtuves, vannas istabas un guļamistabām."],["Filtrēts gaiss","Filtri aiztur putekļus un ziedputekšņus — svarīgi alerģiskiem cilvēkiem."],["Jebkurai mājai","Vertikālie, horizontālie, griestu un sienas modeļi — no dzīvokļa līdz 440 m² mājai."]],
+  st:[["87%","atgūšana līdz"],["942","m³/h līdz"],["440 m²","platība līdz"]]}};
+const devImg=k=>{const d=DEV[k];const s=byId[d.img]&&byId[d.img].img?byId[d.img]:SERIES.find(x=>x.cat===k&&x.img);return s?s.img:""};
+document.getElementById("devices").innerHTML=["hp","ac","rv"].map(k=>{const d=DEV[k],n=SERIES.filter(s=>s.cat===k).reduce((a,s)=>a+s.models.length,0),u=devImg(k);
+ return `<article class="dev-card reveal" data-k="${k}" style="--c:${d.c}"><div class="pic"><span class="badge2">${d.name}</span>${u?`<img src="${esc(u)}" alt="${esc(d.name)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:""}</div>
+ <div class="body"><div class="kick cap">${d.tag}</div><h3>${d.name}</h3><p class="lead">${d.lead}</p>
+ <ul>${d.ben.map(b=>`<li><i>✓</i><div><b>${b[0]}</b><span>${b[1]}</span></div></li>`).join("")}</ul>
+ <div class="st3">${d.st.map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join("")}</div>
+ <div class="acts"><a class="btn pri" href="#/m/${k}">Skatīt modeļus${n?` (${n})`:""}</a><a class="btn gho" href="#piedavajums" data-chk="${d.chk}">Pieprasīt piedāvājumu</a></div></div></article>`}).join("");
+document.querySelectorAll("#devices [data-chk]").forEach(a=>a.addEventListener("click",()=>{const c=document.querySelector(`#pform input[value="${a.dataset.chk}"]`);if(c)c.checked=true}));
+document.querySelectorAll(".dev-card").forEach(c=>{if(matchMedia("(hover:none)").matches)return;
+ c.addEventListener("mousemove",e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`rotateY(${x*7}deg) rotateX(${-y*6}deg) translateY(-6px)`});
+ c.addEventListener("mouseleave",()=>{c.style.transform=""})});
+const mdl=document.getElementById("mdl");
+function openModels(k){cat=k;const d=DEV[k];document.getElementById("mdlKick").textContent="AlpicAir · "+d.tag;document.getElementById("mdlTitle").textContent=d.name+" — modeļi";
+ document.getElementById("wallArea").hidden=k!=="rv";renderGrid();mdl.classList.add("show");document.body.classList.add("lock");if(!cur)mdl.scrollTop=0}
+function closeModels(){if(!mdl.classList.contains("show"))return;mdl.classList.remove("show");if(!cur)document.body.classList.remove("lock")}
+document.getElementById("mdlClose").onclick=()=>{location.hash="#iekartas"};
+mdl.addEventListener("click",e=>{if(e.target===mdl)location.hash="#iekartas"});
 
 /* my system */
 const sys=new Set();const key=(s,i)=>s.id+"|"+s.models[i].m;
@@ -824,7 +909,7 @@ document.getElementById("copySys").onclick=()=>{if(!sys.size){toast("Sistēma ir
   const txt="AlpicAir sistēma:\n"+[...sys].map(fromKey).filter(Boolean).map(({s,m})=>`• ${m.m} — ${s.name}, ${m.l}`).join("\n");
   (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(()=>toast("Saraksts nokopēts"),()=>toast("Neizdevās nokopēt"))};
 addEventListener("keydown",e=>{
-  if(e.key==="Escape"){if(drawer.classList.contains("show"))closeDrawer();else if(cur)location.hash="#serijas"}
+  if(e.key==="Escape"){if(drawer.classList.contains("show"))closeDrawer();else if(cur)location.hash="#/m/"+cur.cat;else if(mdl.classList.contains("show"))location.hash="#iekartas"}
   if(cur&&!drawer.classList.contains("show")&&(e.key==="ArrowRight"||e.key==="ArrowLeft"))det.querySelector(e.key==="ArrowRight"?"#pNext":"#pPrev").click()});
 
 /* misc */
@@ -865,7 +950,7 @@ const S=[
 const sec=document.getElementById("ka-strada");if(!sec)return;
 sec.style.setProperty("--n",S.length);
 const H=document.getElementById("house"),txt=document.getElementById("sText"),dots=document.getElementById("sDots");
-txt.innerHTML=S.map((s,i)=>`<div class="s-step" data-i="${i}"><div class="kick cap">${s.kick}</div>${i===0?"<h1>":"<h2>"}${s.h}${i===0?"</h1>":"</h2>"}<p>${s.p}</p><div class="s-met">${s.met.map(m=>`<div><b>${m[0]}</b><span>${m[1]}</span></div>`).join("")}</div>${s.cta===1?'<div class="cta"><a class="btn pri" href="#serijas">Apskatīt sērijas →</a><a class="btn gho" href="#piedavajums">Pieprasīt piedāvājumu</a></div>':s.cta===2?'<div class="cta"><a class="btn pri" href="#piedavajums">Atsūtīt mājas plānu →</a><a class="btn gho" href="#serijas">Sērijas</a></div>':""}</div>`).join("");
+txt.innerHTML=S.map((s,i)=>`<div class="s-step" data-i="${i}"><div class="kick cap">${s.kick}</div>${i===0?"<h1>":"<h2>"}${s.h}${i===0?"</h1>":"</h2>"}<p>${s.p}</p><div class="s-met">${s.met.map(m=>`<div><b>${m[0]}</b><span>${m[1]}</span></div>`).join("")}</div>${s.cta===1?'<div class="cta"><a class="btn pri" href="#iekartas">Apskatīt iekārtas →</a><a class="btn gho" href="#piedavajums">Pieprasīt piedāvājumu</a></div>':s.cta===2?'<div class="cta"><a class="btn pri" href="#piedavajums">Atsūtīt mājas plānu →</a><a class="btn gho" href="#iekartas">Iekārtas</a></div>':""}</div>`).join("");
 dots.innerHTML=S.map((s,i)=>`<button data-i="${i}" aria-label="${s.dot}"><span>${s.dot}</span></button>`).join("");
 dots.querySelectorAll("button").forEach(b=>b.onclick=()=>{const top=sec.offsetTop+(+b.dataset.i+.3)*(sec.offsetHeight-innerHeight)/S.length;scrollTo({top,behavior:"smooth"})});
 // snow
@@ -879,7 +964,8 @@ function apply(i){
   const s=S[i];cur=i;
   document.documentElement.style.setProperty("--mode",MC[s.mode]);
   Object.assign(H.dataset,{sky:s.sky,snow:s.snow,tint:s.tint,lights:s.lights,hp:s.d.hp,ac:s.d.ac,rv:s.d.rv,boil:s.d.boil,floor:s.d.floor||0,co2:s.d.rv?1:0});
-  tween("tOut",s.out,v=>sgn(v)+" °C");
+  tween("tOut",s.out,v=>sgn(v)+" °C");tween("tOut3d",s.out,v=>sgn(v)+" °C");
+  window.__alpicScene={i,s};dispatchEvent(new CustomEvent("alpic-scene",{detail:{i,s}}));
   tween("tBed",s.rooms[0],v=>Math.round(v)+"°");tween("tKid",s.rooms[1],v=>Math.round(v)+"°");tween("tLiv",s.rooms[2],v=>Math.round(v)+"°");
   $("wpChip").textContent=s.chip;$("wpMode").textContent=s.chip;$("wpIco").innerHTML=IC[s.ico];$("wpU").textContent=s.u;$("wpClock").textContent=s.time;
   if(s.u!=="ppm")tween("wpT",s.t,v=>Math.round(v));
@@ -895,7 +981,7 @@ function onScroll(){
   const p=Math.min(1,Math.max(0,-r.top/total));
   const f=p*S.length,i=Math.min(S.length-1,Math.floor(f)),sub=Math.min(1,f-i);
   if(i!==cur)apply(i);
-  const s=S[i];
+  const s=S[i];dispatchEvent(new CustomEvent("alpic-sub",{detail:sub}));
   if(s.co2from){const v=Math.round(s.co2from+(s.co2-s.co2from)*Math.min(1,sub*1.4));$("tCo2").textContent="CO₂ "+v;$("wpT").textContent=v;tw.wpT=v}
   else $("tCo2").textContent="CO₂ "+s.co2;
   const pr=document.getElementById("progress");if(pr){const d=document.documentElement;pr.style.width=(scrollY/(d.scrollHeight-innerHeight)*100)+"%"}
@@ -907,5 +993,7 @@ apply(0);onScroll();
 
 })();
 </script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+<script type="module" src="house3d.js"></script>
 </body>
 </html>
