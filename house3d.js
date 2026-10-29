@@ -7,8 +7,8 @@ function init(){
   const stage=document.querySelector('#ka-strada .stage');
   if(!stage)return;
   let renderer;
-  try{renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'})}catch(e){return}
-  if(!renderer.getContext())return;
+  try{renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'})}catch(e){window.__no3d&&window.__no3d();return}
+  if(!renderer.getContext()){window.__no3d&&window.__no3d();return}
   const lowEnd=(navigator.hardwareConcurrency||4)<=4||matchMedia('(max-width:700px)').matches;
   renderer.setPixelRatio(Math.min(lowEnd?1.5:2,devicePixelRatio||1));
   renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
@@ -376,4 +376,4 @@ function init(){
   stage.classList.add('is3d');
   if(window.__alpicScene)setScene(window.__alpicScene.i,window.__alpicScene.s);
 }
-try{init()}catch(e){console.error('house3d',e)}
+try{init()}catch(e){console.error('house3d',e);document.querySelector('#ka-strada .h3d')?.remove();window.__no3d&&window.__no3d()}

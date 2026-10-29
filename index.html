@@ -485,6 +485,10 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 .wp-brand{font-size:6cqw}
 .flogo{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.flogo img{height:18px;width:auto;opacity:.9}
 @media (max-width:560px){.logo img{height:18px}}
+/* 3D ielāde: vecā SVG māja netiek rādīta, kamēr ielādējas 3D */
+.stage.is3d:not(:has(.h3d)){border-radius:28px;background:radial-gradient(120% 90% at 50% 20%,#2a2150,#14102a 70%);animation:h3dload 1.6s ease-in-out infinite alternate}
+@keyframes h3dload{to{opacity:.6}}
+@media (max-width:900px){.stage.is3d:not(:has(.h3d)){border-radius:18px}}
 /* ===== skip + mobile rail ===== */
 .s-skip{position:fixed;right:40px;bottom:22px;z-index:45;display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:rgba(14,10,28,.6);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--ink);font-weight:700;font-size:14px;text-decoration:none;transition:background .2s,border-color .2s,opacity .3s,transform .3s}
 .s-skip.off{opacity:0;transform:translateY(12px);pointer-events:none}
@@ -530,7 +534,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 <section class="scrolly" id="ka-strada">
   <div class="sticky">
     <div class="s-text" id="sText"></div>
-    <div class="stage">
+    <div class="stage is3d">
       <svg class="house" id="house" viewBox="0 0 1020 560" data-sky="night" aria-label="Māja ar AlpicAir iekārtām">
         <defs>
           <linearGradient id="skN" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b0a24"/><stop offset="1" stop-color="#2a2150"/></linearGradient>
@@ -1030,5 +1034,10 @@ addEventListener("scroll",railUpd,{passive:true});addEventListener("resize",rail
 </script>
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 <script type="module" src="house3d.js"></script>
+<script>
+// Ja 3D nav pieejams (nav WebGL / neielādējās), rādām SVG māju kā rezervi
+window.__no3d=function(){var st=document.querySelector("#ka-strada .stage");if(st&&!st.querySelector(".h3d"))st.classList.remove("is3d")};
+setTimeout(window.__no3d,10000);
+</script>
 </body>
 </html>
