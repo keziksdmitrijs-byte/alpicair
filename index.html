@@ -485,6 +485,22 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 .wp-brand{font-size:6cqw}
 .flogo{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.flogo img{height:18px;width:auto;opacity:.9}
 @media (max-width:560px){.logo img{height:18px}}
+/* ===== skip + mobile rail ===== */
+.s-skip{position:fixed;right:40px;bottom:22px;z-index:45;display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:rgba(14,10,28,.6);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--ink);font-weight:700;font-size:14px;text-decoration:none;transition:background .2s,border-color .2s,opacity .3s,transform .3s}
+.s-skip.off{opacity:0;transform:translateY(12px);pointer-events:none}
+.s-skip:hover{background:rgba(124,92,255,.3);border-color:var(--brand2)}
+.s-skip svg{width:16px;height:16px;transform:rotate(90deg)}
+.rail{display:none}
+@media (max-width:900px){
+  .s-skip{right:16px;bottom:14px;padding:9px 14px;font-size:13px}
+  .rail{display:flex;flex-direction:column;gap:6px;position:fixed;left:6px;top:50%;transform:translateY(-50%);z-index:45;padding:6px;border-radius:999px;background:rgba(14,10,28,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);box-shadow:0 10px 30px -10px rgba(0,0,0,.6)}
+  .rail a{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:var(--ink2);transition:background .25s,color .25s}
+  .rail a svg{width:18px;height:18px}
+  .rail a.on{background:linear-gradient(135deg,#6a46ff,#9c84ff);color:#fff;box-shadow:0 6px 18px -6px rgba(124,92,255,.9)}
+  .wrap,.scrolly .sticky{padding-left:58px}
+  nav.top .wrap{padding-left:16px}
+  .s-dots{left:58px}
+}
 </style>
 </head>
 <body>
@@ -495,6 +511,9 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 <symbol id="i-panel" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="7" y="7" width="10" height="10" rx="2" fill="currentColor" opacity=".35"/></symbol>
 <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="19.5" r="1.5" fill="currentColor"/></symbol>
 <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6l8-3z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8.5 12l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><g stroke="currentColor" stroke-width="2" fill="none"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></g></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><g stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></g></symbol>
 <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </defs></svg>
 
@@ -504,6 +523,11 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   <button class="sysbtn" id="openSys"><svg width="16" height="16"><use href="#i-layers"/></svg>Mana sistēma <span class="n" id="sysN">0</span></button>
 </div></nav>
 <div class="progress" id="progress"></div>
+<nav class="rail" id="rail" aria-label="Sadaļas">
+  <a href="#ka-strada" data-s="ka-strada" aria-label="Kā tas strādā" title="Kā tas strādā"><svg><use href="#i-home"/></svg></a>
+  <a href="#iekartas" data-s="iekartas" aria-label="Iekārtas" title="Iekārtas"><svg><use href="#i-grid"/></svg></a>
+  <a href="#piedavajums" data-s="piedavajums" aria-label="Piedāvājums" title="Piedāvājums"><svg><use href="#i-doc"/></svg></a>
+</nav>
 
 <section class="scrolly" id="ka-strada">
   <div class="sticky">
@@ -629,6 +653,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
     </div>
     <nav class="s-dots" id="sDots" aria-label="Scēnas"></nav>
     <div class="s-hint" id="sHint">Ritiniet ↓</div>
+    <a class="s-skip" id="sSkip" href="#iekartas">Izlaist ievadu — uz iekārtām<svg><use href="#i-arrow"/></svg></a>
   </div>
 </section>
 
@@ -996,6 +1021,11 @@ function onScroll(){
 let tick=false;addEventListener("scroll",()=>{if(!tick){tick=true;requestAnimationFrame(()=>{tick=false;onScroll()})}},{passive:true});
 addEventListener("resize",onScroll);
 apply(0);onScroll();
+// mobile rail: highlight current section
+const rl=[...document.querySelectorAll("#rail a")],rs=rl.map(a=>document.getElementById(a.dataset.s));
+const sk=document.getElementById("sSkip");
+function railUpd(){sk.classList.toggle("off",sec.getBoundingClientRect().bottom<innerHeight*1.2);let k=0;rs.forEach((el,j)=>{if(el&&el.getBoundingClientRect().top<=innerHeight*.4)k=j});rl.forEach((a,j)=>a.classList.toggle("on",j===k))}
+addEventListener("scroll",railUpd,{passive:true});addEventListener("resize",railUpd);railUpd();
 })();
 
 })();
