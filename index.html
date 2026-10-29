@@ -493,13 +493,11 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 .rail{display:none}
 @media (max-width:900px){
   .s-skip{right:16px;bottom:14px;padding:9px 14px;font-size:13px}
-  .rail{display:flex;flex-direction:column;gap:6px;position:fixed;left:6px;top:50%;transform:translateY(-50%);z-index:45;padding:6px;border-radius:999px;background:rgba(14,10,28,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);box-shadow:0 10px 30px -10px rgba(0,0,0,.6)}
-  .rail a{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:var(--ink2);transition:background .25s,color .25s}
+  .rail{display:flex;flex-direction:column;gap:6px;position:fixed;left:6px;top:50%;transform:translateY(-50%);z-index:45;opacity:.7;transition:opacity .25s}
+  .rail:hover,.rail:active,.rail:focus-within{opacity:1}
+  .rail a{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:#fff;background:rgba(14,10,28,.45);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.12);transition:background .25s}
   .rail a svg{width:18px;height:18px}
-  .rail a.on{background:linear-gradient(135deg,#6a46ff,#9c84ff);color:#fff;box-shadow:0 6px 18px -6px rgba(124,92,255,.9)}
-  .wrap,.scrolly .sticky{padding-left:58px}
-  nav.top .wrap{padding-left:16px}
-  .s-dots{left:58px}
+  .rail a.on{background:rgba(124,92,255,.8);border-color:transparent}
 }
 </style>
 </head>
